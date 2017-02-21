@@ -8,6 +8,50 @@ use App\Http\Requests;
 
 class PageController extends Controller
 {
+    
+    public function getIndex ()
+    {
+        return view ('home');
+    }
+
+    public function getPersonal ()
+    {
+        return view ('Personal');
+    }
+
+
+    public function getProducto ()
+    {
+        return view ('Producto');
+    }
+
+    public function getAlianzas ()
+    {
+        return view ('Alianzas');
+    }
+
+    public function getBroker ()
+    {
+        return view ('Broker');
+    }
+
+    public function getProyeccion ()
+    {
+        return view ('Proyeccion');
+    }
+
+    public function getExportacion ()
+    {
+        return view ('Exportacion');
+    }
+
+    public function getIntercambios ()
+    {
+        return view ('Intercambios');
+    }
+
+
+
     /**
      * Display a listing of the resource.
      *

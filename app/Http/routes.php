@@ -11,6 +11,20 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+
+Route::get('/', 'PageController@getIndex');
+
+Route::get('Personal', 'PageController@getPersonal');
+
+Route::get('Producto', 'PageController@getProducto');
+
+Route::get('Alianzas', 'PageController@getAlianzas');
+
+Route::get('Broker', 'PageController@getBroker');
+
+Route::get('Proyeccion', 'PageController@getProyeccion');
+
+Route::get('Exportacion', 'PageController@getExportacion');
+
+Route::get('Intercambios', 'PageController@getIntercambios');
+
