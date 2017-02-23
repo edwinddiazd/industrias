@@ -9,8 +9,12 @@
 <body>
 @include('partials._navbar')
 <main class="mdl-layout__content">
-    <div class="page-content">
-    @yield ('content')<!-- Your content goes here --></div>
+    <div class="mdl-grid mdl-color--red-100" style="max-width: 1080px;">
+		<div class="mdl-cell mdl-cell--3-offset mdl-cell--9-col">
+			@yield ('content')<!-- Your content goes here -->
+		</div>
+
+    </div>
   </main>
 	
 
