@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>SEIPBES</title>
-	<link rel="stylesheet" href="material.min.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-</head>
-<body class="mdl-color--grey-50">
+@extends('main2')
+@section('content')
 <div class="mdl-grid">
 	<div class="mdl-layout-spacer"></div>
 	<div class="mdl-cell mdl-cell--4-col-offset mdl-cell--4-col mdl-shadow--3dp mdl-color--grey-100" style="margin-top: 15%;">
@@ -29,7 +22,7 @@
 					<div class="mdl-cell mdl-cell--4-col-offset mdl-cell--4-col">
 						<button type="submit" class="mdl-button mdl-js-button mdl-button--primary">Ingresar</button>
 					</div>
-					<div class="mdl-cell mdl-cell--4-col"><button type="submit" class="mdl-button mdl-js-button mdl-button--accent">Registrarse</button></div>
+					<div class="mdl-cell mdl-cell--4-col"><button class="mdl-button mdl-js-button mdl-button--accent"><a href="Registro_Industrias" style="text-decoration: none;">Registrarse</a></button></div>
 				</div>
 			</form>
 		</div>
@@ -37,6 +30,4 @@
 		</div>
 	<div class="mdl-layout-spacer"></div>
 </div>
-</body>
-<script src="material.min.js"></script>
-</html>
+@stop

@@ -28,3 +28,5 @@ Route::get('Exportacion', 'PageController@getExportacion');
 
 Route::get('Intercambios', 'PageController@getIntercambios');
 
+Route::get('Registro_Industrias', 'PageController@getRegistroIndustrias');
+

@@ -50,6 +50,11 @@ class PageController extends Controller
         return view ('Intercambios');
     }
 
+    public function getRegistroIndustrias ()
+    {
+        return view ('Registro_Industrias');
+    }
+
 
 
     /**
