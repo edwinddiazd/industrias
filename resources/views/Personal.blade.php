@@ -75,7 +75,6 @@
 	</div>
 
 	<div class="mdl-cell mdl-cell--3-col">
-		<!-- Numeric Textfield -->
 		<form action="#">
 		  <div class="mdl-textfield mdl-js-textfield">
 		    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
@@ -125,7 +124,7 @@
 	<div class="mdl-cell mdl-cell--3-col">
 		<form action="#">
 		  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-		    <select style="margin-left: -15px; border-color: blue;">
+		    <select style="margin-left: -16px; border-color: blue;">
 		    	<option>Selecciones el cargo</option>
 		    	<option>Encargado Ventas</option>
 		    	<option>Encargado Compras</option>
@@ -170,7 +169,6 @@
 		</form>
 	</div>
 </div>
-
 
 <div class="mdl-grid">
 	<div class="mdl-cell mdl-cell--6-col">
