@@ -30,3 +30,7 @@ Route::get('Intercambios', 'PageController@getIntercambios');
 
 Route::get('Registro_Industrias', 'PageController@getRegistroIndustrias');
 
+Route::resource('Productos','ProductController');
+
+Route::resource('Industria','IndustriaController');
+
