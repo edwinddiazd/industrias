@@ -10,7 +10,7 @@
 		</div>
 		<div class="mdl-grid">
 			<div class="mdl-cell mdl-cell--4-col">
-				<form action="#">
+				<form method="POST" action="{{route('Industria.store')}}">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
 						<input class="mdl-textfield__input" type="text" id="sample1">
 			    		<label class="mdl-textfield__label" for="sample1">INDUSTRIA</label>
