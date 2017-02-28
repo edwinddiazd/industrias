@@ -42,14 +42,14 @@ class IndustriaController extends Controller
     {
         $this->validate($request,array(
             'industrias'=>'required|max:255',
-            'direccion'=>'required',
+            'direccion_industria'=>'required',
             'rif'=>'required|max:15',
             'telefono1'=>'required',
             'telefono2'=>'required'
             ));
         $industria= new Industrias;
         $industria->industrias = $request->industrias;
-        $industria->direccion = $request->direccion;
+        $industria->direccion_industria = $request->direccion_industria;
         $industria->rif = $request->rif;
         $industria->telefono1 = $request->telefono1;
         $industria->telefono2 = $request->telefono2;

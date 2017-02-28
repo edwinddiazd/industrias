@@ -13,24 +13,12 @@ class CreateIndustriasTable extends Migration
     public function up()
     {
         Schema::create('industrias', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id_personal');
             $table->string('industria');
-            $table->string('rif');
-            $table->string('telefono1');
-            $table->string('telefono2');
-            $table->longtext('direccion');
-            $table->timestamps();
-        });
-
-        Schema::create('Personal', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('nombre');
-            $table->string('apellido');
-            $table->string('cedula');
-            $table->string('email');
-            $table->string('telefono1');
-            $table->string('telefono2');
-            $table->longtext('direccion');
+            $table->string('rif_industria');
+            $table->string('telefono1_industria');
+            $table->string('telefono2_industria');
+            $table->longtext('direccion_industria');
             $table->timestamps();
         });
     }
