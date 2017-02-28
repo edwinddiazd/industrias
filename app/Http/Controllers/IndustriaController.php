@@ -8,6 +8,8 @@ use App\Http\Requests;
 
 use App\Industrias;
 
+use Session;
+
 class IndustriaController extends Controller
 {
     /**
@@ -49,8 +51,11 @@ class IndustriaController extends Controller
         $industria->nombre = $request->nombre;
         $industria->direccion = $request->direccion;
         $industria->rif = $request->rif;
-        $industria->telefono1 = $request->telefono2;
+        $industria->telefono1 = $request->telefono1;
+        $industria->telefono1 = $request->telefono1;
         $industria->save();
+
+        Session::flash('success','Datos guardados satisfactoriamente');
     }
 
     /**
