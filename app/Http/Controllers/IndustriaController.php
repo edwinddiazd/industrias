@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use App\Industrias;
+
 class IndustriaController extends Controller
 {
     /**
@@ -25,7 +27,7 @@ class IndustriaController extends Controller
      */
     public function create()
     {
-        //
+        return view('Industrias.create');
     }
 
     /**
@@ -36,7 +38,19 @@ class IndustriaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,array(
+            'nombre'=>'required|max:255',
+            'direccion'=>'required',
+            'rif'=>'required|max:15',
+            'telefono1'=>'required',
+            'telefono2'=>'required'
+            ));
+        $industria= new Industrias;
+        $industria->nombre = $request->nombre;
+        $industria->direccion = $request->direccion;
+        $industria->rif = $request->rif;
+        $industria->telefono1 = $request->telefono2;
+        $industria->save();
     }
 
     /**

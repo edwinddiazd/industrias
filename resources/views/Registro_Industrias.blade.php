@@ -8,57 +8,49 @@
       		<span class="mdl-layout-title mdl-color-text--white">SEIPBES</span>
       		<div class="mdl-layout-spacer"></div>
 		</div>
+		<form method="POST" action="{{route('Industria.store')}}">
 		<div class="mdl-grid">
 			<div class="mdl-cell mdl-cell--4-col">
-				<form method="POST" action="{{route('Industria.store')}}">
-					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
-						<input class="mdl-textfield__input" type="text" id="sample1">
-			    		<label class="mdl-textfield__label" for="sample1">INDUSTRIA</label>
+				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
+						<input class="mdl-textfield__input" type="text" id="nombre" name="nombre">
+			    		<label class="mdl-textfield__label" for="nombre" name="nombre">INDUSTRIA</label>
 					</div>
-				</form>
 			</div>
 			<div class="mdl-cell mdl-cell-1-col-offset mdl-cell--4-col">
-				<form action="#">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-						<textarea class="mdl-textfield__input" type="text" rows= "1" id="sample2"></textarea>
-			    		<label class="mdl-textfield__label" for="sample2">DIRECCION</label>
+						<textarea class="mdl-textfield__input" type="text" rows="1" id="direccion" name="direccion"></textarea>
+			    		<label class="mdl-textfield__label" for="direccion" name="direccion">DIRECCION</label>
 					</div>
-				</form>
 			</div>
 		</div>
 			<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--4-col">
-					<form action="#">
 					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-					    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample3" >
-					    <label class="mdl-textfield__label" for="sample3">TELEFONO N°1</label>
+					    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample3" name="telefono1">
+					    <label class="mdl-textfield__label" for="sample3" name="telefono1">TELEFONO N°1</label>
 					    <span class="mdl-textfield__error">Input is not a number!</span>
 					  </div>
-					</form>
 				</div>
 				<div class="mdl-cell  mdl-cell-2-col-offset mdl-cell--4-col">
-					<form action="#">
 					  <div class="mdl-textfield mdl-js-textfield">
-					    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
-					    <label class="mdl-textfield__label" for="sample2">TELEFONO N°2</label>
+					    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" name="telefono2">
+					    <label class="mdl-textfield__label" for="sample2" name="telefono2">TELEFONO N°2</label>
 					    <span class="mdl-textfield__error">Input is not a number!</span>
 					  </div>
-					</form>
 				</div>
 			</div>
 			<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--4-col">
-					<form action="#">
 						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
-							<input class="mdl-textfield__input" type="text" id="sample1">
-				    		<label class="mdl-textfield__label" for="sample1">RIF</label>
+							<input class="mdl-textfield__input" type="text" id="sample1" name="rif">
+				    		<label class="mdl-textfield__label" for="sample1" name="rif">RIF</label>
 						</div>
-					</form>
 				</div>
 			</div>
 				<div class="mdl-grid">
 					<div class="mdl-cell mdl-cell--4-col">
-						<button type="submit" class="mdl-button mdl-js-button mdl-button--primary">Registrar</button>
+					<input type="submit" class="mdl-button mdl-js-button mdl-button--primary">
+					<input type="hidden" name="_token" value="{{ Session::token() }}">
 					</div>
 				</div>
 			</form>
