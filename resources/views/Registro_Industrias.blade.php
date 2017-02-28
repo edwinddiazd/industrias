@@ -27,14 +27,14 @@
 				<div class="mdl-cell mdl-cell--4-col">
 					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 					    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample3" name="telefono1_industria">
-					    <label class="mdl-textfield__label" for="sample3" name="telefono1_industria">TELEFONO N°1</label>
+					    <label class="mdl-textfield__label" for="telefono1_industria" name="telefono1_industria">TELEFONO N°1</label>
 					    <span class="mdl-textfield__error">Input is not a number!</span>
 					  </div>
 				</div>
 				<div class="mdl-cell  mdl-cell-2-col-offset mdl-cell--4-col">
 					  <div class="mdl-textfield mdl-js-textfield">
 					    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" name="telefono2_industria">
-					    <label class="mdl-textfield__label" for="sample2" name="telefono2_industria">TELEFONO N°2</label>
+					    <label class="mdl-textfield__label" for="telefono2_industria" name="telefono2_industria">TELEFONO N°2</label>
 					    <span class="mdl-textfield__error">Input is not a number!</span>
 					  </div>
 				</div>

@@ -25,9 +25,9 @@ class PageController extends Controller
         return view ('Producto');
     }
 
-    public function getAlianzas ()
+    public function getAliados ()
     {
-        return view ('Alianzas');
+        return view ('Aliados');
     }
 
     public function getBroker ()
@@ -45,9 +45,9 @@ class PageController extends Controller
         return view ('Exportacion');
     }
 
-    public function getIntercambios ()
+    public function getAlianzas ()
     {
-        return view ('Intercambios');
+        return view ('Alianzas');
     }
 
     public function getRegistroIndustrias ()

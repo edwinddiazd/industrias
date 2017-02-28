@@ -18,7 +18,7 @@ Route::get('Personal', 'PageController@getPersonal');
 
 Route::get('Producto', 'PageController@getProducto');
 
-Route::get('Alianzas', 'PageController@getAlianzas');
+Route::get('Aliados', 'PageController@getAliados');
 
 Route::get('Broker', 'PageController@getBroker');
 
@@ -26,7 +26,7 @@ Route::get('Proyeccion', 'PageController@getProyeccion');
 
 Route::get('Exportacion', 'PageController@getExportacion');
 
-Route::get('Intercambios', 'PageController@getIntercambios');
+Route::get('Alianzas', 'PageController@getAlianzas');
 
 Route::get('Registro_Industrias', 'PageController@getRegistroIndustrias');
 
