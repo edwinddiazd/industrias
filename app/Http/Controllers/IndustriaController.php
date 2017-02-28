@@ -43,16 +43,16 @@ class IndustriaController extends Controller
         $this->validate($request,array(
             'industrias'=>'required|max:255',
             'direccion_industria'=>'required',
-            'rif'=>'required|max:15',
-            'telefono1'=>'required',
-            'telefono2'=>'required'
+            'rif_industria'=>'required|max:15',
+            'telefono1_industria'=>'required',
+            'telefono2_industria'=>'required'
             ));
         $industria= new Industrias;
         $industria->industrias = $request->industrias;
         $industria->direccion_industria = $request->direccion_industria;
-        $industria->rif = $request->rif;
-        $industria->telefono1 = $request->telefono1;
-        $industria->telefono2 = $request->telefono2;
+        $industria->rif_industria = $request->rif_industria;
+        $industria->telefono1_industria = $request->telefono1_industria;
+        $industria->telefono2_industria = $request->telefono2_industria;
         $industria->save();
 
         Session::flash('success','Datos guardados satisfactoriamente');
