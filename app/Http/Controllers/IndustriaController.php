@@ -29,7 +29,7 @@ class IndustriaController extends Controller
      */
     public function create()
     {
-        return view('Industrias.create');
+        return view('Industria.create');
     }
 
     /**
@@ -41,14 +41,14 @@ class IndustriaController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,array(
-            'industrias'=>'required|max:255',
+            'industria'=>'required|max:255',
             'direccion_industria'=>'required',
             'rif_industria'=>'required|max:15',
             'telefono1_industria'=>'required',
             'telefono2_industria'=>'required'
             ));
         $industria= new Industrias;
-        $industria->industrias = $request->industrias;
+        $industria->industria = $request->industria;
         $industria->direccion_industria = $request->direccion_industria;
         $industria->rif_industria = $request->rif_industria;
         $industria->telefono1_industria = $request->telefono1_industria;
@@ -56,7 +56,10 @@ class IndustriaController extends Controller
         $industria->save();
 
         Session::flash('success','Datos guardados satisfactoriamente');
+
+        return redirect()->route('Industria.show',$industria->id);
     }
+
 
     /**
      * Display the specified resource.
@@ -66,7 +69,8 @@ class IndustriaController extends Controller
      */
     public function show($id)
     {
-        //
+        $industria=Industrias::find($id);
+        return view ('Industria.show')->with('industria',$industria);
     }
 
     /**

@@ -14,8 +14,9 @@ class CreatePersonalsTable extends Migration
     {
         Schema::create('Personal', function (Blueprint $table) {
             $table->increments('Personal_id');
-            $table->integer('industrias_id')->unsigned();
-            $table->foreign('industrias_id')->references('industrias_id')->on('industrias')->onDelete('cascade');
+            $table->integer('id')->unsigned();
+            $table->foreign('id')->references('id')->on('industrias')->onDelete('cascade');
+            $table->string('cargo_personal');
             $table->string('nombre_personal');
             $table->string('apellido_personal');
             $table->string('cedula_personal');
@@ -34,6 +35,6 @@ class CreatePersonalsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('personals');
+        Schema::drop('Personal');
     }
 }

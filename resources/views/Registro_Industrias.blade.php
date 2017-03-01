@@ -12,8 +12,8 @@
 		<div class="mdl-grid">
 			<div class="mdl-cell mdl-cell--4-col">
 				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
-						<input class="mdl-textfield__input" type="text" id="industrias" name="industrias">
-			    		<label class="mdl-textfield__label" for="industrias" name="industrias">INDUSTRIA</label>
+						<input class="mdl-textfield__input" type="text" id="industria" name="industria">
+			    		<label class="mdl-textfield__label" for="industria" name="industria">INDUSTRIA</label>
 					</div>
 			</div>
 			<div class="mdl-cell mdl-cell-1-col-offset mdl-cell--4-col">
@@ -49,7 +49,7 @@
 			</div>
 				<div class="mdl-grid">
 					<div class="mdl-cell mdl-cell--4-col">
-					<input type="submit" value="REGISTRAR" class="mdl-button mdl-js-button mdl-button--primary">
+					<input type="submit" value="REGISTRAR" class="mdl-button mdl-js-button mdl-button--primary mdl-snackbar__action">
 					<input type="hidden" name="_token" value="{{ Session::token() }}">
 					</div>
 				</div>

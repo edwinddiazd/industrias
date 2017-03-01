@@ -4,11 +4,11 @@
 <h5>Datos del Personal<br></h5>
 
 <!--FORMULARIO PARA LOS DATOS DEL PERSONAL-->
+<form method="POST" action="{{route('Personal.store')}}">
 <div class="mdl-grid">
-	<form method="POST" action="{{route(' ')}}">
-		<div class="mdl-cell mdl-cell--3-col">
+			<div class="mdl-cell mdl-cell--3-col">
 			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
-				<select style="margin-left: -16px; border-color: blue;">
+				<select style="border-color: blue;">
 			    	<option>Selecciones el cargo</option>
 			    	<option>Encargado Ventas</option>
 			    	<option>Encargado Compras</option>
@@ -45,8 +45,6 @@
 			  </div>
 		</div>
 	</div>
-
-
 	<div class="mdl-grid">
 		<div class="mdl-cell mdl-cell--6-col">
 			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
@@ -54,7 +52,6 @@
 			    <label class="mdl-textfield__label" for="email_personal" name="email_personal">CORREO INSTITUCIONAL</label>
 			</div>
 		</div>
-
 		<div class="mdl-cell mdl-cell--3-col">
 			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 				<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" name="telefono2_industria">
@@ -62,7 +59,6 @@
 				<span class="mdl-textfield__error">Input is not a number!</span>
 			</div>
 		</div>
-
 		<div class="mdl-cell mdl-cell--3-col">
 			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 				<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" name="telefono2_industria">
@@ -70,9 +66,8 @@
 				<span class="mdl-textfield__error">Input is not a number!</span>
 			</div>
 		</div>
-	</form>
-</div>
-
+	</div>
+</form>
 
 
 <div class="mdl-grid"

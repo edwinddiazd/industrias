@@ -13,7 +13,7 @@ class CreateIndustriasTable extends Migration
     public function up()
     {
         Schema::create('industrias', function (Blueprint $table) {
-            $table->increments('industrias_id');
+            $table->increments('id');
             $table->string('industria');
             $table->string('rif_industria');
             $table->string('telefono1_industria');

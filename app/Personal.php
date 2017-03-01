@@ -9,6 +9,6 @@ class Personal extends Model
     //
     public function industrias()
     {
-        return $this->belongsTo('App\industrias');
+        return $this->belongsTo('App\Industrias');
     }
 }

@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use App\Personal;
+
+use App\Industria;
+
 class PersonalController extends Controller
 {
     /**
@@ -36,7 +40,28 @@ class PersonalController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $industria = Industria::find('industrias_id');
+
+        $this->validate($request,array(
+            'nombre_personal'=>'required|max:100',
+            'apellido_personal'=>'required|max:100',
+            'cedula_personal'=>'required|max:10',
+            'cargo_personal'=>'required',
+            'email_personal'=>'required|email',
+            'direccion_personal'=>'required',
+            'telefono1_personal'=>'required',
+            'telefono2_personal'=>'required'
+            ));
+
+        $personal= new Personal;
+        $personal->nombre_personal = $request->nombre_personal;
+        $personal->apellido_personal = $request->apellido_personal;
+        $personal->cedula_personal = $request->cedula_personal;
+        $personal->cargo_personal = $request->cargo_personal;
+        $personal->email_personal = $request->email_personal;
+        $personal->telefono1_personal = $request->telefono1_personal;
+        $personal->telefono2_personal = $request->telefono2_personal;
+        $personal->save();
     }
 
     /**
