@@ -57,7 +57,7 @@ class IndustriaController extends Controller
 
         Session::flash('success','Datos guardados satisfactoriamente');
 
-        return redirect()->route('Industria.show',$industria->id);
+        return redirect()->route('Personal.store')->withIndustrias($industria->id);
     }
 
 

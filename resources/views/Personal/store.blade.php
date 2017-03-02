@@ -1,5 +1,7 @@
-@extends ('main')
-@section ('content')
+@extends('main')
+@section('title','|Ingreso de personal')
+@section('content')
+
 
 <h5>Datos del Personal<br></h5>
 

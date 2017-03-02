@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Personal extends Model
 {
     //
-    public function industrias()
+    protected $table='Personal';
+    public function Industrias()
     {
         return $this->belongsTo('App\Industrias');
     }

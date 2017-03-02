@@ -40,7 +40,6 @@ class PersonalController extends Controller
      */
     public function store(Request $request)
     {
-        $industria = Industria::find('industrias_id');
 
         $this->validate($request,array(
             'nombre_personal'=>'required|max:100',
@@ -62,6 +61,8 @@ class PersonalController extends Controller
         $personal->telefono1_personal = $request->telefono1_personal;
         $personal->telefono2_personal = $request->telefono2_personal;
         $personal->save();
+
+        Session::flash('success','Datos guardados satisfactoriamente');
     }
 
     /**

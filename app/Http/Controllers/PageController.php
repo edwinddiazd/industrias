@@ -16,7 +16,7 @@ class PageController extends Controller
 
     public function getPersonal ()
     {
-        return view ('Personal');
+        return view ('personal');
     }
 
 
