@@ -14,7 +14,7 @@
 
 Route::get('/', 'PageController@getIndex');
 
-Route::get('personal', 'PageController@getPersonal');
+Route::get('Personal', 'PageController@getPersonal');
 
 Route::get('Producto', 'PageController@getProducto');
 
@@ -36,3 +36,6 @@ Route::resource('Industria','IndustriaController');
 
 Route::resource('Personal','PersonalController');
 
+Route::resource('Consulta','PageController@getConsulta');
+
+Route::resource('Consulta_Presidente','PageController@getConsulta_Presidente');

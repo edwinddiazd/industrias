@@ -16,7 +16,7 @@ class PageController extends Controller
 
     public function getPersonal ()
     {
-        return view ('personal');
+        return view ('Personal');
     }
 
 
@@ -55,7 +55,15 @@ class PageController extends Controller
         return view ('Registro_Industrias');
     }
 
+    public function getConsulta ()
+    {
+        return view ('Consulta');
+    } 
 
+    public function getConsulta_Presidente()
+    {
+        return view ('Consulta_Presidente');
+    }    
 
     /**
      * Display a listing of the resource.
