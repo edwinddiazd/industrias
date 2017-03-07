@@ -8,7 +8,14 @@ use App\Http\Requests;
 
 use App\Personal;
 
-use App\Industria;
+use App\Industrias;
+
+use Session;
+
+
+
+
+
 
 class PersonalController extends Controller
 {
@@ -53,6 +60,7 @@ class PersonalController extends Controller
             ));
 
         $personal= new Personal;
+        $personal->industrias_id = $request->industrias_id;
         $personal->nombre_personal = $request->nombre_personal;
         $personal->apellido_personal = $request->apellido_personal;
         $personal->cedula_personal = $request->cedula_personal;

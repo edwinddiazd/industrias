@@ -8,7 +8,7 @@
 <div class="mdl-grid">
 			<div class="mdl-cell mdl-cell--3-col">
 			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
-				<select style="border-color: blue;">
+				<select style="border-color: blue;" name="cargo_personal">
 			    	<option value="Selecciones el cargo">Selecciones el cargo</option>
 			    	<option value="Encargado Ventas">Encargado Ventas</option>
 			    	<option value="Encargado Compras">Encargado Compras</option>
@@ -39,12 +39,18 @@
 
 		<div class="mdl-cell mdl-cell--3-col">
 			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
-			    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="cedula_personal">
+			    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="cedula_personal" name="cedula_personal">
 			    <label class="mdl-textfield__label" for="cedula_personal">CEDULA</label>
 			    <span class="mdl-textfield__error">Input is not a number!</span>
 			  </div>
 		</div>
 	</div>
+	<div class="mdl-cell mdl-cell-1-col-offset mdl-cell--4-col">
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						<textarea class="mdl-textfield__input" type="text" rows="1" id="direccion_industria" name="direccion_personal"></textarea>
+			    		<label class="mdl-textfield__label" for="direccion_industria" name="direccion_personal">DIRECCION</label>
+					</div>
+			</div>
 	<div class="mdl-grid">
 		<div class="mdl-cell mdl-cell--6-col">
 			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
@@ -54,26 +60,22 @@
 		</div>
 		<div class="mdl-cell mdl-cell--3-col">
 			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-				<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" name="telefono2_industria">
-				<label class="mdl-textfield__label" for="telefono2_industria" name="telefono2_industria">TELEFONO N°1</label>
+				<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="telefono1_personal" name="telefono1_personal">
+				<label class="mdl-textfield__label" for="telefono1_personal" name="telefono1_personal">TELEFONO N°1</label>
 				<span class="mdl-textfield__error">Input is not a number!</span>
 			</div>
 		</div>
 		<div class="mdl-cell mdl-cell--3-col">
 			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-				<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" name="telefono2_industria">
-				<label class="mdl-textfield__label" for="telefono2_industria" name="telefono2_industria">TELEFONO N°2</label>
+				<input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="telefono2_personal" name="telefono2_personal">
+				<label class="mdl-textfield__label" for="telefono2_personal" name="telefono2_personal">TELEFONO N°2</label>
 				<span class="mdl-textfield__error">Input is not a number!</span>
 			</div>
 		</div>
 	</div>
+	<input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" value="Agregar">
+	<input type="hidden" name="industrias_id" value="{{ $indicador->id }}">
+	<input type="hidden" name="_token" value="{{ Session::token() }}">
 </form>
-
-
-<div class="mdl-grid"
-	<div class="mdl-cell mdl-cell--4-col-offset mdl-cell--4-col">
-		<button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Agregar</button>
-	</div>
-</div>
 
 @stop

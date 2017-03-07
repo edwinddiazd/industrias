@@ -20,6 +20,9 @@ class IndustriaController extends Controller
     public function index()
     {
         //
+        $industrias = Industrias::all();
+
+        return view ('Industria.index')->withIndustrias($industrias);
     }
 
     /**
@@ -55,9 +58,11 @@ class IndustriaController extends Controller
         $industria->telefono2_industria = $request->telefono2_industria;
         $industria->save();
 
+
         Session::flash('success','Datos guardados satisfactoriamente');
 
-        return redirect()->route('Personal.store')->withIndustrias($industria->id);
+    
+        return redirect()->route('Industria.show', $industria->id); 
     }
 
 
@@ -69,8 +74,8 @@ class IndustriaController extends Controller
      */
     public function show($id)
     {
-        $industria=Industrias::find($id);
-        return view ('Industria.show')->with('industria',$industria);
+        $indicador = Industrias::find($id);
+        return view ('personal')->withIndicador($indicador);
     }
 
     /**
