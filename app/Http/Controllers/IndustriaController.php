@@ -75,7 +75,7 @@ class IndustriaController extends Controller
     public function show($id)
     {
         $indicador = Industrias::find($id);
-        return view ('personal')->withIndicador($indicador);
+        return view ('Reg_Personal')->withIndicador($indicador);
     }
 
     /**

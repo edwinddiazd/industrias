@@ -14,9 +14,9 @@ class PageController extends Controller
         return view ('home');
     }
 
-    public function getPersonal ()
+    public function getReg_Personal ()
     {
-        return view ('Personal');
+        return view ('Reg_Personal');
     }
 
 

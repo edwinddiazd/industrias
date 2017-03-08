@@ -9,7 +9,7 @@
       <nav class="mdl-navigation mdl-layout--large-screen-only">
         <a class="mdl-navigation__link" href="">Proyección</a>
         <a class="mdl-navigation__link" href="">Exportación</a>
-        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="Personal">Personal</a>
         <a class="mdl-navigation__link" href="">Link</a>
       </nav>
     </div>

@@ -14,7 +14,7 @@
 
 Route::get('/', 'PageController@getIndex');
 
-Route::get('Personal', 'PageController@getPersonal');
+Route::get('Reg_Personal', 'PageController@getReg_Personal');
 
 Route::get('Producto', 'PageController@getProducto');
 
