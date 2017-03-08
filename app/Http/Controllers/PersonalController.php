@@ -49,26 +49,45 @@ class PersonalController extends Controller
     {
 
         $this->validate($request,array(
-            'nombre_personal'=>'required|max:100',
-            'apellido_personal'=>'required|max:100',
-            'cedula_personal'=>'required|max:10',
-            'cargo_personal'=>'required',
-            'email_personal'=>'required|email',
-            'direccion_personal'=>'required',
-            'telefono1_personal'=>'required',
-            'telefono2_personal'=>'required'
+            'nombre_personal1'=>'required|max:100',
+            'apellido_personal1'=>'required|max:100',
+            'cedula_personal1'=>'required|max:10',
+            'cargo_personal1'=>'required',
+            'email_personal1'=>'required|email',
+            'direccion_personal1'=>'required',
+            'telefono1_personal1'=>'required',
+            'telefono2_personal1'=>'required',
+            'nombre_personal2'=>'required|max:100',
+            'apellido_personal2'=>'required|max:100',
+            'cedula_personal2'=>'required|max:10',
+            'cargo_personal2'=>'required',
+            'email_personal2'=>'required|email',
+            'direccion_personal2'=>'required',
+            'telefono1_personal2'=>'required',
+            'telefono2_personal2'=>'required'
             ));
 
-        $personal= new Personal;
-        $personal->industrias_id = $request->industrias_id;
-        $personal->nombre_personal = $request->nombre_personal;
-        $personal->apellido_personal = $request->apellido_personal;
-        $personal->cedula_personal = $request->cedula_personal;
-        $personal->cargo_personal = $request->cargo_personal;
-        $personal->email_personal = $request->email_personal;
-        $personal->telefono1_personal = $request->telefono1_personal;
-        $personal->telefono2_personal = $request->telefono2_personal;
-        $personal->save();
+        $personal1= new Personal;
+        $personal1->industrias_id = $request->industrias_id;
+        $personal1->nombre_personal = $request->nombre_personal1;
+        $personal1->apellido_personal = $request->apellido_personal1;
+        $personal1->cedula_personal = $request->cedula_personal1;
+        $personal1->cargo_personal = $request->cargo_personal1;
+        $personal1->email_personal = $request->email_personal1;
+        $personal1->telefono1_personal = $request->telefono1_personal1;
+        $personal1->telefono2_personal = $request->telefono2_personal1;
+        $personal1->save();
+
+        $personal2= new Personal;
+        $personal2->industrias_id = $request->industrias_id;
+        $personal2->nombre_personal = $request->nombre_personal2;
+        $personal2->apellido_personal = $request->apellido_personal2;
+        $personal2->cedula_personal = $request->cedula_personal2;
+        $personal2->cargo_personal = $request->cargo_personal2;
+        $personal2->email_personal = $request->email_personal2;
+        $personal2->telefono1_personal = $request->telefono1_personal2;
+        $personal2->telefono2_personal = $request->telefono2_personal2;
+        $personal2->save();
 
         Session::flash('success','Datos guardados satisfactoriamente');
     }

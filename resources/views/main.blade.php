@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
 	<title>SEIPBES</title>
-	<link rel="stylesheet" href="material.min.css">
+	<link rel="stylesheet" href="{{ URL::asset('material.min.css') }}">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body class="mdl-color--grey-50">
@@ -14,5 +13,5 @@
 	</main>
 	</div>
 </body>
-<script src="material.min.js"></script>
+<script src="{{ URL::asset('material.min.js') }}"></script>
 </html>
