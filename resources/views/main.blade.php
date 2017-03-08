@@ -6,22 +6,13 @@
 	<link rel="stylesheet" href="material.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
-<body>
+<body class="mdl-color--grey-50">
 @include('partials._navbar')
 <main class="mdl-layout__content">
-    <div class="mdl-grid mdl-color--transparent" style="max-width: 1200px; padding-left: 15%;padding-top: 4%;">
-		<div class="mdl-cell mdl-cell--1-offset-desktop mdl-cell--11-col-desktop" style="height: 580px;">
-				<div>
-					@include('partials._messages')
-					@yield ('content')
-				</div>
-
-		    
-		</div>
-    </div>
-  </main>
-	
-
+    @include('partials._messages')
+	@yield ('content')
+</main>
+</div>
 </body>
 <script src="material.min.js"></script>
 </html>
