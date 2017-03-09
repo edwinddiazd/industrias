@@ -25,6 +25,11 @@ class PageController extends Controller
         return view ('Producto');
     }
 
+    public function getConsultaPersonal ()
+    {
+        return view ('Consulta_Personal');
+    }
+
     public function getAliados ()
     {
         return view ('Aliados');

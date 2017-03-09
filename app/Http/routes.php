@@ -28,6 +28,8 @@ Route::get('Exportacion', 'PageController@getExportacion');
 
 Route::get('Alianzas', 'PageController@getAlianzas');
 
+Route::get('Consulta_Personal', 'PageController@getConsultaPersonal');
+
 Route::get('Registro_Industrias', 'PageController@getRegistroIndustrias');
 
 Route::resource('Productos','ProductController');
