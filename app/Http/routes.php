@@ -41,3 +41,15 @@ Route::resource('Personal','PersonalController');
 Route::resource('Consulta','PageController@getConsulta');
 
 Route::resource('Consulta_Presidente','PageController@getConsulta_Presidente');
+
+Route::resource('Consulta_Encargado_ventas','PageController@getConsulta_Encargado_ventas');
+
+Route::resource('Consulta_Encargado_compras','PageController@getConsulta_Encargado_compras');
+
+Route::resource('Consulta_Encargado_juridico','PageController@getConsulta_Encargado_juridico');
+
+Route::resource('Consulta_Encargado_Seguridad_integral','PageController@getConsulta_Encargado_Seguridad_integral');
+
+Route::resource('Consulta_Encargado_Seguridad_industrial','PageController@getConsulta_Encargado_Seguridad_industrial');
+
+Route::resource('Consulta_Encargado_operaciones','PageController@getConsulta_Encargado_operaciones');
