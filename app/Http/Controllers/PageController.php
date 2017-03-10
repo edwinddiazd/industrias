@@ -78,6 +78,57 @@ class PageController extends Controller
         return view ('Consulta_Presidente');
     }    
 
+    public function getConsulta_Encargado_ventas()
+    {
+        return view ('Consulta_Encargado_ventas');
+    }  
+
+    public function getConsulta_Encargado_compras()
+    {
+        return view ('Consulta_Encargado_compras');
+    }  
+
+    public function getConsulta_Encargado_juridico()
+    {
+        return view ('Consulta_Encargado_juridico');
+    }  
+
+    public function getConsulta_Encargado_Seguridad_industrial()
+    {
+        return view ('Consulta_Encargado_Seguridad_industrial');
+    } 
+
+    public function getConsulta_Encargado_Seguridad_integral()
+    {
+        return view ('Consulta_Encargado_Seguridad_integral');
+    } 
+
+    public function getConsulta_Encargado_operaciones()
+    {
+        return view ('Consulta_Encargado_operaciones');
+    } 
+
+
+    public function getConsulta_Encargado_Tecnologia()
+    {
+        return view ('Consulta_Encargado_Tecnologia');
+    } 
+
+    public function getConsulta_Encargado_Comunicaciones()
+    {
+        return view ('Consulta_Encargado_Comunicaciones');
+    } 
+
+    public function getConsulta_Encargado_Gestion_humana()
+    {
+        return view ('Consulta_Encargado_Gestion_humana');
+    } 
+
+    public function getConsulta_Encargado_Bienes()
+    {
+        return view ('Consulta_Encargado_Bienes');
+    } 
+
     /**
      * Display a listing of the resource.
      *
