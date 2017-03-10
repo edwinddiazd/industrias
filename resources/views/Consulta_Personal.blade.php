@@ -20,14 +20,14 @@
 				    </tr>
   				</thead>
   				<tbody>
-  				@foreach ($personals as $personal)
+  				@foreach ($industrias as $industria)
 					    
 						    <tr>
-					    	<td class="mdl-data-table__cell--non-numeric">{{ $personal->cargo_personal }}</td>
-					    	<td class="mdl-data-table__cell--non-numeric">{{ $personal->nombre_personal}} {{ $personal->apellido_personal }}</td>	
-					    	<td class="mdl-data-table__cell--non-numeric">{{$personal->email_personal}}</td>
-					    	<td class="mdl-data-table__cell--non-numeric">{{$personal->telefono1_personal}}</td>
-					    	<td class="mdl-data-table__cell--non-numeric">{{$personal->telefono2_personal}}</td>						
+					    	<td class="mdl-data-table__cell--non-numeric">{{ $industria->cargo_personal }}</td>
+					    	<td class="mdl-data-table__cell--non-numeric">{{ $industria->nombre_personal}} {{ $industria->apellido_personal }}</td>	
+					    	<td class="mdl-data-table__cell--non-numeric">{{$industria->email_personal}}</td>
+					    	<td class="mdl-data-table__cell--non-numeric">{{$industria->telefono1_personal}}</td>
+					    	<td class="mdl-data-table__cell--non-numeric">{{$industria->telefono2_personal}}</td>						
 				    		</tr>
 				    		
 				@endforeach

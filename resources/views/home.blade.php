@@ -25,7 +25,7 @@
 					</div>
 					<div class="mdl-cell mdl-cell--8-col-offset mdl-cell--4-col" style="margin-left: 15%;">
 					<button class="mdl-button mdl-js-button mdl-button--accent">
-					Registrarse <a href="Registro_Iundustrias" style="text-decoration: none;"></a>
+					Registrarse <a href="Registro_Industrias" style="text-decoration: none;"></a>
 					</button>
 					</div>
 				</div>
