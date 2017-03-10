@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use DB;
+
+use App\Industrias;
+
+use App\Personal;
+
 class PageController extends Controller
 {
     
@@ -27,7 +33,9 @@ class PageController extends Controller
 
     public function getConsultaPersonal ()
     {
-        return view ('Consulta_Personal');
+       
+        $personals = Personal::all();
+        return view ('Consulta_Personal')->withPersonals($personals);
     }
 
     public function getAliados ()
