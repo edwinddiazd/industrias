@@ -53,3 +53,11 @@ Route::resource('Consulta_Encargado_Seguridad_integral','PageController@getConsu
 Route::resource('Consulta_Encargado_Seguridad_industrial','PageController@getConsulta_Encargado_Seguridad_industrial');
 
 Route::resource('Consulta_Encargado_operaciones','PageController@getConsulta_Encargado_operaciones');
+
+Route::resource('Consulta_Encargado_Bienes','PageController@getConsulta_Encargado_Bienes');
+
+Route::resource('Consulta_Encargado_Comunicaciones','PageController@getConsulta_Encargado_Comunicaciones');
+
+Route::resource('Consulta_Encargado_Tecnologia','PageController@getConsulta_Encargado_Tecnologia');
+
+Route::resource('Consulta_Encargado_Gestion_humana','PageController@getConsulta_Encargado_Gestion_humana');

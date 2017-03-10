@@ -101,6 +101,26 @@ class PageController extends Controller
     } 
 
 
+    public function getConsulta_Encargado_Tecnologia()
+    {
+        return view ('Consulta_Encargado_Tecnologia');
+    } 
+
+    public function getConsulta_Encargado_Comunicaciones()
+    {
+        return view ('Consulta_Encargado_Comunicaciones');
+    } 
+
+    public function getConsulta_Encargado_Gestion_humana()
+    {
+        return view ('Consulta_Encargado_Gestion_humana');
+    } 
+
+    public function getConsulta_Encargado_Bienes()
+    {
+        return view ('Consulta_Encargado_Bienes');
+    } 
+
     /**
      * Display a listing of the resource.
      *
