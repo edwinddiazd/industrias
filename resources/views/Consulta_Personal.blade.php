@@ -27,7 +27,8 @@
 					    	<td class="mdl-data-table__cell--non-numeric">{{ $industria->nombre_personal}} {{ $industria->apellido_personal }}</td>	
 					    	<td class="mdl-data-table__cell--non-numeric">{{$industria->email_personal}}</td>
 					    	<td class="mdl-data-table__cell--non-numeric">{{$industria->telefono1_personal}}</td>
-					    	<td class="mdl-data-table__cell--non-numeric">{{$industria->telefono2_personal}}</td>						
+					    	<td class="mdl-data-table__cell--non-numeric">{{$industria->telefono2_personal}}</td>
+					    	<td class="mdl-data-table__cell--non-numeric">{{$industria->industria}}</td>							
 				    		</tr>
 				    		
 				@endforeach

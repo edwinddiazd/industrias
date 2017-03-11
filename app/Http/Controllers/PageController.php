@@ -34,8 +34,8 @@ class PageController extends Controller
     public function getConsultaPersonal ()
     {
        
-        $industrias = DB::table('industrias')->join('personal','industrias.id','=','personal.industrias_id')->select('industrias.industria','personal.nombre_personal','personal.apellido_personal','personal.email_personal','personal.telefono1_personal','personal.telefono2_personal')->get();
-        return view ('Consulta_Personal')->withIndustrias($industras);
+        $industrias = DB::table('industrias')->join('personal','industrias.id','=','personal.industrias_id')->select('industrias.industria','personal.cargo_personal','personal.nombre_personal','personal.apellido_personal','personal.email_personal','personal.telefono1_personal','personal.telefono2_personal')->get();
+        return view ('Consulta_Personal')->withIndustrias($industrias);
     }
 
     public function getAliados ()
