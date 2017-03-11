@@ -28,10 +28,6 @@ Route::get('Exportacion', 'PageController@getExportacion');
 
 Route::get('Alianzas', 'PageController@getAlianzas');
 
-Route::get('Consulta_Personal', 'PageController@getConsultaPersonal');
-
-Route::get('Registro_Industrias', 'PageController@getRegistroIndustrias');
-
 Route::resource('Productos','ProductController');
 
 Route::resource('Industria','IndustriaController');
@@ -40,24 +36,28 @@ Route::resource('Personal','PersonalController');
 
 Route::resource('Consulta','PageController@getConsulta');
 
-Route::resource('Consulta_Presidente','PageController@getConsulta_Presidente');
+Route::get('Consulta_Personal', 'PageController@getConsultaPersonal');
 
-Route::resource('Consulta_Encargado_ventas','PageController@getConsulta_Encargado_ventas');
+Route::get('Registro_Industrias', 'PageController@getRegistroIndustrias');
 
-Route::resource('Consulta_Encargado_compras','PageController@getConsulta_Encargado_compras');
+Route::get('Consulta_Presidente','PageController@getConsultaPresidente');
 
-Route::resource('Consulta_Encargado_juridico','PageController@getConsulta_Encargado_juridico');
+Route::get('Consulta_Ventas','PageController@getConsultaVentas');
 
-Route::resource('Consulta_Encargado_Seguridad_integral','PageController@getConsulta_Encargado_Seguridad_integral');
+Route::get('Consulta_Compras','PageController@getConsultaCompras');
 
-Route::resource('Consulta_Encargado_Seguridad_industrial','PageController@getConsulta_Encargado_Seguridad_industrial');
+Route::get('Consulta_Juridico','PageController@getConsultaJuridico');
 
-Route::resource('Consulta_Encargado_operaciones','PageController@getConsulta_Encargado_operaciones');
+Route::get('Consulta_Seguridad_Integral','PageController@getConsultaSeguridadIntegral');
 
-Route::resource('Consulta_Encargado_Bienes','PageController@getConsulta_Encargado_Bienes');
+Route::get('ConsultaSeguridadIndustrial','PageController@getConsultaSeguridadIndustrial');
 
-Route::resource('Consulta_Encargado_Comunicaciones','PageController@getConsulta_Encargado_Comunicaciones');
+Route::get('Consulta_Operaciones','PageController@getConsultaOperaciones');
 
-Route::resource('Consulta_Encargado_Tecnologia','PageController@getConsulta_Encargado_Tecnologia');
+Route::get('Consulta_Bienes','PageController@getConsultaBienes');
 
-Route::resource('Consulta_Encargado_Gestion_humana','PageController@getConsulta_Encargado_Gestion_humana');
+Route::get('Consulta_Comunicaciones','PageController@getConsultaComunicaciones');
+
+Route::get('Consulta_Tecnologia','PageController@getConsultaTecnologia');
+
+Route::get('Consulta_Gestion_Humana','PageController@getConsultaGestionHumana');

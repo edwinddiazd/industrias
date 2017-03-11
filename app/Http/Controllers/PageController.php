@@ -35,7 +35,7 @@ class PageController extends Controller
     {
        
         $industrias = DB::table('industrias')->join('personal','industrias.id','=','personal.industrias_id')->select('industrias.industria','personal.cargo_personal','personal.nombre_personal','personal.apellido_personal','personal.email_personal','personal.telefono1_personal','personal.telefono2_personal')->get();
-        return view ('Consulta_Personal')->withIndustrias($industrias);
+        return view ('Consultas.Personal')->withIndustrias($industrias);
     }
 
     public function getAliados ()
@@ -73,60 +73,62 @@ class PageController extends Controller
         return view ('Consulta');
     } 
 
-    public function getConsulta_Presidente()
+    public function getConsultaPresidente()
     {
-        return view ('Consulta_Presidente');
+        return view ('Consultas.Presidente');
     }    
 
-    public function getConsulta_Encargado_ventas()
+    public function getConsultaVentas()
     {
-        return view ('Consulta_Encargado_ventas');
+        return view ('Consultas.Ventas');
     }  
 
-    public function getConsulta_Encargado_compras()
+    public function getConsultaCompras()
     {
-        return view ('Consulta_Encargado_compras');
+        return view ('Consultas.Compras');
     }  
 
-    public function getConsulta_Encargado_juridico()
+    public function getConsultaJuridico()
     {
-        return view ('Consulta_Encargado_juridico');
+        $industrias = DB::table('industrias')->join('personal','industrias.id','=','personal.industrias_id')->select('industrias.industria','personal.cargo_personal','personal.nombre_personal','personal.apellido_personal','personal.cedula_personal','personal.email_personal','personal.telefono1_personal','personal.telefono2_personal')->where('personal.cargo_personal','=', 'Encargado Juridico')->get();
+
+        return view ('Consultas.Juridico')->withIndustrias($industrias);
     }  
 
-    public function getConsulta_Encargado_Seguridad_industrial()
+    public function getConsultaSeguridadIndustrial()
     {
-        return view ('Consulta_Encargado_Seguridad_industrial');
+        return view ('Consultas.Seguridad_Industrial');
     } 
 
-    public function getConsulta_Encargado_Seguridad_integral()
+    public function getConsultaSeguridadIntegral()
     {
-        return view ('Consulta_Encargado_Seguridad_integral');
+        return view ('Consultas.Seguridad_Integral');
     } 
 
-    public function getConsulta_Encargado_operaciones()
+    public function getConsultaOperaciones()
     {
-        return view ('Consulta_Encargado_operaciones');
+        return view ('Consultas.Operaciones');
     } 
 
 
-    public function getConsulta_Encargado_Tecnologia()
+    public function getConsultaTecnologia()
     {
-        return view ('Consulta_Encargado_Tecnologia');
+        return view ('Consultas.Tecnologia');
     } 
 
-    public function getConsulta_Encargado_Comunicaciones()
+    public function getConsultaComunicaciones()
     {
-        return view ('Consulta_Encargado_Comunicaciones');
+        return view ('Consultas.Comunicaciones');
     } 
 
-    public function getConsulta_Encargado_Gestion_humana()
+    public function getConsultaGestionHumana()
     {
-        return view ('Consulta_Encargado_Gestion_humana');
+        return view ('Consultas.Gestion_Humana');
     } 
 
-    public function getConsulta_Encargado_Bienes()
+    public function getConsultaBienes()
     {
-        return view ('Consulta_Encargado_Bienes');
+        return view ('Consultas.Bienes');
     } 
 
     /**
