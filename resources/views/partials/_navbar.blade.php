@@ -10,14 +10,22 @@
         <a class="mdl-navigation__link" href="">Proyección</a>
         <a class="mdl-navigation__link" href="">Exportación</a>
         <a class="mdl-navigation__link" href="Consulta_Personal">Personal</a>
-        <a class="mdl-navigation__link" href="">Link</a>
+        <button id="menu" class="mdl-button mdl-js-button mdl-button--icon">
+          <i class="material-icons">content_paste</i>
+            </button>
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu">
+              <li class="mdl-menu__item">Personal</li>
+              <li class="mdl-menu__item">Encargados Juridicos</li>
+              <li class="mdl-menu__item">Disabled Action</li>
+              <li class="mdl-menu__item">Yet Another Action</li>
+            </ul>
       </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">SEIPBES</span>
     <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
+          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Inicio</a>
           <a class="mdl-navigation__link" href="personal"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Personal</a>
           <a class="mdl-navigation__link" href="Producto"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_offer</i>Productos</a>
           <a class="mdl-navigation__link" href="Alianzas"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Alianzas</a>
