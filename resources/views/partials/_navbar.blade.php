@@ -10,15 +10,18 @@
         <a class="mdl-navigation__link" href="">Proyección</a>
         <a class="mdl-navigation__link" href="">Exportación</a>
         <a class="mdl-navigation__link" href="Consulta_Personal">Personal</a>
+        <!-- inicio del menu desplegable -->
         <button id="menu" class="mdl-button mdl-js-button mdl-button--icon">
           <i class="material-icons">content_paste</i>
             </button>
             <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu">
-              <li class="mdl-menu__item">Personal</li>
+              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Consulta_Personal
+              ">Personal</a></li>
               <li class="mdl-menu__item">Encargados Juridicos</li>
               <li class="mdl-menu__item">Disabled Action</li>
               <li class="mdl-menu__item">Yet Another Action</li>
             </ul>
+        <!-- fin del menu desplegable -->
       </nav>
     </div>
   </header>
