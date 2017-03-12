@@ -9,7 +9,7 @@
 	<div class="mdl-cell mdl-cell--10-col mdl-shadow--3dp mdl-color--grey-100">
 		<div class="mdl-grid">
 		<div class="mdl-layout-spacer"></div>
-			<div class="mdl-cell mdl-cell--1-col mdl-cell--10-col">
+			<div class="mdl-cell mdl-cell--10-col">
 			<div><h4>Datos Encargado Ventas</h4></div>
 			<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
   				<thead>
