@@ -10,7 +10,7 @@
 		<div class="mdl-grid">
 		<div class="mdl-layout-spacer"></div>
 			<div class="mdl-cell mdl-cell--1-col mdl-cell--10-col">
-			<div><h4>Datos Personal</h4></div>
+			<div><h4>Datos Encargado Seguridad Integral</h4></div>
 			<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
   				<thead>
 				    <tr>

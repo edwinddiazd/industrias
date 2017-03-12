@@ -48,9 +48,9 @@ Route::get('Consulta_Compras','PageController@getConsultaCompras');
 
 Route::get('Consulta_Juridico','PageController@getConsultaJuridico');
 
-Route::get('Consulta_Seguridad_Integral','PageController@getConsultaSeguridadIntegral');
+Route::get('Consulta_SeguridadIntegral','PageController@getConsultaSeguridadIntegral');
 
-Route::get('ConsultaSeguridadIndustrial','PageController@getConsultaSeguridadIndustrial');
+Route::get('Consulta_SeguridadIndustrial','PageController@getConsultaSeguridadIndustrial');
 
 Route::get('Consulta_Operaciones','PageController@getConsultaOperaciones');
 

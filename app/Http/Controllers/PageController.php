@@ -80,12 +80,16 @@ class PageController extends Controller
 
     public function getConsultaVentas()
     {
+        $industrias = DB::table('industrias')->join('personal','industrias.id','=','personal.industrias_id')->select('industrias.industria','personal.cargo_personal','personal.nombre_personal','personal.apellido_personal','personal.cedula_personal','personal.email_personal','personal.telefono1_personal','personal.telefono2_personal')->where('personal.cargo_personal','=', 'Encargado Compras')->get();
+
         return view ('Consultas.Ventas');
     }  
 
     public function getConsultaCompras()
     {
-        return view ('Consultas.Compras');
+        $industrias = DB::table('industrias')->join('personal','industrias.id','=','personal.industrias_id')->select('industrias.industria','personal.cargo_personal','personal.nombre_personal','personal.apellido_personal','personal.cedula_personal','personal.email_personal','personal.telefono1_personal','personal.telefono2_personal')->where('personal.cargo_personal','=', 'Encargado Compras')->get();
+
+        return view ('Consultas.Compras')->withIndustrias($industrias);
     }  
 
     public function getConsultaJuridico()
@@ -97,23 +101,27 @@ class PageController extends Controller
 
     public function getConsultaSeguridadIndustrial()
     {
-        return view ('Consultas.Seguridad_Industrial');
+        $industrias = DB::table('industrias')->join('personal','industrias.id','=','personal.industrias_id')->select('industrias.industria','personal.cargo_personal','personal.nombre_personal','personal.apellido_personal','personal.cedula_personal','personal.email_personal','personal.telefono1_personal','personal.telefono2_personal')->where('personal.cargo_personal','=', 'Encargado Seguridad Industrial')->get();
+        return view ('Consultas.Seguridad_Industrial')->withIndustrias($industrias);
     } 
 
     public function getConsultaSeguridadIntegral()
     {
-        return view ('Consultas.Seguridad_Integral');
+        $industrias = DB::table('industrias')->join('personal','industrias.id','=','personal.industrias_id')->select('industrias.industria','personal.cargo_personal','personal.nombre_personal','personal.apellido_personal','personal.cedula_personal','personal.email_personal','personal.telefono1_personal','personal.telefono2_personal')->where('personal.cargo_personal','=', 'Encargado Seguridad Integral')->get();
+        return view ('Consultas.Seguridad_Integral')->withIndustrias($industrias);
     } 
 
     public function getConsultaOperaciones()
     {
-        return view ('Consultas.Operaciones');
+        $industrias = DB::table('industrias')->join('personal','industrias.id','=','personal.industrias_id')->select('industrias.industria','personal.cargo_personal','personal.nombre_personal','personal.apellido_personal','personal.cedula_personal','personal.email_personal','personal.telefono1_personal','personal.telefono2_personal')->where('personal.cargo_personal','=', 'Encargado Operaciones')->get();
+        return view ('Consultas.Operaciones')->withIndustrias($industrias);
     } 
 
 
     public function getConsultaTecnologia()
     {
-        return view ('Consultas.Tecnologia');
+        $industrias = DB::table('industrias')->join('personal','industrias.id','=','personal.industrias_id')->select('industrias.industria','personal.cargo_personal','personal.nombre_personal','personal.apellido_personal','personal.cedula_personal','personal.email_personal','personal.telefono1_personal','personal.telefono2_personal')->where('personal.cargo_personal','=', 'Encargado Tecnologia')->get();
+        return view ('Consultas.Tecnologia')->withIndustrias($industrias);
     } 
 
     public function getConsultaComunicaciones()
@@ -128,7 +136,8 @@ class PageController extends Controller
 
     public function getConsultaBienes()
     {
-        return view ('Consultas.Bienes');
+        $industrias = DB::table('industrias')->join('personal','industrias.id','=','personal.industrias_id')->select('industrias.industria','personal.cargo_personal','personal.nombre_personal','personal.apellido_personal','personal.cedula_personal','personal.email_personal','personal.telefono1_personal','personal.telefono2_personal')->where('personal.cargo_personal','=', 'Encargado Bienes')->get();
+        return view ('Consultas.Bienes')->withIndustrias($industrias);
     } 
 
     /**
