@@ -126,12 +126,14 @@ class PageController extends Controller
 
     public function getConsultaComunicaciones()
     {
-        return view ('Consultas.Comunicaciones');
+        $industrias = DB::table('industrias')->join('personal','industrias.id','=','personal.industrias_id')->select('industrias.industria','personal.cargo_personal','personal.nombre_personal','personal.apellido_personal','personal.cedula_personal','personal.email_personal','personal.telefono1_personal','personal.telefono2_personal')->where('personal.cargo_personal','=', 'Encargado Comunicaciones')->get();        
+        return view ('Consultas.Comunicaciones')->withIndustrias($industrias);
     } 
 
     public function getConsultaGestionHumana()
     {
-        return view ('Consultas.Gestion_Humana');
+        $industrias = DB::table('industrias')->join('personal','industrias.id','=','personal.industrias_id')->select('industrias.industria','personal.cargo_personal','personal.nombre_personal','personal.apellido_personal','personal.cedula_personal','personal.email_personal','personal.telefono1_personal','personal.telefono2_personal')->where('personal.cargo_personal','=', 'Encargado Bienes')->get();
+        return view ('Consultas.Gestion_Humana')->withIndustrias($industrias);
     } 
 
     public function getConsultaBienes()
