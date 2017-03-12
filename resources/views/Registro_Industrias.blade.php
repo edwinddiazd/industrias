@@ -1,4 +1,4 @@
-@extends ('main2')
+@extends ('main')
 @section ('content')
 <div class="mdl-grid">
 	<div class="mdl-layout-spacer"></div>
@@ -9,20 +9,20 @@
       		<div class="mdl-layout-spacer"></div>
 		</div>
 		<form method="POST" action="{{route('Industria.store')}}">
-		<div class="mdl-grid">
-			<div class="mdl-cell mdl-cell--4-col">
-				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
-						<input class="mdl-textfield__input" type="text" id="industria" name="industria">
-			    		<label class="mdl-textfield__label" for="industria" name="industria">INDUSTRIA</label>
-					</div>
+			<div class="mdl-grid">
+				<div class="mdl-cell mdl-cell--4-col">
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
+							<input class="mdl-textfield__input" type="text" id="industria" name="industria">
+				    		<label class="mdl-textfield__label" for="industria" name="industria">INDUSTRIA</label>
+						</div>
+				</div>
+				<div class="mdl-cell mdl-cell-1-col-offset mdl-cell--4-col">
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							<textarea class="mdl-textfield__input" type="text" rows="1" id="direccion_industria" name="direccion_industria"></textarea>
+				    		<label class="mdl-textfield__label" for="direccion_industria" name="direccion_industria">DIRECCION</label>
+						</div>
+				</div>
 			</div>
-			<div class="mdl-cell mdl-cell-1-col-offset mdl-cell--4-col">
-					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-						<textarea class="mdl-textfield__input" type="text" rows="1" id="direccion_industria" name="direccion_industria"></textarea>
-			    		<label class="mdl-textfield__label" for="direccion_industria" name="direccion_industria">DIRECCION</label>
-					</div>
-			</div>
-		</div>
 			<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--4-col">
 					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -47,16 +47,14 @@
 						</div>
 				</div>
 			</div>
-				<div class="mdl-grid">
-					<div class="mdl-cell mdl-cell--4-col">
+			<div class="mdl-grid">
+				<div class="mdl-cell mdl-cell--4-col">
 					<input type="submit" value="REGISTRAR" class="mdl-button mdl-js-button mdl-button--primary mdl-snackbar__action">
-					<input type="hidden" name="_token" value="{{ Session::token() }}">
-					</div>
 				</div>
+			</div>
+			<input type="hidden" name="_token" value="{{ Session::token() }}">
 			</form>
 		</div>
 		<div class="mdl-layout-spacer"></div>
-		</div>
-	<div class="mdl-layout-spacer"></div>
 </div>
 @stop

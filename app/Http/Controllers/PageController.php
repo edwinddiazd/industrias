@@ -63,7 +63,7 @@ class PageController extends Controller
         return view ('Alianzas');
     }
 
-    public function getRegistroIndustrias ()
+    public function getRegistro ()
     {
         return view ('Registro_Industrias');
     }

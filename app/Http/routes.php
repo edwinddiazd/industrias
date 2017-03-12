@@ -38,7 +38,7 @@ Route::resource('Consulta','PageController@getConsulta');
 
 Route::get('Consulta_Personal', 'PageController@getConsultaPersonal');
 
-Route::get('Registro_Industrias', 'PageController@getRegistroIndustrias');
+Route::get('Registro', 'PageController@getRegistro');
 
 Route::get('Consulta_Presidente','PageController@getConsultaPresidente');
 
