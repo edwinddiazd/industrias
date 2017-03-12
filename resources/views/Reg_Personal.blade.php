@@ -9,7 +9,8 @@
 				<div class="mdl-cell mdl-cell--3-col">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
 						<select style="border-color: blue;" name="cargo_personal1">
-					    	<option value="Selecciones el cargo">Seleccione el cargo</option>
+					    	<option>Seleccione el cargo</option>
+					    	<option value="Presidente">Presidente</option>
 					    	<option value="Encargado Ventas">Encargado Ventas</option>
 					    	<option value="Encargado Compras">Encargado Compras</option>
 					    	<option value="Encargado Juridico">Encargado Juridico</option>
@@ -75,7 +76,8 @@
 				<div class="mdl-cell mdl-cell--3-col">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
 						<select style="border-color: blue;" name="cargo_personal2">
-					    	<option value="Selecciones el cargo">Seleccione el cargo</option>
+					    	<option>Seleccione el cargo</option>
+					    	<option value="Presidente">Presidente</option>
 					    	<option value="Encargado Ventas">Encargado Ventas</option>
 					    	<option value="Encargado Compras">Encargado Compras</option>
 					    	<option value="Encargado Juridico">Encargado Juridico</option>
@@ -141,7 +143,8 @@
 				<div class="mdl-cell mdl-cell--3-col">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
 						<select style="border-color: blue;" name="cargo_personal3">
-					    	<option value="Selecciones el cargo">Seleccione el cargo</option>
+					    	<option>Seleccione el cargo</option>
+					    	<option value="Presidente">Presidente</option>
 					    	<option value="Encargado Ventas">Encargado Ventas</option>
 					    	<option value="Encargado Compras">Encargado Compras</option>
 					    	<option value="Encargado Juridico">Encargado Juridico</option>
@@ -207,7 +210,8 @@
 				<div class="mdl-cell mdl-cell--3-col">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
 						<select style="border-color: blue;" name="cargo_personal4">
-					    	<option value="Selecciones el cargo">Seleccione el cargo</option>
+					    	<option>Seleccione el cargo</option>
+					    	<option value="Presidente">Presidente</option>
 					    	<option value="Encargado Ventas">Encargado Ventas</option>
 					    	<option value="Encargado Compras">Encargado Compras</option>
 					    	<option value="Encargado Juridico">Encargado Juridico</option>
@@ -273,7 +277,8 @@
 				<div class="mdl-cell mdl-cell--3-col">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
 						<select style="border-color: blue;" name="cargo_personal5">
-					    	<option value="Selecciones el cargo">Seleccione el cargo</option>
+					    	<option>Seleccione el cargo</option>
+					    	<option value="Presidente">Presidente</option>
 					    	<option value="Encargado Ventas">Encargado Ventas</option>
 					    	<option value="Encargado Compras">Encargado Compras</option>
 					    	<option value="Encargado Juridico">Encargado Juridico</option>
@@ -339,7 +344,8 @@
 				<div class="mdl-cell mdl-cell--3-col">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
 						<select style="border-color: blue;" name="cargo_personal6">
-					    	<option value="Selecciones el cargo">Seleccione el cargo</option>
+					    	<option>Seleccione el cargo</option>
+					    	<option value="Presidente">Presidente</option>
 					    	<option value="Encargado Ventas">Encargado Ventas</option>
 					    	<option value="Encargado Compras">Encargado Compras</option>
 					    	<option value="Encargado Juridico">Encargado Juridico</option>
@@ -405,7 +411,8 @@
 				<div class="mdl-cell mdl-cell--3-col">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
 						<select style="border-color: blue;" name="cargo_personal7">
-					    	<option value="Selecciones el cargo">Seleccione el cargo</option>
+					    	<option>Seleccione el cargo</option>
+					    	<option value="Presidente">Presidente</option>
 					    	<option value="Encargado Ventas">Encargado Ventas</option>
 					    	<option value="Encargado Compras">Encargado Compras</option>
 					    	<option value="Encargado Juridico">Encargado Juridico</option>
@@ -471,7 +478,8 @@
 				<div class="mdl-cell mdl-cell--3-col">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
 						<select style="border-color: blue;" name="cargo_personal8">
-					    	<option value="Selecciones el cargo">Seleccione el cargo</option>
+					    	<option>Seleccione el cargo</option>
+					    	<option value="Presidente">Presidente</option>
 					    	<option value="Encargado Ventas">Encargado Ventas</option>
 					    	<option value="Encargado Compras">Encargado Compras</option>
 					    	<option value="Encargado Juridico">Encargado Juridico</option>
@@ -537,7 +545,8 @@
 				<div class="mdl-cell mdl-cell--3-col">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
 						<select style="border-color: blue;" name="cargo_personal9">
-					    	<option value="Selecciones el cargo">Seleccione el cargo</option>
+					    	<option>Seleccione el cargo</option>
+					    	<option value="Presidente">Presidente</option>
 					    	<option value="Encargado Ventas">Encargado Ventas</option>
 					    	<option value="Encargado Compras">Encargado Compras</option>
 					    	<option value="Encargado Juridico">Encargado Juridico</option>
