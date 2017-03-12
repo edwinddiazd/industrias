@@ -82,7 +82,7 @@ class PageController extends Controller
     {
         $industrias = DB::table('industrias')->join('personal','industrias.id','=','personal.industrias_id')->select('industrias.industria','personal.cargo_personal','personal.nombre_personal','personal.apellido_personal','personal.cedula_personal','personal.email_personal','personal.telefono1_personal','personal.telefono2_personal')->where('personal.cargo_personal','=', 'Encargado Compras')->get();
 
-        return view ('Consultas.Ventas');
+        return view ('Consultas.Ventas')->withIndustrias($industrias);
     }  
 
     public function getConsultaCompras()
