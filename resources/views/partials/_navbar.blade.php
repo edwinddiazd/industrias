@@ -7,9 +7,26 @@
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link" href="">Proyección</a>
-        <a class="mdl-navigation__link" href="">Exportación</a>
+        <a class="mdl-navigation__link" href="">Producto</a>
+        <!--<button id="menu" class="mdl-button mdl-js-button mdl-button--icon">
+          <i class="material-icons">timeline</i>
+            </button>
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu">
+              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Proyección</a></li>
+              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Exportacion</a></li>
+            </ul>-->        
+        <a class="mdl-navigation__link" href="">Industria</a>
+       <!--<button id="menu" class="mdl-button mdl-js-button mdl-button--icon">
+          <i class="material-icons">store mall directory</i>
+            </button>
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu">
+              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Aliados</a></li>
+              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Operacion Con Aliados</a></li>
+              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Broker</a></li>
+              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Exportaciones</a></li>
+            </ul>-->
         <a class="mdl-navigation__link" href="Consulta_Personal">Personal</a>
+
         <!-- inicio del menu desplegable -->
         <button id="menu" class="mdl-button mdl-js-button mdl-button--icon">
           <a class="mdl-navigation__link" href="">Consultas</a>
@@ -17,9 +34,17 @@
             <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu">
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Consulta_Personal
               ">Personal</a></li>
-              <li class="mdl-menu__item">Encargados Juridicos</li>
-              <li class="mdl-menu__item">Disabled Action</li>
-              <li class="mdl-menu__item">Yet Another Action</li>
+              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Consulta_Presidente">Presidente</a></li>
+              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Consulta_Bienes">Bienes</a></li>
+              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Consulta_Compras">Compras</a></li>
+              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Consulta_Presidente">Comunicaciones</a></li>
+              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Consulta_Bienes">Gestion Humana</a></li>
+              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Consulta_Compras">Jurídico</a></li>
+              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Consulta_Presidente">Operaciones</a></li>
+              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Consulta_Bienes">Seguridad Industrial</a></li>
+              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Consulta_Compras">Seguridad Integral</a></li>
+              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Consulta_Bienes">Tecnología</a></li>
+              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Consulta_Compras">Ventas</a></li>
             </ul>
         <!-- fin del menu desplegable -->
               @if (Auth::guest())
