@@ -14,6 +14,22 @@
 
 Route::get('/', 'PageController@getIndex');
 
+//autenticacion
+
+Route::get('auth/login','Auth\AuthController@getLogin');
+
+Route::post('auth/login','Auth\AuthController@postLogin');
+
+Route::get('auth/logout','Auth\AuthController@getLogout');
+
+//registro
+
+Route::get('auth/register','Auth\AuthController@getRegister');
+
+Route::post('auth/register','Auth\AuthController@postRegister');
+
+//vistas infinitas
+
 Route::get('Reg_Personal', 'PageController@getReg_Personal');
 
 Route::get('Producto', 'PageController@getProducto');
@@ -61,3 +77,6 @@ Route::get('Consulta_Comunicaciones','PageController@getConsultaComunicaciones')
 Route::get('Consulta_Tecnologia','PageController@getConsultaTecnologia');
 
 Route::get('Consulta_Gestion_Humana','PageController@getConsultaGestionHumana');
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

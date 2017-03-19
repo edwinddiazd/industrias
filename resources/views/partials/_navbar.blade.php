@@ -12,7 +12,7 @@
         <a class="mdl-navigation__link" href="Consulta_Personal">Personal</a>
         <!-- inicio del menu desplegable -->
         <button id="menu" class="mdl-button mdl-js-button mdl-button--icon">
-          <i class="material-icons">content_paste</i>
+          <a class="mdl-navigation__link" href="">Consultas</a>
             </button>
             <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu">
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Consulta_Personal
@@ -22,6 +22,19 @@
               <li class="mdl-menu__item">Yet Another Action</li>
             </ul>
         <!-- fin del menu desplegable -->
+              @if (Auth::guest())
+              <a class="mdl-navigation__link" href="{{ url('/login') }}">Ingresa</a>
+              <a class="mdl-navigation__link" href="{{ url('/register') }}">Reg&iacute;strate</a>
+              @else
+                  <button id="menu" class="mdl-button mdl-js-button mdl-button--icon">
+                    <a class="mdl-navigation__link" href="">{{ Auth::user()->name }} <i class="material-icons">keyboard_arrow_down</i></a>
+                  </button>
+                  <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu">
+                        <li class="mdl-menu__item">
+                             <li><a class="mdl-navigation__link" href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                        </li>
+              @endif           
+          <a class="mdl-navigation__link" href=""></a>
       </nav>
     </div>
   </header>
