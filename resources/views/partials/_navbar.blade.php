@@ -6,24 +6,33 @@
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
-      <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link" href="">Producto</a>
-        <!--<button id="menu" class="mdl-button mdl-js-button mdl-button--icon">
+      <nav class="mdl-navigation mdl-layout--large-screen-only">     
+        <a class="mdl-navigation__link" href="" >Producto</a>
+        <button id="menu2" class="mdl-button mdl-js-button mdl-button--icon">
           <i class="material-icons">timeline</i>
             </button>
-            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu">
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu2">
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Proyección</a></li>
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Exportacion</a></li>
-            </ul>-->        
+            </ul>
+        
         <a class="mdl-navigation__link" href="">Industria</a>
-       <!--<button id="menu" class="mdl-button mdl-js-button mdl-button--icon">
+       <button id="menu1" class="mdl-button mdl-js-button mdl-button--icon">
           <i class="material-icons">store mall directory</i>
             </button>
-            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu">
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu1">
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Aliados</a></li>
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Operacion Con Aliados</a></li>
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Broker</a></li>
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Exportaciones</a></li>
+<<<<<<< HEAD
+            </ul>
+<!-- inicio del menu desplegable -->
+        <a class="mdl-navigation__link" href="" >Personal</a>
+        <button id="menu" class="mdl-button mdl-js-button mdl-button--icon">
+          <i class="material-icons">person</i>
+            </button>
+=======
             </ul>-->
         <a class="mdl-navigation__link" href="Consulta_Personal">Personal</a>
 
@@ -31,6 +40,7 @@
         
           <button id="menu" class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons">more_vert</i></button>
           
+>>>>>>> 8e5b72def5022ee1bce581f5fdf6db25b064c7f1
             <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu">
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Consulta_Personal
               ">Personal</a></li>
@@ -47,6 +57,7 @@
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Consulta_Compras">Ventas</a></li>
             </ul>
         <!-- fin del menu desplegable -->
+        
               @if (Auth::guest())
               <a class="mdl-navigation__link" href="{{ url('/login') }}">Ingresa</a>
               <a class="mdl-navigation__link" href="{{ url('/register') }}">Reg&iacute;strate</a>
