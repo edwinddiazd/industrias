@@ -28,9 +28,9 @@
         <a class="mdl-navigation__link" href="Consulta_Personal">Personal</a>
 
         <!-- inicio del menu desplegable -->
-        <button id="menu" class="mdl-button mdl-js-button mdl-button--icon">
-          <a class="mdl-navigation__link" href="">Consultas</a>
-            </button>
+        
+          <button id="menu" class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons">more_vert</i></button>
+          
             <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu">
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Consulta_Personal
               ">Personal</a></li>
