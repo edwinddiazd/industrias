@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 
+use App\models\Permission;
+
 class PermissionTableSeeder extends Seeder
 {
     /**
@@ -94,9 +96,6 @@ class PermissionTableSeeder extends Seeder
         	]
         ];
 
-        foreach ($permission as $key => $value) {
-        	Permission::create($value);
-        }
-    }
-    }
+        foreach ($permission as $key => $value) {Permission::create($value);}
+	}
 }

@@ -25,22 +25,13 @@
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Operacion Con Aliados</a></li>
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Broker</a></li>
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Exportaciones</a></li>
-<<<<<<< HEAD
             </ul>
 <!-- inicio del menu desplegable -->
         <a class="mdl-navigation__link" href="" >Personal</a>
         <button id="menu" class="mdl-button mdl-js-button mdl-button--icon">
           <i class="material-icons">person</i>
             </button>
-=======
-            </ul>-->
-        <a class="mdl-navigation__link" href="Consulta_Personal">Personal</a>
-
         <!-- inicio del menu desplegable -->
-        
-          <button id="menu" class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons">more_vert</i></button>
-          
->>>>>>> 8e5b72def5022ee1bce581f5fdf6db25b064c7f1
             <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu">
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Consulta_Personal
               ">Personal</a></li>
