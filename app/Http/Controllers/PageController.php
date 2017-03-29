@@ -25,6 +25,10 @@ class PageController extends Controller
         return view ('Reg_Personal');
     }
 
+    public function getDashboard ()
+    {
+        return view ('Dashboard');
+    }
 
     public function getProducto ()
     {

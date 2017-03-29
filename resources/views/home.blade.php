@@ -1,5 +1,4 @@
 @extends('main')
-
 @section('content')
 <div class="mdl-grid">
     <div class="mdl-layout-spacer"></div>
@@ -12,7 +11,7 @@
             <div class="mdl-grid">
                 <div class="mdl-layout-spacer"></div>
                 <div class="mdl-cell mdl-cell--4-col">
-                    <a href="{{ url('/login') }}" style="text-decoration: none;"><button class="mdl-button mdl-js-button mdl-button--primary">Ingresar</button></a>
+                <a href="{{ url('/login') }}" style="text-decoration: none;"><button class="mdl-button mdl-js-button mdl-button--primary">Ingresar</button></a>
                 </div>
                 <div class="mdl-cell mdl-cell--4-col">                
                 <a href="{{ url('/register') }}" style="text-decoration: none;"><button class="mdl-button mdl-js-button mdl-button--accent">Registrarse</button></a>
@@ -21,6 +20,5 @@
             </div>
     </div>
     <div class="mdl-layout-spacer"></div>
-</div>
-    
+</div>  
 @endsection

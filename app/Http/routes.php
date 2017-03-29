@@ -37,6 +37,8 @@ Route::post('auth/register','Auth\AuthController@postRegister');
 
 Route::get('Reg_Personal', 'PageController@getReg_Personal');
 
+Route::get('Dashboard', 'PageController@getDashboard');
+
 Route::get('Producto', 'PageController@getProducto');
 
 Route::get('Aliados', 'PageController@getAliados');
