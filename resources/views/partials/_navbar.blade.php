@@ -6,7 +6,9 @@
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
-      <nav class="mdl-navigation mdl-layout--large-screen-only">     
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+
+      @if(Entrust::hasRole('Dios'))     
         <a class="mdl-navigation__link" href="" >Producto</a>
         <button id="menu2" class="mdl-button mdl-js-button mdl-button--icon">
           <i class="material-icons">timeline</i>
@@ -48,20 +50,16 @@
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Consulta_Compras">Ventas</a></li>
             </ul>
         <!-- fin del menu desplegable -->
-        
-              @if (Auth::guest())
+              <a class="mdl-navigation__link" href="">{{ Auth::user()->name }}</a>
+              <button id="logout" class="mdl-button mdl-js-button mdl-button--icon">
+              <i class="material-icons">keyboard_arrow_down</i></button>
+              <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="logout">
+                  <li class="mdl-menu__item">
+                  <a class="mdl-button--primary" style="text-decoration: none;" href="{{ url('/logout') }}">Cerrar Sesi&oacute;n</a><i class="fa fa-btn fa-sign-out"></i></li>
+              @else
               <a class="mdl-navigation__link" href="{{ url('/login') }}">Ingresa</a>
               <a class="mdl-navigation__link" href="{{ url('/register') }}">Reg&iacute;strate</a>
-              @else
-                  <button id="menu" class="mdl-button mdl-js-button mdl-button--icon">
-                    <a class="mdl-navigation__link" href="">{{ Auth::user()->name }} <i class="material-icons">keyboard_arrow_down</i></a>
-                  </button>
-                  <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu">
-                        <li class="mdl-menu__item">
-                             <li><a class="mdl-navigation__link" href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                        </li>
               @endif           
-          <a class="mdl-navigation__link" href=""></a>
       </nav>
     </div>
   </header>

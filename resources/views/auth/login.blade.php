@@ -15,13 +15,13 @@
                         {{ csrf_field() }}
 
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="margin-left: 40px;">
-                            <input class="mdl-textfield__input" type="text" id="user_input" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
-                            <label class="mdl-textfield__label" for="user_input">Usuario</label>
+                            <input class="mdl-textfield__input" type="text" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                            <label class="mdl-textfield__label" for="email" name="email">Usuario</label>
                             <span class="mdl-textfield__error">Debes ingresar tu correo</span>
                         </div>
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="margin-left: 40px;">
-                            <input class="mdl-textfield__input" type="password" id="pwd_input" pattern=".{6,}">
-                            <label class="mdl-textfield__label" for="pwd_input">Password</label>
+                            <input class="mdl-textfield__input" type="password" id="password" name="password" pattern=".{6,}">
+                            <label class="mdl-textfield__label" for="password" name="password">Password</label>
                             <span class="mdl-textfield__error">El password debe tener al menos 6 caracteres</span>
                         </div>
                         <div class="mdl-grid">
