@@ -61,8 +61,9 @@
               <a class="mdl-navigation__link" href="{{ url('/register') }}">Reg&iacute;strate</a>
               @endif           
       </nav>
-    </div>
+  </div>
   </header>
+  @if (Auth::check())
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">{{ Auth::check() ? Auth::user()->name : "SEIPBES"}}</span>
     <nav class="mdl-navigation">
@@ -79,3 +80,6 @@
           <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
         </nav>
   </div>
+  @else
+
+  @endif
