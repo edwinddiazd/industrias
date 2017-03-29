@@ -64,7 +64,7 @@ class PersonalController extends Controller
             'email_personal2'=>'required|email',
             'direccion_personal2'=>'required',
             'telefono1_personal2'=>'required',
-            'telefono2_personal2'=>'required'
+            'telefono2_personal2'=>'required',
             'nombre_personal3'=>'required|max:100',
             'apellido_personal3'=>'required|max:100',
             'cedula_personal3'=>'required|max:10',
@@ -88,7 +88,7 @@ class PersonalController extends Controller
             'email_personal5'=>'required|email',
             'direccion_personal5'=>'required',
             'telefono1_personal5'=>'required',
-            'telefono2_personal5'=>'required'
+            'telefono2_personal5'=>'required',
             'nombre_personal6'=>'required|max:100',
             'apellido_personal6'=>'required|max:100',
             'cedula_personal6'=>'required|max:10',
@@ -128,7 +128,7 @@ class PersonalController extends Controller
             'email_personal10'=>'required|email',
             'direccion_personal10'=>'required',
             'telefono1_personal10'=>'required',
-            'telefono2_personal10'=>'required'
+            'telefono2_personal10'=>'required',
             'nombre_personal11'=>'required|max:100',
             'apellido_personal11'=>'required|max:100',
             'cedula_personal11'=>'required|max:10',

@@ -15,6 +15,11 @@
 Route::get('/', 'PageController@getIndex');
 
 //autenticacion
+Route::group(['prefix' => 'dios'], function () {
+        Route::controller('roles', 'RolesController');
+        Route::controller('permissions', 'PermissionsController');
+        Route::controller('users', 'UsersController');
+    });
 
 Route::get('auth/login','Auth\AuthController@getLogin');
 
@@ -77,6 +82,7 @@ Route::get('Consulta_Comunicaciones','PageController@getConsultaComunicaciones')
 Route::get('Consulta_Tecnologia','PageController@getConsultaTecnologia');
 
 Route::get('Consulta_Gestion_Humana','PageController@getConsultaGestionHumana');
+
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
