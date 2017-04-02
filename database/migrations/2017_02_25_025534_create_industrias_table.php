@@ -19,6 +19,7 @@ class CreateIndustriasTable extends Migration
             $table->string('telefono1_industria');
             $table->string('telefono2_industria');
             $table->longtext('direccion_industria');
+            $table->string('tipo_industria');
             $table->timestamps();
         });
     }
