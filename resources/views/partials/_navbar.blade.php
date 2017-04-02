@@ -49,7 +49,11 @@
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Consulta_Bienes">Tecnología</a></li>
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Consulta_Compras">Ventas</a></li>
             </ul>
+            @else
         <!-- fin del menu desplegable -->
+            @endif
+
+            @if (Auth::check())
               <a class="mdl-navigation__link" href="">{{ Auth::user()->name }}</a>
               <button id="logout" class="mdl-button mdl-js-button mdl-button--icon">
               <i class="material-icons">keyboard_arrow_down</i></button>
@@ -67,7 +71,7 @@
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">{{ Auth::check() ? Auth::user()->name : "SEIPBES"}}</span>
     <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Inicio</a>
+          <a class="mdl-navigation__link" href="Dashboard"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">dashboard</i>Dashboard</a>
           <a class="mdl-navigation__link" href="personal"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">people</i>Personal</a>
           <a class="mdl-navigation__link" href="Producto"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">local_offer</i>Productos</a>
           <a class="mdl-navigation__link" href="Alianzas"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Alianzas</a>
