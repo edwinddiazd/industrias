@@ -59,31 +59,31 @@ Route::resource('Personal','PersonalController');
 
 Route::resource('Consulta','PageController@getConsulta');
 
-Route::get('Consulta_Personal', 'PageController@getConsultaPersonal');
+Route::get('Personal', 'PageController@getConsultaPersonal');
 
 Route::get('Registro', 'PageController@getRegistro');
 
-Route::get('Consulta_Presidente','PageController@getConsultaPresidente');
+Route::get('Presidente','PageController@getConsultaPresidente');
 
-Route::get('Consulta_Ventas','PageController@getConsultaVentas');
+Route::get('Ventas','PageController@getConsultaVentas');
 
-Route::get('Consulta_Compras','PageController@getConsultaCompras');
+Route::get('Compras','PageController@getConsultaCompras');
 
-Route::get('Consulta_Juridico','PageController@getConsultaJuridico');
+Route::get('Juridico','PageController@getConsultaJuridico');
 
-Route::get('Consulta_SeguridadIntegral','PageController@getConsultaSeguridadIntegral');
+Route::get('Seguridad_Integral','PageController@getConsultaSeguridadIntegral');
 
-Route::get('Consulta_SeguridadIndustrial','PageController@getConsultaSeguridadIndustrial');
+Route::get('Seguridad_Industrial','PageController@getConsultaSeguridadIndustrial');
 
-Route::get('Consulta_Operaciones','PageController@getConsultaOperaciones');
+Route::get('Operaciones','PageController@getConsultaOperaciones');
 
-Route::get('Consulta_Bienes','PageController@getConsultaBienes');
+Route::get('Bienes','PageController@getConsultaBienes');
 
-Route::get('Consulta_Comunicaciones','PageController@getConsultaComunicaciones');
+Route::get('Comunicaciones','PageController@getConsultaComunicaciones');
 
-Route::get('Consulta_Tecnologia','PageController@getConsultaTecnologia');
+Route::get('Tecnologia','PageController@getConsultaTecnologia');
 
-Route::get('Consulta_Gestion_Humana','PageController@getConsultaGestionHumana');
+Route::get('Gestion_Humana','PageController@getConsultaGestionHumana');
 
 Route::auth();
 

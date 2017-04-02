@@ -79,7 +79,8 @@ class PageController extends Controller
 
     public function getConsultaPresidente()
     {
-        return view ('Consultas.Presidente');
+        $industrias = DB::table('industrias')->join('personal','industrias.id','=','personal.industrias_id')->select('industrias.industria','personal.cargo_personal','personal.nombre_personal','personal.apellido_personal','personal.cedula_personal','personal.email_personal','personal.telefono1_personal','personal.telefono2_personal')->where('personal.cargo_personal','=', 'Presidente')->get();
+        return view ('Consultas.Presidente')->withIndustrias($industrias);
     }    
 
     public function getConsultaVentas()
