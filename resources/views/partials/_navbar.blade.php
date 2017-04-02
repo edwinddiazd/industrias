@@ -49,7 +49,11 @@
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Consulta_Bienes">Tecnología</a></li>
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Consulta_Compras">Ventas</a></li>
             </ul>
+            @else
         <!-- fin del menu desplegable -->
+            @endif
+
+            @if (Auth::check())
               <a class="mdl-navigation__link" href="">{{ Auth::user()->name }}</a>
               <button id="logout" class="mdl-button mdl-js-button mdl-button--icon">
               <i class="material-icons">keyboard_arrow_down</i></button>

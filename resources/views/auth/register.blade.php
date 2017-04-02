@@ -1,82 +1,49 @@
-@extends('layouts.app')
+@extends('main')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
-                <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
+
+<div class="mdl-grid">
+    <div class="mdl-layout-spacer"></div>
+    <div class="mdl-cell mdl-cell--4-col-offset mdl-cell--5-col mdl-shadow--3dp mdl-color--grey-100" style="margin-top: 10%;">
+        <div class="mdl-layout-spacer "></div>
+        <div class="mdl-color--indigo-A700" style="padding-top: 10px;padding-bottom: 10px;padding-left: 10px;">
+            <span class="mdl-layout-title mdl-color-text--white">Reg&iacute;strate</span>
+            <div class="mdl-layout-spacer"></div>
+        </div>
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--2-col-offset mdl-cell--8-col">
+                    <form role="form" method="POST" action="{{ url('/register') }}">
                         {{ csrf_field() }}
 
-                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">Name</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}">
-
-                                @if ($errors->has('name'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="margin-left: 40px;">
+                            <input class="mdl-textfield__input" type="text" id="name" name="name" value="{{ old('name') }}">
+                            <label class="mdl-textfield__label" for="name">Nombre y Apellido</label>
+                            <span class="mdl-textfield__error">Inserte un nombre y apellido v&aacute;lidos</span>
                         </div>
-
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}">
-
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="margin-left: 40px;">
+                            <input class="mdl-textfield__input" type="text" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                            <label class="mdl-textfield__label" for="email" name="email">E-mail (este sera su usuario)</label>
+                            <span class="mdl-textfield__error">Debes ingresar tu correo</span>
                         </div>
-
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password">
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="margin-left: 40px;">
+                            <input class="mdl-textfield__input" type="password" id="password" name="password" pattern=".{6,}">
+                            <label class="mdl-textfield__label" for="password" name="password">Password</label>
+                            <span class="mdl-textfield__error">El password debe tener al menos 6 caracteres</span>
                         </div>
-
-                        <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation">
-
-                                @if ($errors->has('password_confirmation'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password_confirmation') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="margin-left: 40px;">
+                            <input id="password-confirm" type="password" class="mdl-textfield__input" name="password_confirmation" pattern=".{6,}">
+                            <label class="mdl-textfield__label" for="password" name="password">Password</label>
+                            <span class="mdl-textfield__error">El password no coincide</span>
                         </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-btn fa-user"></i> Register
-                                </button>
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--4-col">
+                                <button type="submit" class="mdl-button mdl-js-button mdl-button--primary">Registrar</button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
+    <div class="mdl-layout-spacer"></div>
     </div>
-</div>
 @endsection
