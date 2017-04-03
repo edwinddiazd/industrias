@@ -16,6 +16,14 @@
                         {{ csrf_field() }}
 
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="margin-left: 40px;">
+                            <select style="border-color: blue;" name="cargo_personal1">
+                            <option>Seleccione la empresa a la que pertenece</option>
+                            @foreach ($industrias as $industria)
+                            <option value="{{ $industria->id }}">{{ $industria->industria }}</option>
+                            @endforeach
+                            </select>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="margin-left: 40px;">
                             <input class="mdl-textfield__input" type="text" id="name" name="name" value="{{ old('name') }}">
                             <label class="mdl-textfield__label" for="name">Nombre y Apellido</label>
                             <span class="mdl-textfield__error">Inserte un nombre y apellido v&aacute;lidos</span>

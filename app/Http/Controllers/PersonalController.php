@@ -12,11 +12,6 @@ use App\Industrias;
 
 use Session;
 
-
-
-
-
-
 class PersonalController extends Controller
 {
     /**
@@ -47,6 +42,7 @@ class PersonalController extends Controller
      */
     public function store(Request $request)
     {
+        $industrias = Auth::user()->industrias_id;
 
         $this->validate($request,array(
             'nombre_personal1'=>'required|max:100',
@@ -140,7 +136,7 @@ class PersonalController extends Controller
             ));
 
         $personal1= new Personal;
-        $personal1->industrias_id = $request->industrias_id;
+        $personal1->industrias_id = $industrias->industrias_id;
         $personal1->nombre_personal = $request->nombre_personal1;
         $personal1->apellido_personal = $request->apellido_personal1;
         $personal1->cedula_personal = $request->cedula_personal1;
@@ -151,7 +147,7 @@ class PersonalController extends Controller
         $personal1->save();
 
         $personal2= new Personal;
-        $personal2->industrias_id = $request->industrias_id;
+        $personal2->industrias_id = $industrias->industrias_id;
         $personal2->nombre_personal = $request->nombre_personal2;
         $personal2->apellido_personal = $request->apellido_personal2;
         $personal2->cedula_personal = $request->cedula_personal2;
@@ -162,7 +158,7 @@ class PersonalController extends Controller
         $personal2->save();
 
         $personal3= new Personal;
-        $personal3->industrias_id = $request->industrias_id;
+        $personal3->industrias_id = $industrias->industrias_id;
         $personal3->nombre_personal = $request->nombre_personal3;
         $personal3->apellido_personal = $request->apellido_personal3;
         $personal3->cedula_personal = $request->cedula_personal3;
@@ -173,7 +169,7 @@ class PersonalController extends Controller
         $personal3->save();
 
         $personal4= new Personal;
-        $personal4->industrias_id = $request->industrias_id;
+        $personal4->industrias_id = $industrias->industrias_id;
         $personal4->nombre_personal = $request->nombre_personal4;
         $personal4->apellido_personal = $request->apellido_personal4;
         $personal4->cedula_personal = $request->cedula_personal4;
@@ -184,7 +180,7 @@ class PersonalController extends Controller
         $personal4->save();
 
         $personal5= new Personal;
-        $personal5->industrias_id = $request->industrias_id;
+        $personal5->industrias_id = $industrias->industrias_id;
         $personal5->nombre_personal = $request->nombre_personal5;
         $personal5->apellido_personal = $request->apellido_personal5;
         $personal5->cedula_personal = $request->cedula_personal5;
@@ -195,7 +191,7 @@ class PersonalController extends Controller
         $personal5->save();
 
         $personal6= new Personal;
-        $personal6->industrias_id = $request->industrias_id;
+        $personal6->industrias_id = $industrias->industrias_id;
         $personal6->nombre_personal = $request->nombre_personal6;
         $personal6->apellido_personal = $request->apellido_personal6;
         $personal6->cedula_personal = $request->cedula_personal6;
@@ -206,7 +202,7 @@ class PersonalController extends Controller
         $personal6->save();
 
         $personal7= new Personal;
-        $personal7->industrias_id = $request->industrias_id;
+        $personal7->industrias_id = $industrias->industrias_id;
         $personal7->nombre_personal = $request->nombre_personal7;
         $personal7->apellido_personal = $request->apellido_personal7;
         $personal7->cedula_personal = $request->cedula_personal7;
@@ -217,7 +213,7 @@ class PersonalController extends Controller
         $personal7->save();
 
         $personal8= new Personal;
-        $personal8->industrias_id = $request->industrias_id;
+        $personal8->industrias_id = $industrias->industrias_id;
         $personal8->nombre_personal = $request->nombre_personal8;
         $personal8->apellido_personal = $request->apellido_personal8;
         $personal8->cedula_personal = $request->cedula_personal8;
@@ -228,7 +224,7 @@ class PersonalController extends Controller
         $personal8->save();
 
         $personal9= new Personal;
-        $personal9->industrias_id = $request->industrias_id;
+        $personal9->industrias_id = $industrias->industrias_id;
         $personal9->nombre_personal = $request->nombre_personal9;
         $personal9->apellido_personal = $request->apellido_personal9;
         $personal9->cedula_personal = $request->cedula_personal9;
@@ -239,7 +235,7 @@ class PersonalController extends Controller
         $personal9->save();
 
         $personal10= new Personal;
-        $personal10->industrias_id = $request->industrias_id;
+        $personal10->industrias_id = $industrias->industrias_id;
         $personal10->nombre_personal = $request->nombre_personal10;
         $personal10->apellido_personal = $request->apellido_personal10;
         $personal10->cedula_personal = $request->cedula_personal10;
@@ -250,7 +246,7 @@ class PersonalController extends Controller
         $personal10->save();
 
         $personal11= new Personal;
-        $personal11->industrias_id = $request->industrias_id;
+        $personal11->industrias_id = $industrias->industrias_id;
         $personal11->nombre_personal = $request->nombre_personal11;
         $personal11->apellido_personal = $request->apellido_personal11;
         $personal11->cedula_personal = $request->cedula_personal11;
