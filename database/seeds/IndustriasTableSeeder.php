@@ -32,6 +32,16 @@ class IndustriasTableSeeder extends Seeder
         		'direccion_industria' => 'direccion',
         		'tipo_industria' => 'Automotriz',
         	]);
+
+        $fake3 = Industrias::create([
+                'industria' => 'Empresas role registro',
+                'rif_industria' => 'obviamente el rif',
+                'telefono1_industria' => 'telefono',
+                'telefono2_industria' => 'telefono',
+                'direccion_industria' => 'direccion',
+                'tipo_industria' => 'Automotriz',
+            ]);
+
         $chery = Industrias::create([
         		'industria' => 'Chery de Venezuela, C.A.',
         		'rif_industria' => 'obviamente el rif',

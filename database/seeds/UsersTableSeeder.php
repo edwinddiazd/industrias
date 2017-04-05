@@ -27,11 +27,13 @@ class UsersTableSeeder extends Seeder
         'name' => 'Madeleind Reyes',
         'email' => 'madeleind.reyes@gmail.com',
         'password' => bcrypt('qwerty'),
+        'industrias_id'=>'1'
             ]);
   $edwin = User::create([
         'name' => 'Edwin Diaz',
         'email' => 'edwinddiazd@gmail.com',
         'password' => bcrypt('qwerty'),
+        'industrias_id'=>'3'        
             ]);
 //creamos el role de admin
    $dios = Role::create([
