@@ -12,4 +12,9 @@ class Industrias extends Model
         
         return $this->hasMany('App\Personal');
     }
+
+    public function MateriasPrimas ()
+    {
+    	return $this->belongsToMany('App\MateriasPrimas');
+    }
 }
