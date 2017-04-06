@@ -35,6 +35,11 @@ class PageController extends Controller
         return view ('Producto');
     }
 
+    public function getReg_Materias ()
+    {
+        return view ('Reg_Materias');
+    }
+
     public function getConsultaPersonal ()
     {
        

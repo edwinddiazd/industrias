@@ -1,16 +1,12 @@
 @if(Session::has('success'))
-  <div class="mdl-js-snackbar mdl-snackbar">
-    <div class="mdl-snackbar__text"></div>
+  <div class="mdl-grid">
+  <div class="mdl-layout-spacer"></div>
+    <div class="mdl-cell mdl-cell--5-col">
+      <p>{{ Session::get('success') }}</p>
+    </div>
+  <div class="mdl-layout-spacer"></div>
   </div>
-  <script>
-    var notification = document.querySelector('.mdl-js-snackbar');
-    notification.MaterialSnackbar.showSnackbar(
-      {
-        message: '{{ Session::get('success') }}'
-      }
-    );
-  </script>
-  @endif
+@endif
 
   @if(count($errors) > 0)
     <div>

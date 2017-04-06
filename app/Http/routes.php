@@ -37,7 +37,9 @@ Route::post('auth/register','Auth\AuthController@postRegister');
 
 Route::get('Reg_Personal', 'PageController@getReg_Personal');
 
-Route::get('Dashboard', 'PageController@getDashboard');
+Route::get('Reg_Materias', ['middleware' => ['auth'], 'uses' => 'PageController@getReg_Materias']);
+
+Route::get('Dashboard', ['middleware' => ['auth'], 'uses' => 'PageController@getDashboard']);
 
 Route::get('Producto', 'PageController@getProducto');
 
@@ -57,7 +59,7 @@ Route::resource('Industria','IndustriaController');
 
 Route::resource('Personal','PersonalController');
 
-Route::resource('Consulta','PageController@getConsulta');
+Route::resource('Materias','MateriasController');
 
 Route::get('Personal', 'PageController@getConsultaPersonal');
 

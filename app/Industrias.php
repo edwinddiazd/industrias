@@ -15,6 +15,6 @@ class Industrias extends Model
 
     public function MateriasPrimas ()
     {
-    	return $this->belongsToMany('App\MateriasPrimas');
+    	return $this->belongsToMany('App\Materias');
     }
 }

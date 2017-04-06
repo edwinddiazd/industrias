@@ -4,11 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class MateriasPrimas extends Model
+class Materias extends Model
 {
+    protected $table='materias';
     public function Industrias()
     {
-    	protected $table='materias_primas';
+    	
     	return $this->belongsToMany('App\Industrias');
     }
 }
