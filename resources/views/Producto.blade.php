@@ -4,18 +4,17 @@
 <h5>Registro de Productos</h5>
 
 <div class="mdl-grid">
-	<form action="#">
+	<form method="POST" action="{{route('Productos.store')}}">
 		 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 		    <select style="border-color: blue;">
-		    	<option>Seleccione Tipo de Producción</option>
-		    	<option>Semi - Terminado</option>
-		    	<option>Terminado</option>
-		    	<option>Sub Producto</option>
+		    	<option >Seleccione Tipo de Producción</option>
+		    	<option value="1">Semi - Terminado</option>
+		    	<option value="2">Terminado</option>
+		    	<option value="3">Sub Producto</option>
 		    </select>
 		</div>
 	</form>
 </div>
-
 <div class="mdl-grid" >
 	<div class="mdl-cell mdl-cell--4-col">
 		<form action="#">

@@ -17,10 +17,7 @@ class CreateProductosTable extends Migration
             $table->string('producto');
             $table->string('tipo_producto');
             $table->string('unidad_producto');
-            $table->string('criticidad_producto');
             $table->longtext('descripcion_producto');
-            $table->string('capacidad_instalada');
-            $table->string('capacidad_operativa');
             $table->timestamps();
         });
     }

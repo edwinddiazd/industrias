@@ -50,7 +50,7 @@ class MateriasController extends Controller
             'unidad' => 'required',
         ));
 
-        $materias = new Materias;
+        $materias = new Materias; 
         $materias->nombre = $request->nombre;
         $materias->descripcion = $request->descripcion;
         $materias->unidad = $request->unidad;

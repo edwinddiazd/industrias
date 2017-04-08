@@ -6,15 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use App\Producto;
-
-use App\Industrias;
-
-use Session;
-
-use Illuminate\Support\Facades\Auth;
-
-class ProductController extends Controller
+class CapacidadController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -44,28 +36,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,array(
-            'producto'=>'required',
-            'tipo_producto'=>'required',
-            'unidad_producto' => 'required',
-            'descripcion_producto' => 'required|max:400',
-        ));
-
-        $productos = new Productos; 
-        $productos->producto = $request->producto;
-        $productos->tipo_producto = $request->tipo_producto;
-        $productos->descripcion_producto = $request->descripcion_producto;
-        $productos->unidad_producto = $request->unidad_producto;
-        $productos->save();
-
-        $idusuario = Auth::user();
-        $idindustrias = Industrias::find($idusuario->industrias_id);
-        $idindustrias->Prod_Indus()->attach($productos);
-
-
-        Session::flash('success','Datos guardados satisfactoriamente');
-
-        return redirect('Dashboard');
+        //
     }
 
     /**
@@ -76,7 +47,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-         //
+        //
     }
 
     /**

@@ -41,7 +41,7 @@ Route::get('Reg_Materias', ['middleware' => ['auth'], 'uses' => 'PageController@
 
 Route::get('Dashboard', ['middleware' => ['auth'], 'uses' => 'PageController@getDashboard']);
 
-Route::get('Producto', 'PageController@getProducto');
+Route::get('Producto', ['middleware' => ['auth'], 'uses' => 'PageController@getProducto']);
 
 Route::get('Aliados', 'PageController@getAliados');
 

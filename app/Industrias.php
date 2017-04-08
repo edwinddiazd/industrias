@@ -17,4 +17,9 @@ class Industrias extends Model
     {
     	return $this->belongsToMany('App\Materias');
     }
+
+    public function Prod_Indus ()
+    {
+    	return $this->belongsToMany('App\Productos');
+    }
 }
