@@ -4,7 +4,7 @@
 
 <div class="mdl-grid">
     <div class="mdl-layout-spacer"></div>
-    <div class="mdl-cell mdl-cell--4-col-offset mdl-cell--5-col mdl-shadow--3dp mdl-color--grey-100">
+    <div class="mdl-cell mdl-cell--4-col-offset mdl-cell--7-col mdl-shadow--3dp mdl-color--grey-100">
         <div class="mdl-layout-spacer "></div>
         <div class="mdl-color--indigo-A700" style="padding-top: 10px;padding-bottom: 10px;padding-left: 10px;">
             <span class="mdl-layout-title mdl-color-text--white">Reg&iacute;strate</span>

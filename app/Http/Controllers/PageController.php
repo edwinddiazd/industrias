@@ -12,6 +12,8 @@ use App\Industrias;
 
 use App\Personal;
 
+use Illuminate\Support\Facades\Auth;
+
 class PageController extends Controller
 {
     
@@ -27,7 +29,9 @@ class PageController extends Controller
 
     public function getDashboard ()
     {
-        return view ('Dashboard');
+        $data = Auth::user()->id;
+        $industrias = Industrias::find($data);
+        return view ('Dashboard')->withIndustrias($industrias);
     }
 
     public function getProducto ()

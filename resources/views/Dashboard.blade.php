@@ -2,23 +2,22 @@
 
 @section ('content')
 
-
 <!--dashboard de el usuario Dios
 =================================--> 
-
+@if(Entrust::hasRole('Mortal'))
 <div class="mdl-grid">
 	<div class="mdl-layout-spacer"></div>
 	<div class="mdl-cell mdl-cell--10-col mdl-shadow--3dp mdl-color--grey-100">
-	<h5 style="margin-left: 2%;">Nombre de la Industria<br></h5>
+	<h5 style="margin-left: 2%;">{{ $industrias->industria }}<br></h5>
 			<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--4-col">
-					<div style="border: 2px solid #ccc">Direcci&oacute;n</div>
+					<div style="border: 2px solid #ccc">{{$industrias->direccion_industria}}</div>
 				</div>
 				<div class="mdl-cell mdl-cell--4-col">
-					<div style="border: 2px solid #ccc">RIF</div>
+					<div style="border: 2px solid #ccc">{{$industrias->rif_industria}}</div>
 				</div>
 				<div class="mdl-cell mdl-cell--4-col">
-					<div style="border: 2px solid #ccc">Tipo de Industria</div>
+					<div style="border: 2px solid #ccc">{{$industrias->tipo_industria}}</div>
 				</div>
 			</div>
 			<div class="mdl-grid">
@@ -39,9 +38,10 @@
 	<div class="mdl-layout-spacer"></div>
 </div>
 
+
 <!--dashboard de el usuario Visor
 =====================================--> 
-
+@elseif (Entrust::hasRole('Consulta'))
 <div class="mdl-grid">
 	<div class="mdl-layout-spacer"></div>
 	<div class="mdl-cell mdl-cell--10-col mdl-shadow--3dp mdl-color--grey-100">
@@ -87,6 +87,7 @@
 <!--dashboard de el usuario Registro
 =======================================--> 
 
+@elseif (Entrust::hasRole('Mortal'))
 <div class="mdl-grid">
 	<div class="mdl-layout-spacer"></div>
 	<div class="mdl-cell mdl-cell--10-col mdl-shadow--3dp mdl-color--grey-100">
@@ -120,6 +121,5 @@
 	<div class="mdl-layout-spacer"></div>
 
 </div>
-
-
+@endif
 @endsection
