@@ -22,4 +22,9 @@ class Industrias extends Model
     {
     	return $this->belongsToMany('App\Productos');
     }
+
+    public function Broker_Ind ()
+    {
+        return $this->hasMany('App\Broker');
+    }
 }
