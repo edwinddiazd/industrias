@@ -46,6 +46,13 @@ class PageController extends Controller
         return view ('Reg_Materias');
     }
 
+    public function getCapacidads ()
+    {
+        $data = Auth::user()->id;
+        $industrias = Industrias::find($data);
+        return view ('Capacidad')->withIndustrias($industrias);
+    }
+
     public function getConsultaPersonal ()
     {
        

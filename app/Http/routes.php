@@ -45,13 +45,15 @@ Route::get('Producto', ['middleware' => ['auth'], 'uses' => 'PageController@getP
 
 Route::get('Aliados', 'PageController@getAliados');
 
-Route::get('Broker', 'PageController@getBroker');
+Route::get('Brokers', 'PageController@getBroker');
 
 Route::get('Proyeccion', 'PageController@getProyeccion');
 
 Route::get('Exportacion', 'PageController@getExportacion');
 
 Route::get('Alianzas', 'PageController@getAlianzas');
+
+Route::get('Capacidads', 'PageController@getCapacidads');
 
 Route::resource('Productos','ProductController');
 
@@ -62,6 +64,8 @@ Route::resource('Personal','PersonalController');
 Route::resource('Materias','MateriasController');
 
 Route::resource('Broker','BrokerController');
+
+Route::resource('Capacidad','CapacidadController');
 
 Route::get('Personal', 'PageController@getConsultaPersonal');
 
