@@ -73,7 +73,7 @@
           <a class="mdl-navigation__link" href="Dashboard"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">dashboard</i>Dashboard</a>
           <a class="mdl-navigation__link" href="Reg_Personal"><i class="mdl-color-text--blue-grey-400 material-icons" role="Reg_Personal">people</i>Personal</a>
           <a class="mdl-navigation__link" href="Reg_Materias"><i class="mdl-color-text--blue-grey-400 material-icons" role="Reg_Materias">local_offer</i>Materias Primas</a>
-          <!--<a class="mdl-navigation__link" href="Alianzas"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Alianzas</a>-->
+          <a class="mdl-navigation__link" href="Producto"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Producto</a>
           <a class="mdl-navigation__link" href="Broker"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i>Broker</a>
           <!--<a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Correo</a>-->
         </nav>
