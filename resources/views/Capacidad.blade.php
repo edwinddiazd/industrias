@@ -13,9 +13,10 @@
 				<div class="mdl-layout-spacer"></div>
 				<div class="mdl-cell mdl-cell--5-col">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			    		<script type="text/javascript">$('select').select2({
+			    			placeholder: 'Select an option'
+			    			});</script>
 			    		<select style="border-color: blue;" name="tipo_producto">
-			    		<script type="text/javascript">$('select').select2();</script>
-					    	<option >Seleccione Tipo de Producción</option>
 					    	<option value="1">Semi - Terminado</option>
 					    	<option value="2">Terminado</option>
 					    	<option value="3">Sub Producto</option>
