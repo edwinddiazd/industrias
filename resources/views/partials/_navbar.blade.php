@@ -9,7 +9,7 @@
       <nav class="mdl-navigation mdl-layout--large-screen-only">
 
       @if(Entrust::hasRole('Dios'))     
-        <a class="mdl-navigation__link" href="" >Producto</a>
+        <p class="mdl-navigation__link">Producto</p>
         <button id="menu2" class="mdl-button mdl-js-button mdl-button--icon">
           <i class="material-icons">timeline</i>
             </button>
@@ -18,7 +18,7 @@
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Exportacion</a></li>
             </ul>
         
-        <a class="mdl-navigation__link" href="">Industria</a>
+        <p class="mdl-navigation__link" href="">Industria</p>
        <button id="menu1" class="mdl-button mdl-js-button mdl-button--icon">
           <i class="material-icons">store mall directory</i>
             </button>
@@ -29,7 +29,7 @@
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Exportaciones</a></li>
             </ul>
 <!-- inicio del menu desplegable -->
-        <a class="mdl-navigation__link" href="" >Personal</a>
+        <p class="mdl-navigation__link" href="" >Personal</p>
         <button id="menu" class="mdl-button mdl-js-button mdl-button--icon">
           <i class="material-icons">person</i>
             </button>
@@ -53,7 +53,7 @@
             @endif
 
             @if (Auth::check())
-              <a class="mdl-navigation__link" href="">{{ Auth::user()->name }}</a>
+              <p class="mdl-navigation__link" href="">{{ Auth::user()->name }}</p>
               <button id="logout" class="mdl-button mdl-js-button mdl-button--icon">
               <i class="material-icons">keyboard_arrow_down</i></button>
               <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="logout">
@@ -71,11 +71,11 @@
     <span class="mdl-layout-title">{{ Auth::check() ? Auth::user()->name : "SEIPBES"}}</span>
     <nav class="mdl-navigation">
           <a class="mdl-navigation__link" href="Dashboard"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">dashboard</i>Dashboard</a>
-          <a class="mdl-navigation__link" href="personal"><i class="mdl-color-text--blue-grey-400 material-icons" role="Reg_Personal">people</i>Personal</a>
+          <a class="mdl-navigation__link" href="Reg_Personal"><i class="mdl-color-text--blue-grey-400 material-icons" role="Reg_Personal">people</i>Personal</a>
           <a class="mdl-navigation__link" href="Reg_Materias"><i class="mdl-color-text--blue-grey-400 material-icons" role="Reg_Materias">local_offer</i>Materias Primas</a>
-          <a class="mdl-navigation__link" href="Alianzas"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Alianzas</a>
+          <!--<a class="mdl-navigation__link" href="Alianzas"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Alianzas</a>-->
           <a class="mdl-navigation__link" href="Broker"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i>Broker</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Correo</a>
+          <!--<a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Correo</a>-->
         </nav>
   </div>
   @else

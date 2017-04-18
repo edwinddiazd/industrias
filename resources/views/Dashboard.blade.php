@@ -11,13 +11,13 @@
 	<h5 style="margin-left: 2%;">{{ $industrias->industria }}<br></h5>
 			<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--4-col">
-					<div style="border: 2px solid #ccc">{{$industrias->direccion_industria}}</div>
+					<div>{{$industrias->direccion_industria}}</div>
 				</div>
 				<div class="mdl-cell mdl-cell--4-col">
-					<div style="border: 2px solid #ccc">{{$industrias->rif_industria}}</div>
+					<div>{{$industrias->rif_industria}}</div>
 				</div>
 				<div class="mdl-cell mdl-cell--4-col">
-					<div style="border: 2px solid #ccc">{{$industrias->tipo_industria}}</div>
+					<div>{{$industrias->tipo_industria}}</div>
 				</div>
 			</div>
 			<div class="mdl-grid">
@@ -37,8 +37,6 @@
 	</div>
 	<div class="mdl-layout-spacer"></div>
 </div>
-
-
 <!--dashboard de el usuario Visor
 =====================================--> 
 @elseif (Entrust::hasRole('Consulta'))

@@ -24,7 +24,9 @@ class PageController extends Controller
 
     public function getReg_Personal ()
     {
-        return view ('Reg_Personal');
+        $data = Auth::user()->id;
+        $industrias = Industrias::find($data);
+        return view ('Reg_Personal')->withIndustrias($industrias);
     }
 
     public function getDashboard ()

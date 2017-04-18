@@ -3,7 +3,7 @@
 <div class="mdl-grid">
 	<div class="mdl-layout-spacer"></div>
 	<div class="mdl-cell mdl-cell--12-col mdl-shadow--3dp mdl-color--grey-100">
-	<h5 style="margin-left: 2%;">Datos del Personal<br></h5>
+	<h5 style="margin-left: 2%;">Datos del Personal para {{ $industrias->industria }}<br></h5>
 		<form method="POST" action="{{route('Personal.store')}}">
 			<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--3-col">
@@ -611,7 +611,7 @@
 	<div class="mdl-grid">
 		<div class="mdl-cell mdl-cell--3-col">
 			<input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" value="Agregar">
-			<input type="hidden" name="industrias_id" value="{{ $indicador->id }}">
+			<input type="hidden" name="industrias_id" value="{{ $industrias->id }}">
 			<input type="hidden" name="_token" value="{{ Session::token() }}">	
 		</div>
 	</div>
