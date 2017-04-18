@@ -6,6 +6,14 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use Illuminate\Support\Facades\Auth;
+
+use App\Industrias;
+
+use App\Broker;
+
+use Session;
+
 class BrokerController extends Controller
 {
     /**
@@ -26,6 +34,7 @@ class BrokerController extends Controller
     public function create()
     {
         //
+
     }
 
     /**
@@ -36,26 +45,32 @@ class BrokerController extends Controller
      */
     public function store(Request $request)
     {
-        $industrias = Auth::user()->industrias_id;
+
+        $data = Auth::user()->id;
+        $industrias = Industrias::find($data);
 
          $this->validate($request,array(
             'nombre'=>'required|max:255',
+            'pasaporte'=>'required',
             'direccion'=>'required|max:400',
             'correo'=>'required',
             'tlf1'=>'required',
-            'tlf2'=>'required'
+            'tlf2'=>'required',
             ));
         $brok= new Broker;
         $brok->nombre = $request->nombre;
+        $brok->pasaporte = $request->pasaporte;
         $brok->direccion = $request->direccion;
         $brok->correo = $request->correo;
         $brok->tlf1 = $request->tlf1;
         $brok->tlf2 = $request->tlf2;
-        $brok->industrias_id = $industrias->industrias_id;
+        $brok->industrias_id = $industrias->id;
         $brok->save();
 
 
         Session::flash('success','Datos guardados satisfactoriamente');
+
+        return redirect('/Brokers');
     }
 
     /**

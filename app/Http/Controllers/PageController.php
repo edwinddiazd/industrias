@@ -161,10 +161,10 @@ class PageController extends Controller
         return view ('Consultas.Gestion_Humana')->withIndustrias($industrias);
     } 
 
-    public function getConsultaBienes()
+    public function getConsultaBroker_Consul()
     {
-        $industrias = DB::table('industrias')->join('personal','industrias.id','=','personal.industrias_id')->select('industrias.industria','personal.cargo_personal','personal.nombre_personal','personal.apellido_personal','personal.cedula_personal','personal.email_personal','personal.telefono1_personal','personal.telefono2_personal')->where('personal.cargo_personal','=', 'Encargado Bienes')->get();
-        return view ('Consultas.Bienes')->withIndustrias($industrias);
+        $industrias = DB::table('industrias')->join('Broker','industrias.id','=','Broker.industrias_id')->select('industrias.industria','Broker.nombre','Broker.pasaporte','Broker.direccion','Broker.correo','Broker.tlf1','Broker.tlf2')->get();
+        return view ('Consultas.Broker_Consul')->withIndustrias($industrias);
     } 
 
     /**

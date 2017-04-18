@@ -93,6 +93,8 @@ Route::get('Tecnologia','PageController@getConsultaTecnologia');
 
 Route::get('Gestion_Humana','PageController@getConsultaGestionHumana');
 
+Route::get('Broker_Consul','PageController@getConsultaBroker_Consul');
+
 Route::auth();
 
 Route::get('/home', 'HomeController@index');

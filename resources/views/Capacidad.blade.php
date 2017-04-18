@@ -12,16 +12,13 @@
 			<div class="mdl-grid">
 				<div class="mdl-layout-spacer"></div>
 				<div class="mdl-cell mdl-cell--5-col">
-					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-			    		<script type="text/javascript">$('select').select2({
-			    			placeholder: 'Select an option'
-			    			});</script>
-			    		<select style="border-color: blue;" name="tipo_producto">
-					    	<option value="1">Semi - Terminado</option>
-					    	<option value="2">Terminado</option>
-					    	<option value="3">Sub Producto</option>
-			    		</select>
-					</div>
+					<div>nombre del producto</div>
+				</div>
+				<div class="mdl-cell mdl-cell--5-col">
+					<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="criticidad">
+					<span class="mdl-checkbox__label">Producto Cr&iacute;tico</span>
+  					<input type="checkbox" id="criticidad" class="mdl-checkbox__input">
+  					</label>
 				</div>
 				<div class="mdl-layout-spacer"></div>
 			</div>

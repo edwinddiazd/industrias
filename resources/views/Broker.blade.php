@@ -14,8 +14,14 @@
 			<div class="mdl-layout-spacer"></div>
 				<div class="mdl-cell mdl-cell--6-col">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
-							<input class="mdl-textfield__input" type="text" id="name" name="nombre">
-				    		<label class="mdl-textfield__label" for="name" name="nombre">Nombre</label>
+							<input class="mdl-textfield__input" type="text" id="nombre" name="nombre">
+				    		<label class="mdl-textfield__label" for="nombre" name="nombre">Nombre</label>
+						</div>
+				</div>
+				<div class="mdl-cell mdl-cell--6-col">
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
+							<input class="mdl-textfield__input" type="text" id="pasaporte" name="pasaporte">
+				    		<label class="mdl-textfield__label" for="pasaporte" name="pasaporte">Pasaporte</label>
 						</div>
 				</div>
 			<div class="mdl-layout-spacer"></div>
@@ -24,8 +30,14 @@
 			<div class="mdl-layout-spacer"></div>
 				<div class="mdl-cell mdl-cell--6-col">
 						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-							<textarea class="mdl-textfield__input" type="text" rows="3" id="descripcion" name="direcccion"></textarea>
-				    		<label class="mdl-textfield__label" for="descripcion" name="direccion">Direcci&oacute;n</label>
+							<textarea class="mdl-textfield__input" type="text" rows="1" id="direccion" name="direccion"></textarea>
+				    		<label class="mdl-textfield__label" for="direccion" name="direccion">Direcci&oacute;n</label>
+						</div>
+				</div>
+				<div class="mdl-cell mdl-cell--6-col">
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							<input class="mdl-textfield__input" type="text" id="correo" name="correo"> 
+				    		<label class="mdl-textfield__label" for="correo" name="correo">Sitio Web</label>
 						</div>
 				</div>
 			<div class="mdl-layout-spacer"></div>
@@ -34,22 +46,19 @@
 			<div class="mdl-layout-spacer"></div>
 				<div class="mdl-cell mdl-cell--6-col">
 					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-					    <input class="mdl-textfield__input" type="text"  id="unidad" name="tlf1">
-					    <label class="mdl-textfield__label" for="unidad" name="tlf1">Tel&eacute;fono m&oacute;vil</label>
+					    <input class="mdl-textfield__input" type="text"  id="tlf1" name="tlf1">
+					    <label class="mdl-textfield__label" for="tlf1" name="tlf1">Tel&eacute;fono m&oacute;vil</label>
 					  </div>
 				</div>
-			<div class="mdl-layout-spacer"></div>
-			</div>
-			<div class="mdl-grid">
-			<div class="mdl-layout-spacer"></div>
 				<div class="mdl-cell mdl-cell--6-col">
 					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-					    <input class="mdl-textfield__input" type="text"  id="unidad" name="tlf2">
-					    <label class="mdl-textfield__label" for="unidad" name="tlf2">Tel&eacute;fono Otro</label>
+					    <input class="mdl-textfield__input" type="text"  id="tlf2" name="tlf2">
+					    <label class="mdl-textfield__label" for="tlf2" name="tlf2">Tel&eacute;fono Fijo Internacional</label>
 					  </div>
 				</div>
 			<div class="mdl-layout-spacer"></div>
 			</div>
+
 			<div class="mdl-grid">
 				<div class="mdl-layout-spacer"></div>
 					<div class="mdl-cell mdl-cell--4-col">
@@ -62,6 +71,5 @@
 		</div>
 		<div class="mdl-layout-spacer"></div>
 </div>
-
 
 @stop                        
