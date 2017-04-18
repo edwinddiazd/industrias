@@ -13,7 +13,7 @@
 				<div class="mdl-layout-spacer"></div>
 				<div class="mdl-cell mdl-cell--5-col">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-			    		<select style="border-color: blue;">
+			    		<select style="border-color: blue;" name="tipo_producto">
 					    	<option >Seleccione Tipo de Producción</option>
 					    	<option value="1">Semi - Terminado</option>
 					    	<option value="2">Terminado</option>
@@ -27,8 +27,8 @@
 			<div class="mdl-layout-spacer"></div>
 				<div class="mdl-cell mdl-cell--6-col">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
-							<input class="mdl-textfield__input" type="text" id="name" name="nombre">
-				    		<label class="mdl-textfield__label" for="name" name="nombre">Nombre del Producto</label>
+							<input class="mdl-textfield__input" type="text" id="name" name="producto">
+				    		<label class="mdl-textfield__label" for="name" name="producto">Nombre del Producto</label>
 						</div>
 				</div>
 			<div class="mdl-layout-spacer"></div>
@@ -37,8 +37,8 @@
 			<div class="mdl-layout-spacer"></div>
 				<div class="mdl-cell mdl-cell--6-col">
 					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-					    <input class="mdl-textfield__input" type="text"  id="unidad" name="unidad">
-					    <label class="mdl-textfield__label" for="unidad" name="unidad">Unidad</label>
+					    <input class="mdl-textfield__input" type="text"  id="unidad" name="unidad_producto">
+					    <label class="mdl-textfield__label" for="unidad" name="unidad_producto">Unidad</label>
 					  </div>
 				</div>
 			<div class="mdl-layout-spacer"></div>
@@ -47,8 +47,8 @@
 			<div class="mdl-layout-spacer"></div>
 				<div class="mdl-cell mdl-cell--6-col">
 						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-							<textarea class="mdl-textfield__input" type="text" rows="3" id="descripcion" name="descripcion"></textarea>
-				    		<label class="mdl-textfield__label" for="descripcion" name="descripcion">Descripci&oacute;n</label>
+							<textarea class="mdl-textfield__input" type="text" rows="3" id="descripcion" name="descripcion_producto"></textarea>
+				    		<label class="mdl-textfield__label" for="descripcion" name="descripcion_producto">Descripci&oacute;n</label>
 						</div>
 				</div>
 			<div class="mdl-layout-spacer"></div>

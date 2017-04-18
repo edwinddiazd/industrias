@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use App\Producto;
+use App\Productos;
 
 use App\Industrias;
 
