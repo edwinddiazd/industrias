@@ -36,7 +36,26 @@ class BrokerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $industrias = Auth::user()->industrias_id;
+
+         $this->validate($request,array(
+            'nombre'=>'required|max:255',
+            'direccion'=>'required|max:400',
+            'correo'=>'required',
+            'tlf1'=>'required',
+            'tlf2'=>'required'
+            ));
+        $brok= new Broker;
+        $brok->nombre = $request->nombre;
+        $brok->direccion = $request->direccion;
+        $brok->correo = $request->correo;
+        $brok->tlf1 = $request->tlf1;
+        $brok->tlf2 = $request->tlf2;
+        $brok->industrias_id = $industrias->industrias_id;
+        $brok->save();
+
+
+        Session::flash('success','Datos guardados satisfactoriamente');
     }
 
     /**

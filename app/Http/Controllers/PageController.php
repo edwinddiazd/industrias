@@ -67,7 +67,9 @@ class PageController extends Controller
 
     public function getBroker ()
     {
-        return view ('Broker');
+        $data = Auth::user()->id;
+        $industrias = Industrias::find($data);
+        return view ('Broker')->withIndustrias($industrias);
     }
 
     public function getProyeccion ()
