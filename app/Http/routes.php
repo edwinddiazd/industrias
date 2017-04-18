@@ -61,6 +61,8 @@ Route::resource('Personal','PersonalController');
 
 Route::resource('Materias','MateriasController');
 
+Route::resource('Broker','BrokerController');
+
 Route::get('Personal', 'PageController@getConsultaPersonal');
 
 Route::get('Registro', 'PageController@getRegistro');

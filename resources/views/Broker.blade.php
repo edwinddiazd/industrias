@@ -1,73 +1,57 @@
 @extends ('main')
 @section ('content')
 
-<h5 style="margin-top: 55px;">Registro Único de Compradores Internacionales<br></h5>
-
 <div class="mdl-grid">
-	<div class="mdl-cell mdl-cell--3-col">
-		<form action="#">
-		  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-		    <input class="mdl-textfield__input" type="text" id="sample1">
-		    <label class="mdl-textfield__label" for="sample1">NOMBRE</label>
-		  </div>
-		</form>
-	</div>
-
-	<div class="mdl-cell mdl-cell--3-col">
-		<form action="#">
-		  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-		    <input class="mdl-textfield__input" type="text" id="sample1">
-		    <label class="mdl-textfield__label" for="sample1">APELLIDO</label>
-		  </div>
-		</form>
-	</div>
-
-	<div class="mdl-cell mdl-cell--6-col">
-		<form action="#">
-		  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-		    <textarea class="mdl-textfield__input" type="text" rows= "1" id="sample5" ></textarea>
-		    <label class="mdl-textfield__label" for="sample5">DIRECCION</label>
-		  </div>
-		</form>
-	</div>
+	<div class="mdl-layout-spacer"></div>
+	<div class="mdl-cell mdl-cell--2-col-offset mdl-cell--7-col mdl-shadow--3dp mdl-color--grey-100" style="margin-top: 8%;">
+		<div class="mdl-layout-spacer "></div>
+		<div class="mdl-color--indigo-A700" style="padding-top: 10px;padding-bottom: 10px;padding-left: 10px;">
+      		<span class="mdl-layout-title mdl-color-text--white">Registro Único de Compradores Internacionales</span>
+      		<div class="mdl-layout-spacer"></div>
+		</div>
+		<form method="POST" action="{{route('Broker.store')}}">
+			<div class="mdl-grid">
+			<div class="mdl-layout-spacer"></div>
+				<div class="mdl-cell mdl-cell--6-col">
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
+							<input class="mdl-textfield__input" type="text" id="name" name="nombre">
+				    		<label class="mdl-textfield__label" for="name" name="nombre">Nombre</label>
+						</div>
+				</div>
+			<div class="mdl-layout-spacer"></div>
+			</div>
+			<div class="mdl-grid">
+			<div class="mdl-layout-spacer"></div>
+				<div class="mdl-cell mdl-cell--6-col">
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							<textarea class="mdl-textfield__input" type="text" rows="3" id="descripcion" name="descripcion"></textarea>
+				    		<label class="mdl-textfield__label" for="descripcion" name="descripcion">Descripci&oacute;n</label>
+						</div>
+				</div>
+			<div class="mdl-layout-spacer"></div>
+			</div>
+			<div class="mdl-grid">
+			<div class="mdl-layout-spacer"></div>
+				<div class="mdl-cell mdl-cell--6-col">
+					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					    <input class="mdl-textfield__input" type="text"  id="unidad" name="unidad">
+					    <label class="mdl-textfield__label" for="unidad" name="unidad">Unidad</label>
+					  </div>
+				</div>
+			<div class="mdl-layout-spacer"></div>
+			</div>
+			<div class="mdl-grid">
+				<div class="mdl-layout-spacer"></div>
+					<div class="mdl-cell mdl-cell--4-col">
+						<input type="submit" value="REGISTRAR" class="mdl-button mdl-js-button mdl-button--primary mdl-snackbar__action">
+					</div>
+				<div class="mdl-layout-spacer"></div>
+			</div>
+			<input type="hidden" name="_token" value="{{ Session::token() }}">
+			</form>
+		</div>
+		<div class="mdl-layout-spacer"></div>
 </div>
 
-
-<div class="mdl-grid">
-	<div class="mdl-cell mdl-cell--4-col">
-		<form action="#">
-		  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-		    <input class="mdl-textfield__input" type="text" id="sample1">
-		    <label class="mdl-textfield__label" for="sample1">CORREO</label>
-		  </div>
-		</form>
-	</div>
-
-	<div class="mdl-cell mdl-cell--3-col">
-		<form action="#">
-		  <div class="mdl-textfield mdl-js-textfield">
-		    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
-		    <label class="mdl-textfield__label" for="sample2">TELEFONO N° 1</label>
-		    <span class="mdl-textfield__error">Input is not a number!</span>
-		  </div>
-		</form>
-	</div>
-
-	<div class="mdl-cell mdl-cell--3-col">
-		<form action="#">
-		  <div class="mdl-textfield mdl-js-textfield">
-		    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
-		    <label class="mdl-textfield__label" for="sample2">TELEFONO N°2</label>
-		    <span class="mdl-textfield__error">Input is not a number!</span>
-		  </div>
-		</form>
-	</div>
-</div>
-
-<div class="mdl-grid"
-	<div class="mdl-cell mdl-cell--4-col-offset mdl-cell--4-col">
-		<button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Agregar</button>
-	</div>
-</div>
 
 @stop
