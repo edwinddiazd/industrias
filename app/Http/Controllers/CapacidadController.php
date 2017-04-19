@@ -6,6 +6,16 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use Illuminate\Support\Facades\Auth;
+
+use App\Industrias;
+
+use App\Producto;
+
+use App\Capacidad;
+
+use Session;
+
 class CapacidadController extends Controller
 {
     /**
@@ -36,7 +46,26 @@ class CapacidadController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        //$data = Auth::user()->id;
+        /*$industrias = Industrias::find($data);
+
+         $this->validate($request,array(
+            'criticidad_producto'=>'required',
+            'capacidad_instalada'=>'required',
+            'capacidad_operativa'=>'required',
+            )); 
+        $capac= new Capacidad;
+        $capac->criticidad_producto = $request->criticidad;
+        $capac->capacidad_instalada = $request->cap_inst;
+        $capac->capacidad_operativa = $request->cap_inst_oper;
+        $capac->industrias_id = $industrias->id;
+        $capac->save();
+
+
+        Session::flash('success','Datos guardados satisfactoriamente');
+
+        return redirect('/Producto');*/
     }
 
     /**

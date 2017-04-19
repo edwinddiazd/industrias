@@ -26,28 +26,14 @@
 			<div class="mdl-layout-spacer"></div>
 				<div class="mdl-cell mdl-cell--6-col">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
-							<input class="mdl-textfield__input" type="text" id="name" name="producto">
-				    		<label class="mdl-textfield__label" for="name" name="producto">Nombre del Producto</label>
+							<input class="mdl-textfield__input" type="text" id="cap_inst" name="cap_inst">
+				    		<label class="mdl-textfield__label" for="cap_inst" name="">Capacidad Instalada</label>
 						</div>
 				</div>
-			<div class="mdl-layout-spacer"></div>
-			</div>
-			<div class="mdl-grid">
-			<div class="mdl-layout-spacer"></div>
 				<div class="mdl-cell mdl-cell--6-col">
-					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-					    <input class="mdl-textfield__input" type="text"  id="unidad" name="unidad_producto">
-					    <label class="mdl-textfield__label" for="unidad" name="unidad_producto">Unidad</label>
-					  </div>
-				</div>
-			<div class="mdl-layout-spacer"></div>
-			</div>
-			<div class="mdl-grid">
-			<div class="mdl-layout-spacer"></div>
-				<div class="mdl-cell mdl-cell--6-col">
-						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-							<textarea class="mdl-textfield__input" type="text" rows="3" id="descripcion" name="descripcion_producto"></textarea>
-				    		<label class="mdl-textfield__label" for="descripcion" name="descripcion_producto">Descripci&oacute;n</label>
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
+							<input class="mdl-textfield__input" type="text" id="cap_inst_oper" name="cap_inst_oper">
+				    		<label class="mdl-textfield__label" for="cap_inst_oper" name="cap_inst_oper">Capacidad Instalada Operativa</label>
 						</div>
 				</div>
 			<div class="mdl-layout-spacer"></div>
