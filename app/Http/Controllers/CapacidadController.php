@@ -65,7 +65,7 @@ class CapacidadController extends Controller
 
         Session::flash('success','Datos guardados satisfactoriamente');
 
-        return redirect('/Producto');*/
+        return redirect('/Capacidad');*/
     }
 
     /**

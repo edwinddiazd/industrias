@@ -12,7 +12,12 @@
 			<div class="mdl-grid">
 				<div class="mdl-layout-spacer"></div>
 				<div class="mdl-cell mdl-cell--5-col">
-					<div>nombre del producto</div>
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
+						<select style="border-color: blue;" name="cargo_personal1">
+					    	<option>Seleccione el producto</option>
+					    	<option value="Presidente">Presidente</option>
+				    	</select>
+					</div>
 				</div>
 				<div class="mdl-cell mdl-cell--5-col">
 					<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="criticidad">
@@ -27,7 +32,7 @@
 				<div class="mdl-cell mdl-cell--6-col">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
 							<input class="mdl-textfield__input" type="text" id="cap_inst" name="cap_inst">
-				    		<label class="mdl-textfield__label" for="cap_inst" name="">Capacidad Instalada</label>
+				    		<label class="mdl-textfield__label" for="cap_inst" name="cap_inst">Capacidad Instalada</label>
 						</div>
 				</div>
 				<div class="mdl-cell mdl-cell--6-col">

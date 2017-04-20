@@ -38,6 +38,7 @@ class PageController extends Controller
 
     public function getProducto ()
     {
+
         return view ('Producto');
     }
 
@@ -48,9 +49,10 @@ class PageController extends Controller
 
     public function getCapacidads ()
     {
+        $prod = Productos::all();
         $data = Auth::user()->id;
         $industrias = Industrias::find($data);
-        return view ('Capacidad')->withIndustrias($industrias);
+        return view ('Capacidad')->withIndustrias($industrias)->withProductos($prod);
     }
 
     public function getConsultaPersonal ()
