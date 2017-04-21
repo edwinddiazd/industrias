@@ -13,9 +13,11 @@
 				<div class="mdl-layout-spacer"></div>
 				<div class="mdl-cell mdl-cell--5-col">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
-						<select style="border-color: blue;" name="cargo_personal1">
-					    	<option>Seleccione el producto</option>
-					    	<option value="Presidente">Presidente</option>
+						<select style="border-color: blue;" name="">
+						<option>Seleccione el producto</option>
+						@foreach ($productos as $produ)
+					    	<option>{{$produ->producto}}</option>
+					    @endforeach
 				    	</select>
 					</div>
 				</div>

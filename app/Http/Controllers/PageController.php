@@ -12,6 +12,8 @@ use App\Industrias;
 
 use App\Personal;
 
+use App\Productos;
+
 use Illuminate\Support\Facades\Auth;
 
 class PageController extends Controller
@@ -49,10 +51,10 @@ class PageController extends Controller
 
     public function getCapacidads ()
     {
-        $prod = Productos::all();
+        $produs = Productos::all();
         $data = Auth::user()->id;
         $industrias = Industrias::find($data);
-        return view ('Capacidad')->withIndustrias($industrias)->withProductos($prod);
+        return view ('Capacidad')->withIndustrias($industrias)->withProductos($produs);
     }
 
     public function getConsultaPersonal ()
