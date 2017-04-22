@@ -14,6 +14,8 @@ use App\Personal;
 
 use App\Productos;
 
+use App\Materias;
+
 use Illuminate\Support\Facades\Auth;
 
 class PageController extends Controller
@@ -55,6 +57,12 @@ class PageController extends Controller
         $data = Auth::user()->id;
         $industrias = Industrias::find($data);
         return view ('Capacidad')->withIndustrias($industrias)->withProductos($produs);
+    }
+    public function getSolmats ()
+    {
+        $produs = Productos::all();
+        $mats = Materias::all();
+        return view ('Solmat')->withMaterias($mats)->withProductos($produs);
     }
 
     public function getConsultaPersonal ()

@@ -61,6 +61,7 @@ class SolmatController extends Controller
         $solicitud->materias_id = $request->materias_id;
         $solicitud->productos_id = $request->productos_id;
         $solicitud->capacidad = $request->capacidad;
+        $solicitud->solicitud = $request->solicitud;
         $solicitud->save();
 
         Session::flash('success','Datos guardados satisfactoriamente');

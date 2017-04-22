@@ -23,8 +23,8 @@ class CreateSolMatsTable extends Migration
                 ->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('productos_id')->references('id')->on('productos')
                 ->onUpdate('cascade')->onDelete('cascade');
-            $table->integer('capacidad');            
-
+            $table->integer('capacidad');
+            $table->integer('solicitud');
             $table->timestamps();
         });
     }

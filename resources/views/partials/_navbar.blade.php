@@ -9,18 +9,18 @@
       <nav class="mdl-navigation mdl-layout--large-screen-only">
 
       @if(Entrust::hasRole('Dios'))     
-        <p class="mdl-navigation__link">Producto</p>
+        <p class="mdl-navigation__link" style="cursor: default;">Producto</p>
         <button id="menu2" class="mdl-button mdl-js-button mdl-button--icon">
-          <i class="material-icons">timeline</i>
+          <i class="material-icons">keyboard_arrow_down</i>
             </button>
             <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu2">
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Proyección</a></li>
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Exportacion</a></li>
             </ul>
         
-        <p class="mdl-navigation__link" href="">Industria</p>
+        <p class="mdl-navigation__link" style="cursor: default;">Industria</p>
        <button id="menu1" class="mdl-button mdl-js-button mdl-button--icon">
-          <i class="material-icons">store mall directory</i>
+          <i class="material-icons">keyboard_arrow_down</i>
             </button>
             <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu1">
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Aliados</a></li>
@@ -29,9 +29,9 @@
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Exportaciones</a></li>
             </ul>
 <!-- inicio del menu desplegable -->
-        <p class="mdl-navigation__link" href="" >Personal</p>
+        <p class="mdl-navigation__link" style="cursor: default;">Personal</p>
         <button id="menu" class="mdl-button mdl-js-button mdl-button--icon">
-          <i class="material-icons">person</i>
+          <i class="material-icons">keyboard_arrow_down</i>
             </button>
         <!-- inicio del menu desplegable -->
             <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu">
@@ -53,9 +53,9 @@
             @endif
 
             @if (Auth::check())
-              <p class="mdl-navigation__link" href="">{{ Auth::user()->name }}</p>
+              <p class="mdl-navigation__link" style="cursor: default;">{{ Auth::user()->name }}</p>
               <button id="logout" class="mdl-button mdl-js-button mdl-button--icon">
-              <i class="material-icons">keyboard_arrow_down</i></button>
+              <i class="material-icons">person</i></button>
               <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="logout">
                   <li class="mdl-menu__item">
                   <a class="mdl-button--primary" style="text-decoration: none;" href="{{ url('/logout') }}">Cerrar Sesi&oacute;n</a><i class="fa fa-btn fa-sign-out"></i></li>
@@ -71,11 +71,15 @@
     <span class="mdl-layout-title">{{ Auth::check() ? Auth::user()->name : "SEIPBES"}}</span>
     <nav class="mdl-navigation">
           <a class="mdl-navigation__link" href="Dashboard"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">dashboard</i>Dashboard</a>
-          <a class="mdl-navigation__link" href="Reg_Personal"><i class="mdl-color-text--blue-grey-400 material-icons" role="Reg_Personal">people</i>Personal</a>
-          <a class="mdl-navigation__link" href="Reg_Materias"><i class="mdl-color-text--blue-grey-400 material-icons" role="Reg_Materias">local_offer</i>Materias Primas</a>
-          <a class="mdl-navigation__link" href="Producto"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Producto</a>
-          <a class="mdl-navigation__link" href="Brokers"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i>Broker</a>
-          <!--<a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Correo</a>-->
+          <br>
+          <span class="mdl-layout-title" style="text-align: center;">Registros:</span>
+          <br>
+          <a class="mdl-navigation__link" href="Reg_Personal"><i class="mdl-color-text--blue-grey-400 material-icons" role="Reg_Personal">person_add</i>   Personal</a>
+          <a class="mdl-navigation__link" href="Reg_Materias"><i class="mdl-color-text--blue-grey-400 material-icons" role="Reg_Materias">input</i>   Materias Primas</a>
+          <a class="mdl-navigation__link" href="Producto"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">input</i>   Producto</a>
+          <a class="mdl-navigation__link" href="Brokers"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">input</i>   Broker</a>
+          <a class="mdl-navigation__link" href="Solmats"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">input</i>   Solicitud de Materias Primas</a>
+          <a class="mdl-navigation__link" href="Capacidads"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">input</i>   Capacidad de Producci&oacute;n</a>
         </nav>
   </div>
   @else
