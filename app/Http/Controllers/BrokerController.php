@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use Illuminate\Support\Facades\Auth;
+
 class BrokerController extends Controller
 {
     /**
@@ -56,6 +58,7 @@ class BrokerController extends Controller
 
 
         Session::flash('success','Datos guardados satisfactoriamente');
+        
     }
 
     /**
