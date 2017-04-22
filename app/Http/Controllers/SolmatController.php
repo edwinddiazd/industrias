@@ -6,6 +6,16 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use App\Sol_Mat;
+
+use Illuminate\Support\Facades\Auth;
+
+use App\Industrias;
+
+use App\Producto;
+
+use Session;
+
 class SolmatController extends Controller
 {
     /**
@@ -36,7 +46,27 @@ class SolmatController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,array(
+            'capacidad'=>'required',
+            'materias_id'=>'required',
+            'productos_id'=>'required',
+            )); 
+        $data = Auth::user()->id;
+        $indus = Industrias::find($data);
+
+
+
+        $solicitud = new Sol_Mat;
+        $solicitud->industrias_id = $indus->id;
+        $solicitud->materias_id = $request->materias_id;
+        $solicitud->productos_id = $request->productos_id;
+        $solicitud->capacidad = $request->capacidad;
+        $solicitud->save();
+
+        Session::flash('success','Datos guardados satisfactoriamente');
+
+        return redirect('/Solmat');
+
     }
 
     /**

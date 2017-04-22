@@ -16,7 +16,7 @@
 						<select style="border-color: blue;" name="">
 						<option>Seleccione el producto</option>
 						@foreach ($productos as $produ)
-					    	<option value="{{ $produ->id }}">{{$produ->producto}}</option>
+					    	<option>{{$produ->producto}}</option>
 					    @endforeach
 				    	</select>
 					</div>

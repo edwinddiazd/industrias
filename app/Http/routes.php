@@ -55,6 +55,8 @@ Route::get('Alianzas', 'PageController@getAlianzas');
 
 Route::get('Capacidads', 'PageController@getCapacidads');
 
+Route::get('Solmats', 'PageController@getSolmats');
+
 Route::resource('Productos','ProductController');
 
 Route::resource('Industria','IndustriaController');
@@ -66,6 +68,8 @@ Route::resource('Materias','MateriasController');
 Route::resource('Broker','BrokerController');
 
 Route::resource('Capacidad','CapacidadController');
+
+Route::resource('Solmat','SolmatController');
 
 Route::get('Personal', 'PageController@getConsultaPersonal');
 

@@ -47,8 +47,8 @@ class CapacidadController extends Controller
     public function store(Request $request)
     {
         
-        //$data = Auth::user()->id;
-        /*$industrias = Industrias::find($data);
+        $data = Auth::user()->id;
+        $industrias = Industrias::find($data);
 
          $this->validate($request,array(
             'criticidad_producto'=>'required',
@@ -65,7 +65,7 @@ class CapacidadController extends Controller
 
         Session::flash('success','Datos guardados satisfactoriamente');
 
-        return redirect('/Capacidad');*/
+        return redirect('/Capacidad');
     }
 
     /**
