@@ -58,9 +58,9 @@ class ProductController extends Controller
         $productos->unidad_producto = $request->unidad_producto;
         $productos->save();
 
-        $idusuario = Auth::user();
+        /*$idusuario = Auth::user();
         $idindustrias = Industrias::find($idusuario->industrias_id);
-        $idindustrias->Prod_Indus()->attach($productos);
+        $idindustrias->Prod_Indus()->attach($productos);*/
 
 
         Session::flash('success','Datos guardados satisfactoriamente');

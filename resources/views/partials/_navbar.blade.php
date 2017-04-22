@@ -2,7 +2,7 @@
   <header class="mdl-layout__header mdl-color--indigo-A700">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <span class="mdl-layout-title">SEIPBES</span>
+      <span class="mdl-layout-title" style="cursor: default;">SEIPBES</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->

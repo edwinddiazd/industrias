@@ -56,9 +56,9 @@ class MateriasController extends Controller
         $materias->unidad = $request->unidad;
         $materias->save();
 
-        $idusuario = Auth::user();
-        $idindustrias = Industrias::find($idusuario->industrias_id);
-        $idindustrias->MateriasPrimas()->attach($materias);
+      //  $idusuario = Auth::user();
+      //  $idindustrias = Industrias::find($idusuario->industrias_id);
+       // $idindustrias->MateriasPrimas()->attach($materias);
 
 
         Session::flash('success','Datos guardados satisfactoriamente');

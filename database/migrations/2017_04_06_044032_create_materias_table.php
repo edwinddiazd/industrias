@@ -20,17 +20,17 @@ class CreateMateriasTable extends Migration
             $table->timestamps();
         });
 
-        Schema::create('industrias_materias', function (Blueprint $table) {
-            $table->integer('industrias_id')->unsigned();
-            $table->integer('materias_id')->unsigned();
+       // Schema::create('industrias_materias', function (Blueprint $table) {
+         //   $table->integer('industrias_id')->unsigned();
+           // $table->integer('materias_id')->unsigned();
 
-            $table->foreign('industrias_id')->references('id')->on('industrias')
-                ->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('materias_id')->references('id')->on('materias')
-                ->onUpdate('cascade')->onDelete('cascade');
+            //$table->foreign('industrias_id')->references('id')->on('industrias')
+              //  ->onUpdate('cascade')->onDelete('cascade');
+            //$table->foreign('materias_id')->references('id')->on('materias')
+              //  ->onUpdate('cascade')->onDelete('cascade');
 
-            $table->primary(['industrias_id', 'materias_id']);
-        });
+           // $table->primary(['industrias_id', 'materias_id']);
+       // });
     }
 
     /**

@@ -13,7 +13,7 @@ class Industrias extends Model
         return $this->hasMany('App\Personal');
     }
 
-    public function MateriasPrimas ()
+   /* public function MateriasPrimas ()
     {
     	return $this->belongsToMany('App\Materias');
     }
@@ -26,5 +26,5 @@ class Industrias extends Model
     public function Broker_Ind ()
     {
         return $this->hasMany('App\Broker');
-    }
+    }*/
 }

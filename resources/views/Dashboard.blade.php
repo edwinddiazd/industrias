@@ -8,7 +8,7 @@
 <div class="mdl-grid">
 	<div class="mdl-layout-spacer"></div>
 	<div class="mdl-cell mdl-cell--10-col mdl-shadow--3dp mdl-color--grey-100">
-	<h5 style="margin-left: 2%;">{{ $industrias->industria }}<br></h5>
+	<h3 style="margin-left: 2%;">{{ $industrias->industria }}<br></h3>
 			<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--4-col">
 					<div>{{$industrias->direccion_industria}}</div>
