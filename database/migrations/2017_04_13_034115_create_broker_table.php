@@ -18,6 +18,7 @@ class CreateBrokerTable extends Migration
             $table->integer('industrias_id')->unsigned();
             $table->foreign('industrias_id')->references('id')->on('industrias')->onDelete('cascade');
             $table->string('nombre');
+            $table->string('pasaporte');
             $table->longtext('direccion');
             $table->string('correo');
             $table->string('tlf1');

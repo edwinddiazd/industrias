@@ -4,7 +4,7 @@
 
 <!--dashboard de el usuario Dios
 =================================--> 
-@if(Entrust::hasRole('Mortal'))
+@if(Entrust::hasRole('Dios'))
 <div class="mdl-grid">
 	<div class="mdl-layout-spacer"></div>
 	<div class="mdl-cell mdl-cell--10-col mdl-shadow--3dp mdl-color--grey-100">

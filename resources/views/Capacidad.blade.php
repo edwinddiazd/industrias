@@ -12,16 +12,20 @@
 			<div class="mdl-grid">
 				<div class="mdl-layout-spacer"></div>
 				<div class="mdl-cell mdl-cell--5-col">
-					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-			    		<script type="text/javascript">$('select').select2({
-			    			placeholder: 'Select an option'
-			    			});</script>
-			    		<select style="border-color: blue;" name="tipo_producto">
-					    	<option value="1">Semi - Terminado</option>
-					    	<option value="2">Terminado</option>
-					    	<option value="3">Sub Producto</option>
-			    		</select>
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
+						<select style="border-color: blue;" name="">
+						<option>Seleccione el producto</option>
+						@foreach ($productos as $produ)
+					    	<option>{{$produ->producto}}</option>
+					    @endforeach
+				    	</select>
 					</div>
+				</div>
+				<div class="mdl-cell mdl-cell--5-col">
+					<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="criticidad">
+					<span class="mdl-checkbox__label">Producto Cr&iacute;tico</span>
+  					<input type="checkbox" id="criticidad" class="mdl-checkbox__input">
+  					</label>
 				</div>
 				<div class="mdl-layout-spacer"></div>
 			</div>
@@ -29,28 +33,14 @@
 			<div class="mdl-layout-spacer"></div>
 				<div class="mdl-cell mdl-cell--6-col">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
-							<input class="mdl-textfield__input" type="text" id="name" name="producto">
-				    		<label class="mdl-textfield__label" for="name" name="producto">Nombre del Producto</label>
+							<input class="mdl-textfield__input" type="text" id="cap_inst" name="cap_inst">
+				    		<label class="mdl-textfield__label" for="cap_inst" name="cap_inst">Capacidad Instalada</label>
 						</div>
 				</div>
-			<div class="mdl-layout-spacer"></div>
-			</div>
-			<div class="mdl-grid">
-			<div class="mdl-layout-spacer"></div>
 				<div class="mdl-cell mdl-cell--6-col">
-					  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-					    <input class="mdl-textfield__input" type="text"  id="unidad" name="unidad_producto">
-					    <label class="mdl-textfield__label" for="unidad" name="unidad_producto">Unidad</label>
-					  </div>
-				</div>
-			<div class="mdl-layout-spacer"></div>
-			</div>
-			<div class="mdl-grid">
-			<div class="mdl-layout-spacer"></div>
-				<div class="mdl-cell mdl-cell--6-col">
-						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-							<textarea class="mdl-textfield__input" type="text" rows="3" id="descripcion" name="descripcion_producto"></textarea>
-				    		<label class="mdl-textfield__label" for="descripcion" name="descripcion_producto">Descripci&oacute;n</label>
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
+							<input class="mdl-textfield__input" type="text" id="cap_inst_oper" name="cap_inst_oper">
+				    		<label class="mdl-textfield__label" for="cap_inst_oper" name="cap_inst_oper">Capacidad Instalada Operativa</label>
 						</div>
 				</div>
 			<div class="mdl-layout-spacer"></div>
