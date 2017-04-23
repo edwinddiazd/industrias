@@ -16,7 +16,6 @@ class CreateCapacidadsTable extends Migration
             $table->increments('id');
             $table->integer('industrias_id')->unsigned();
             $table->integer('productos_id')->unsigned();
-            $table->boolean('criticidad_producto');
             $table->string('capacidad_instalada');
             $table->string('capacidad_operativa');
             $table->foreign('productos_id')->references('id')->on('productos')

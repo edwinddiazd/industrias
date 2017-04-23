@@ -47,6 +47,7 @@ class SolmatController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,array(
+            'criticidad_producto'=>'required',
             'capacidad'=>'required',
             'materias_id'=>'required',
             'productos_id'=>'required',
@@ -60,6 +61,7 @@ class SolmatController extends Controller
         $solicitud->industrias_id = $indus->id;
         $solicitud->materias_id = $request->materias_id;
         $solicitud->productos_id = $request->productos_id;
+        $solicitud->criticidad_producto = $request->criticidad;
         $solicitud->capacidad = $request->capacidad;
         $solicitud->solicitud = $request->solicitud;
         $solicitud->save();

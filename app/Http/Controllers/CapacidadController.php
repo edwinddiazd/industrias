@@ -51,12 +51,10 @@ class CapacidadController extends Controller
         $industrias = Industrias::find($data);
 
          $this->validate($request,array(
-            'criticidad_producto'=>'required',
             'capacidad_instalada'=>'required',
             'capacidad_operativa'=>'required',
             )); 
         $capac= new Capacidad;
-        $capac->criticidad_producto = $request->criticidad;
         $capac->capacidad_instalada = $request->cap_inst;
         $capac->capacidad_operativa = $request->cap_inst_oper;
         $capac->industrias_id = $industrias->id;

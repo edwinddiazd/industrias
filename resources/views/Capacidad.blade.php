@@ -21,12 +21,6 @@
 				    	</select>
 					</div>
 				</div>
-				<div class="mdl-cell mdl-cell--5-col">
-					<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="criticidad">
-					<span class="mdl-checkbox__label">Producto Cr&iacute;tico</span>
-  					<input type="checkbox" id="criticidad" class="mdl-checkbox__input">
-  					</label>
-				</div>
 				<div class="mdl-layout-spacer"></div>
 			</div>
 			<div class="mdl-grid">

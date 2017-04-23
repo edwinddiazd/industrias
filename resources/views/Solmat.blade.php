@@ -37,6 +37,12 @@
 				    	</select>
 					</div>
 				</div>
+				<div class="mdl-cell mdl-cell--2-col">
+					<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="criticidad">
+					<span class="mdl-checkbox__label">Materia Cr&iacute;tica</span>
+  					<input type="checkbox" id="criticidad" class="mdl-checkbox__input">
+  					</label>
+				</div>
 				<div class="mdl-cell mdl-cell--5-col">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
 						<select style="border-color: blue;" name="productos_id">
