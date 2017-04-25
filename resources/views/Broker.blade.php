@@ -30,9 +30,6 @@
 			<div class="mdl-layout-spacer"></div>
 				<div class="mdl-cell mdl-cell--6-col">
 						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-
-							<textarea class="mdl-textfield__input" type="text" rows="3" id="direccion" name="direcccion"></textarea>
-				    		<label class="mdl-textfield__label" for="direccion" name="direccion">Direcci&oacute;n</label>
 							<textarea class="mdl-textfield__input" type="text" rows="1" id="direccion" name="direccion"></textarea>
 				    		<label class="mdl-textfield__label" for="direccion" name="direccion">Direcci&oacute;n</label>
 						</div>
