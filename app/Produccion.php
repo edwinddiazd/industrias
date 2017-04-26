@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Sol_Mat extends Model
+class Produccion extends Model
 {
-    protected $table='solmat';
+    //
 }

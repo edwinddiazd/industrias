@@ -14,6 +14,8 @@ use App\Industrias;
 
 use App\Producto;
 
+use DB;
+
 use Session;
 
 class SolmatController extends Controller
@@ -47,7 +49,7 @@ class SolmatController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,array(
-            'criticidad_producto'=>'required',
+            'criticidad'=>'required',
             'capacidad'=>'required',
             'materias_id'=>'required',
             'productos_id'=>'required',
@@ -68,7 +70,7 @@ class SolmatController extends Controller
 
         Session::flash('success','Datos guardados satisfactoriamente');
 
-        return redirect('/Solmat');
+        return redirect('/Solmats');
 
     }
 

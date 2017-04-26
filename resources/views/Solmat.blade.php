@@ -39,8 +39,8 @@
 				</div>
 				<div class="mdl-cell mdl-cell--2-col">
 					<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="criticidad">
+					<input type="checkbox" id="criticidad" name="criticidad" value="0" class="mdl-checkbox__input">
 					<span class="mdl-checkbox__label">Materia Cr&iacute;tica</span>
-  					<input type="checkbox" id="criticidad" class="mdl-checkbox__input">
   					</label>
 				</div>
 				<div class="mdl-cell mdl-cell--5-col">

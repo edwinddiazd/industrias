@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCapacidadsTable extends Migration
+class CreateProyeccionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,15 +12,17 @@ class CreateCapacidadsTable extends Migration
      */
     public function up()
     {
-        Schema::create('capacidads', function (Blueprint $table) {
+        Schema::create('proyeccions', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('industrias_id')->unsigned();
-            $table->integer('productos_id')->unsigned();
-            $table->string('capacidad_instalada');
-            $table->foreign('productos_id')->references('id')->on('productos')
-                ->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('industrias_id')->references('id')->on('industrias')
                 ->onUpdate('cascade')->onDelete('cascade');
+            $table->integer('productos_id')->unsigned();
+            $table->foreign('productos_id')->references('id')->on('productos')
+                ->onUpdate('cascade')->onDelete('cascade');
+            $table->integer('proyeccion');
+            /*Recuerda que esta capacidad es la operativa trimestral*/
+            $table->integer('capacidad');
             $table->timestamps();
         });
     }
@@ -32,6 +34,6 @@ class CreateCapacidadsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('capacidads');
+        Schema::drop('proyeccions');
     }
 }

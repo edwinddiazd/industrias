@@ -101,4 +101,4 @@ Route::get('Broker_Consul','PageController@getConsultaBroker_Consul');
 
 Route::auth();
 
-Route::get('/home', 'HomeController@index');
+/*Route::get('/home', 'HomeController@index');*/
