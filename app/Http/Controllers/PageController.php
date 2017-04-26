@@ -87,11 +87,11 @@ class PageController extends Controller
     public function getProyeccion ()
     {
         /*Aqui estoy haciendo un query serio, dentro de este query lo q estoy haciendo es 
-        1- llamar a la tabla proyeccion para meter la informacion dentro de la variable $proy mediante el comabdo DB::table('nombre de la tabla')
+        1- llamar a la tabla proyeccion para meter la informacion dentro de la variable $proys mediante el comabdo DB::table('nombre de la tabla')
         2- unirle o pegarle (->join) la informacion de la tabla industrias con la condicion de q el id de la tabla industrias ('industrias.id' y recuerda q el punto indica pertenencia a la tabla, en este caso seria el id que pertenece a la tabla industrias, tambien recuerda que me refiero a id como columna de la tabla no como titulo del valor) coincida con el industrias_id de la tabla proyeccion
         3- repito el procedimiendo para las tablas de productos, de capacidad y de produccion.
         4- con ->select selecciono las columnas que necesito para mostrar la informacion de la consulta, en este caso necesito el nombre de la industria, el nombre del producto, la unidad del producto, la capacidad instalada, la capacidad operativa, la proyeccion, la produccion y los precios en bs y en $
-        5- toda esa informacion va a estar guardada en la variable $proy, y se la pasamos a la vista para q se construya la tabla a mostrar 
+        5- toda esa informacion va a estar guardada en la variable $proys, y se la pasamos a la vista para q se construya la tabla a mostrar 
         */
         $proys = DB::table('proyeccions')->join('industrias','industrias.id','=','proyeccions.industrias_id')->join('productos','productos.id','=','proyeccions.productos_id')->join('capacidads','capacidad.productos_id','=','proyeccions.productos_id')->join('produccions','produccions.productos_id','=','proyeccions.productos_id')->select('industrias.industrias','proyeccions.proyeccion','productos.producto','produccions.produccion','produccions.bolivares','produccions.dolares','productos.unidad_producto','capacidads.capacidad_instalada','proyeccions.capacidad','productos.tipo_producto')->get();
         return view ('Proyeccion')->withProy($proys);
