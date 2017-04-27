@@ -6,19 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use App\Sol_Mat;
-
-use Illuminate\Support\Facades\Auth;
-
-use App\Industrias;
-
-use App\Producto;
-
-use DB;
-
-use Session;
-
-class SolmatController extends Controller
+class ProyeccionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -48,30 +36,26 @@ class SolmatController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,array(
-            'criticidad'=>'required',
-            'capacidad'=>'required',
-            'materias_id'=>'required',
-            'productos_id'=>'required',
-            )); 
+        //
         $data = Auth::user()->industrias_id;
-        $indus = Industrias::find($data);
+        $industrias = Industrias::find($data);
 
+         $this->validate($request,array(
+            'proyeccion'=>'required',
+            'cap_oper'=>'required',
+            'producto_id'=>'required',
+            )); 
 
-
-        $solicitud = new Sol_Mat;
-        $solicitud->industrias_id = $indus->id;
-        $solicitud->materias_id = $request->materias_id;
-        $solicitud->productos_id = $request->productos_id;
-        $solicitud->criticidad_producto = $request->criticidad;
-        $solicitud->capacidad = $request->capacidad;
-        $solicitud->solicitud = $request->solicitud;
-        $solicitud->save();
+        $proye= new Proyeccion;
+        $proye->proyeccion = $request->proyeccion;
+        $proye->capacidad = $request->cap_oper;
+        $proye->industrias_id = $industrias->id;
+        $proye->producto_id = $request ->prod;
+        $proye->save();
 
         Session::flash('success','Datos guardados satisfactoriamente');
 
-        return redirect('/Solmats');
-
+        return redirect('/Reg_Proyeccion');
     }
 
     /**

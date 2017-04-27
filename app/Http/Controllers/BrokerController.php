@@ -46,7 +46,7 @@ class BrokerController extends Controller
     public function store(Request $request)
     {
 
-        $data = Auth::user()->id;
+        $data = Auth::user()->industrias_id;
         $industrias = Industrias::find($data);
 
          $this->validate($request,array(

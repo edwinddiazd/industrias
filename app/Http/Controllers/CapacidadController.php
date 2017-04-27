@@ -47,12 +47,12 @@ class CapacidadController extends Controller
     public function store(Request $request)
     {
         
-        $data = Auth::user()->id;
+        $data = Auth::user()->industrias_id;
         $industrias = Industrias::find($data);
 
          $this->validate($request,array(
-            'capacidad_instalada'=>'required',
-            'capacidad_operativa'=>'required',
+            'cap_inst'=>'required',
+            'cap_inst_oper'=>'required',
             )); 
         $capac= new Capacidad;
         $capac->capacidad_instalada = $request->cap_inst;
