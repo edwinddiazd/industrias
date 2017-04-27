@@ -13,7 +13,7 @@
 				<div class="mdl-layout-spacer"></div>
 				<div class="mdl-cell mdl-cell--5-col">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
-						<select style="border-color: blue;" name="">
+						<select style="border-color: blue;" name="selec_produc">
 						<option>Seleccione el producto</option>
 						@foreach ($productos as $produ)
 					    	<option value="{{ $produ->id }}">{{$produ->producto}}</option>

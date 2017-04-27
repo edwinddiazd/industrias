@@ -57,6 +57,8 @@ Route::get('Capacidads', 'PageController@getCapacidads');
 
 Route::get('Solmats', 'PageController@getSolmats');
 
+Route::get('Reg_Proyeccions','PageController@getReg_Proyeccion');
+
 Route::resource('Productos','ProductController');
 
 Route::resource('Industria','IndustriaController');
@@ -70,6 +72,8 @@ Route::resource('Broker','BrokerController');
 Route::resource('Capacidad','CapacidadController');
 
 Route::resource('Solmat','SolmatController');
+
+Route::resource('Reg_Proyeccion','ProyeccionController');
 
 Route::get('Personal', 'PageController@getConsultaPersonal');
 

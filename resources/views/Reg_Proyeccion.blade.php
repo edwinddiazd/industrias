@@ -13,7 +13,7 @@
 				<div class="mdl-layout-spacer"></div>
 				<div class="mdl-cell mdl-cell--5-col">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
-						<select style="border-color: blue;" name="">
+						<select style="border-color: blue;" name="selec_product">
 						<option>Seleccione el producto</option>
 						@foreach ($productos as $produ)
 					    	<option value="{{ $produ->id }}">{{$produ->producto}}</option>
@@ -27,14 +27,14 @@
 			<div class="mdl-layout-spacer"></div>
 				<div class="mdl-cell mdl-cell--6-col">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
-							<input class="mdl-textfield__input" type="text" id="cap_inst" name="cap_inst">
-				    		<label class="mdl-textfield__label" for="cap_inst" name="cap_inst">Capacidad Instalada</label>
+							<input class="mdl-textfield__input" type="text" id="proyeccion" name="proyeccion">
+				    		<label class="mdl-textfield__label" for="proyeccion" name="proyeccion">Proyecci&oacute;n</label>
 						</div>
 				</div>
 				<div class="mdl-cell mdl-cell--6-col">
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
-							<input class="mdl-textfield__input" type="text" id="cap_inst_oper" name="cap_inst_oper">
-				    		<label class="mdl-textfield__label" for="cap_inst_oper" name="cap_inst_oper">Capacidad Instalada Operativa</label>
+							<input class="mdl-textfield__input" type="text" id="cap_oper" name="cap_oper">
+				    		<label class="mdl-textfield__label" for="cap_oper" name="cap_oper">Capacidad</label>
 						</div>
 				</div>
 			<div class="mdl-layout-spacer"></div>

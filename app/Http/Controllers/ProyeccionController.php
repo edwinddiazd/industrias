@@ -50,7 +50,7 @@ class ProyeccionController extends Controller
         $proye->proyeccion = $request->proyeccion;
         $proye->capacidad = $request->cap_oper;
         $proye->industrias_id = $industrias->id;
-        $proye->producto_id = $request ->prod;
+        $proye->producto_id = $request ->selec_product;
         $proye->save();
 
         Session::flash('success','Datos guardados satisfactoriamente');
