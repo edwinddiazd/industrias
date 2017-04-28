@@ -12,11 +12,11 @@ use App\Industrias;
 
 use App\Producto;
 
-use App\Proyeccion;
+use App\Produccion;
 
 use Session;
 
-class ProyeccionController extends Controller
+class ProduccionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -51,21 +51,23 @@ class ProyeccionController extends Controller
         $industrias = Industrias::find($data);
 
          $this->validate($request,array(
-            'proyeccion'=>'required',
-            'cap_oper'=>'required',
-            'selec_product'=>'required',
+            'produccion'=>'required',
+            'costo_b'=>'required',
+            'costo_d'=>'required',
+            'sele_product'=>'required',
             )); 
 
-        $proye= new Proyeccion;
-        $proye->proyeccion = $request->proyeccion;
-        $proye->capacidad = $request->cap_oper;
-        $proye->industrias_id = $industrias->id;
-        $proye->productos_id = $request ->selec_product;
-        $proye->save();
+        $pduc= new Produccion;
+        $pduc->produccion = $request->produccion;
+        $pduc->bolivares = $request->costo_b;
+        $pduc->dolares=$request->costo_d;
+        $pduc->industrias_id = $industrias->id;
+        $pduc->productos_id = $request ->sele_product;
+        $pduc->save();
 
         Session::flash('success','Datos guardados satisfactoriamente');
 
-        return redirect('/Reg_Proyeccions');
+        return redirect('/Reg_Produccions');
     }
 
     /**

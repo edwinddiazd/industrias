@@ -74,6 +74,14 @@ class PageController extends Controller
         return view ('Reg_Proyeccion')->withIndustrias($industrias)->withProductos($produs);
     }
 
+    public function getReg_Produccion ()
+    {
+        $produs = Productos::all();
+        $data = Auth::user()->industrias_id;
+        $industrias = Industrias::find($data);
+        return view ('Reg_Produccion')->withIndustrias($industrias)->withProductos($produs);
+    }
+
     public function getConsultaPersonal ()
     {
        
