@@ -56,7 +56,7 @@ class CapacidadController extends Controller
             )); 
         $capac= new Capacidad;
         $capac->capacidad_instalada = $request->cap_inst;
-        $capac->producto_id = $request ->selec_produc;
+        $capac->productos_id = $request ->selec_produc;
         $capac->industrias_id = $industrias->id;
         $capac->save();
 
