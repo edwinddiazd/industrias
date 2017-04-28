@@ -73,7 +73,7 @@ Route::resource('Capacidad','CapacidadController');
 
 Route::resource('Solmat','SolmatController');
 
-Route::resource('Reg_Proyeccion','ProyeccionController');
+Route::resource('Proyeccion','ProyeccionController');
 
 Route::get('Personal', 'PageController@getConsultaPersonal');
 

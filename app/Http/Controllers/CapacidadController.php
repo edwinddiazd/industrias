@@ -52,19 +52,18 @@ class CapacidadController extends Controller
 
          $this->validate($request,array(
             'cap_inst'=>'required',
-            'cap_inst_oper'=>'required',
+            'selec_produc'=>'required',
             )); 
         $capac= new Capacidad;
         $capac->capacidad_instalada = $request->cap_inst;
-        $capac->capacidad_operativa = $request->cap_inst_oper;
-        $capac->industrias_id = $industrias->id;
         $capac->producto_id = $request ->selec_produc;
+        $capac->industrias_id = $industrias->id;
         $capac->save();
 
 
         Session::flash('success','Datos guardados satisfactoriamente');
 
-        return redirect('/Capacidad');
+        return redirect('/Capacidads');
     }
 
     /**

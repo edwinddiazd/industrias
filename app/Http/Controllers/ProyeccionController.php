@@ -43,7 +43,7 @@ class ProyeccionController extends Controller
          $this->validate($request,array(
             'proyeccion'=>'required',
             'cap_oper'=>'required',
-            'producto_id'=>'required',
+            'selec_product'=>'required',
             )); 
 
         $proye= new Proyeccion;
