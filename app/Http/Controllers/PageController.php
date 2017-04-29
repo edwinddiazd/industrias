@@ -16,6 +16,10 @@ use App\Productos;
 
 use App\Materias;
 
+use App\Proyeccion;
+
+use App\Produccion;
+
 use Illuminate\Support\Facades\Auth;
 
 class PageController extends Controller
@@ -101,7 +105,7 @@ class PageController extends Controller
         return view ('Broker')->withIndustrias($industrias);
     }
 
-    public function getProyeccion ()
+    public function getConsultaProyeccion_Consul ()
     {
         /*Aqui estoy haciendo un query serio, dentro de este query lo q estoy haciendo es 
         1- llamar a la tabla proyeccion para meter la informacion dentro de la variable $proys mediante el comabdo DB::table('nombre de la tabla')
@@ -111,7 +115,7 @@ class PageController extends Controller
         5- toda esa informacion va a estar guardada en la variable $proys, y se la pasamos a la vista para q se construya la tabla a mostrar 
         */
         $proys = DB::table('proyeccions')->join('industrias','industrias.id','=','proyeccions.industrias_id')->join('productos','productos.id','=','proyeccions.productos_id')->join('capacidads','capacidad.productos_id','=','proyeccions.productos_id')->join('produccions','produccions.productos_id','=','proyeccions.productos_id')->select('industrias.industrias','proyeccions.proyeccion','productos.producto','produccions.produccion','produccions.bolivares','produccions.dolares','productos.unidad_producto','capacidads.capacidad_instalada','proyeccions.capacidad','productos.tipo_producto')->get();
-        return view ('Proyeccion')->withProy($proys);
+        return view ('Proyeccion_Consul')->withProy($proys);
     }
 
     public function getExportacion ()

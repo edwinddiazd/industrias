@@ -107,6 +107,8 @@ Route::get('Gestion_Humana','PageController@getConsultaGestionHumana');
 
 Route::get('Broker_Consul','PageController@getConsultaBroker_Consul');
 
+Route::get('Proyeccion_Consul','PageController@getConsultaProyeccion_Consul');
+
 Route::auth();
 
 /*Route::get('/home', 'HomeController@index');*/
