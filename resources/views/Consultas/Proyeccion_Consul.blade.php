@@ -1,9 +1,11 @@
+@extends('main')
+@section('content')
 <div class="mdl-grid">
 <div class="mdl-layout-spacer"></div>
 	<div class="mdl-cell mdl-cell--10-col mdl-shadow--3dp mdl-color--grey-100">
 		<div class="mdl-grid">
 		<div class="mdl-layout-spacer"></div>
-			<div class="mdl-cell mdl-cell--1-col mdl-cell--10-col">
+			<div class="mdl-cell mdl-cell--10-col">
 			<div><h4>Consulta General de Productos</h4></div>
 			<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
   				<thead>
@@ -15,10 +17,6 @@
 				      <th class="mdl-data-table__cell--non-numeric"><h6 style="font-weight: bold;">Proyecci&oacute;n</h6></th>
 				      <th class="mdl-data-table__cell--non-numeric"><h6 style="font-weight: bold;">Unidad de Medida</h6></th>
 				      <th class="mdl-data-table__cell--non-numeric"><h6 style="font-weight: bold;">Industrias</h6></th>
-				      <th class="mdl-data-table__cell--non-numeric"><h6 style="font-weight: bold;">prueba</h6></th>
-				      <th class="mdl-data-table__cell--non-numeric"><h6 style="font-weight: bold;">prueba</h6></th>
-				      <th class="mdl-data-table__cell--non-numeric"><h6 style="font-weight: bold;">prueba</h6></th>
-				      <th class="mdl-data-table__cell--non-numeric"><h6 style="font-weight: bold;">prueba</h6></th>
 				    </tr>
   				</thead>
   				<tbody>
