@@ -80,8 +80,8 @@
           <a class="mdl-navigation__link" href="Brokers"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">input</i>   Broker</a>
           <a class="mdl-navigation__link" href="Solmats"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">input</i>   Solicitud de Materias Primas</a>
           <a class="mdl-navigation__link" href="Capacidads"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">input</i>   Capacidad de Producci&oacute;n</a>
-          <a class="mdl-navigation__link" href="Proyeccions"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">input</i>   Proyecci&oacute;n de la Producci&oacute;n</a>
-          <a class="mdl-navigation__link" href="Produccions"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">input</i>   Producci&oacute;n Real</a>
+          <a class="mdl-navigation__link" href="Reg_Proyeccions"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">input</i>   Proyecci&oacute;n de la Producci&oacute;n</a>
+          <a class="mdl-navigation__link" href="Reg_Produccions"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">input</i>   Producci&oacute;n Real</a>
         </nav>
   </div>
   @else
