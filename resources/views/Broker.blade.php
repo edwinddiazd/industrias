@@ -36,8 +36,8 @@
 				</div>
 				<div class="mdl-cell mdl-cell--6-col">
 						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-							<input class="mdl-textfield__input" type="text" id="correo" name="correo"> 
-				    		<label class="mdl-textfield__label" for="correo" name="correo">Sitio Web</label>
+							<input class="mdl-textfield__input" type="text" id="web" name="web"> 
+				    		<label class="mdl-textfield__label" for="web" name="web">Sitio Web</label>
 						</div>
 				</div>
 			<div class="mdl-layout-spacer"></div>

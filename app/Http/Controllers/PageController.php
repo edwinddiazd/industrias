@@ -204,7 +204,7 @@ class PageController extends Controller
 
     public function getConsultaBroker_Consul()
     {
-        $industrias = DB::table('industrias')->join('Broker','industrias.id','=','Broker.industrias_id')->select('industrias.industria','Broker.nombre','Broker.pasaporte','Broker.direccion','Broker.correo','Broker.tlf1','Broker.tlf2')->get();
+        $industrias = DB::table('industrias')->join('Broker','industrias.id','=','Broker.industrias_id')->select('industrias.industria','Broker.nombre','Broker.pasaporte','Broker.direccion','Broker.web','Broker.tlf1','Broker.tlf2')->get();
         return view ('Consultas.Broker_Consul')->withIndustrias($industrias);
     } 
 

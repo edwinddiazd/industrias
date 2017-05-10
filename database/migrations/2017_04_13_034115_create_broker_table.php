@@ -20,7 +20,7 @@ class CreateBrokerTable extends Migration
             $table->string('nombre');
             $table->string('pasaporte');
             $table->longtext('direccion');
-            $table->string('correo');
+            $table->string('web');
             $table->string('tlf1');
             $table->string('tlf2');
             $table->timestamps();

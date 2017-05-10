@@ -53,7 +53,7 @@ class BrokerController extends Controller
             'nombre'=>'required|max:255',
             'pasaporte'=>'required',
             'direccion'=>'required|max:400',
-            'correo'=>'required',
+            'web'=>'required',
             'tlf1'=>'required',
             'tlf2'=>'required',
             ));
@@ -61,7 +61,7 @@ class BrokerController extends Controller
         $brok->nombre = $request->nombre;
         $brok->pasaporte = $request->pasaporte;
         $brok->direccion = $request->direccion;
-        $brok->correo = $request->correo;
+        $brok->web = $request->web;
         $brok->tlf1 = $request->tlf1;
         $brok->tlf2 = $request->tlf2;
         $brok->industrias_id = $industrias->id;
