@@ -15,9 +15,9 @@
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 			    		<select style="border-color: blue;" name="tipo_producto">
 					    	<option >Seleccione Tipo de Producción</option>
-					    	<option value="1">Semi - Terminado</option>
-					    	<option value="2">Terminado</option>
-					    	<option value="3">Sub Producto</option>
+					    	<option value="Semi-Terminado">Semi - Terminado</option>
+					    	<option value="Terminado">Terminado</option>
+					    	<option value="Sub Producto">Sub Producto</option>
 			    		</select>
 					</div>
 				</div>

@@ -114,8 +114,14 @@ class PageController extends Controller
         4- con ->select selecciono las columnas que necesito para mostrar la informacion de la consulta, en este caso necesito el nombre de la industria, el nombre del producto, la unidad del producto, la capacidad instalada, la capacidad operativa, la proyeccion, la produccion y los precios en bs y en $
         5- toda esa informacion va a estar guardada en la variable $proys, y se la pasamos a la vista para q se construya la tabla a mostrar 
         */
-        $proys = DB::table('proyeccions')->join('industrias','industrias.id','=','proyeccions.industrias_id')->join('productos','productos.id','=','proyeccions.productos_id')->join('capacidads','capacidads.productos_id','=','proyeccions.productos_id')->join('produccions','produccions.productos_id','=','proyeccions.productos_id')->select('industrias.industria','proyeccions.proyeccion','productos.producto','productos.descripcion_producto','produccions.produccion','produccions.bolivares','produccions.dolares','productos.unidad_producto','capacidads.capacidad_instalada','proyeccions.capacidad','productos.tipo_producto')->get();
+        $proys = DB::table('proyeccions')->join('industrias','industrias.id','=','proyeccions.industrias_id')->join('productos','productos.id','=','proyeccions.productos_id')->join('capacidads','capacidads.productos_id','=','proyeccions.productos_id')->join('produccions','produccions.productos_id','=','proyeccions.productos_id')->select('industrias.industria','proyeccions.proyeccion','productos.producto','productos.descripcion_producto','productos.unidad_producto','productos.tipo_producto')->get();
         return view ('Consultas.Proyeccion_Consul')->withProy($proys);
+    }
+
+    public function getTipoProducto_Consul ()
+    {
+        $proys = DB::table('proyeccions')->join('industrias','industrias.id','=','proyeccions.industrias_id')->join('productos','productos.id','=','proyeccions.productos_id')->join('capacidads','capacidads.productos_id','=','proyeccions.productos_id')->join('produccions','produccions.productos_id','=','proyeccions.productos_id')->select('industrias.industria','proyeccions.proyeccion','productos.producto','produccions.produccion','produccions.bolivares','produccions.dolares','productos.unidad_producto','capacidads.capacidad_instalada','proyeccions.capacidad','productos.tipo_producto')->where('productos.tipo_producto','=','Semi-Terminado')->get();
+        return view ('Consultas.TipoProducto_Consul')->withProy($proys);
     }
 
     public function getExportacion ()

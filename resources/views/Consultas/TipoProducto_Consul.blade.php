@@ -6,7 +6,15 @@
 		<div class="mdl-grid">
 		<div class="mdl-layout-spacer"></div>
 			<div class="mdl-cell mdl-cell--12-col">
-			<div><h4>Consulta Productos</h4></div>
+			<div><h4>Consulta  Tipo de Producto por Industria</h4></div>
+			<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			    <select style="border-color: blue;" name="tipo_producto">
+					<option >Seleccione Tipo de Producción</option>
+					<option value="Semi-Terminado">Semi - Terminado</option>
+					<option value="Terminado">Terminado</option>
+					<option value="Sub Producto">Sub Producto</option>
+			    </select>
+			</div>
 			<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
   				<thead>
 				    <tr>
@@ -19,6 +27,7 @@
 				    </tr>
   				</thead>
   				<tbody>
+  				
   				@foreach ($proy as $pro)
 					    
 						    <tr>
