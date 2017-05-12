@@ -7,7 +7,7 @@
 		<div class="mdl-layout-spacer"></div>
 			<div class="mdl-cell mdl-cell--12-col">
 			<div><h4>Consulta Productos</h4></div>
-			<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+			<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp class-tabla">
   				<thead>
 				    <tr>
 				      <th class="mdl-data-table__cell--non-numeric"><h6 style="font-weight: bold;">Producto</h6></th>
@@ -22,9 +22,9 @@
   				@foreach ($proy as $pro)
 					    
 						    <tr>
-					    	<td class="mdl-data-table__cell--non-numeric">{{ $pro->producto}}</td>
+					    	<td class="mdl-data-table__cell--non-numeric ">{{ $pro->producto}}</td>
 					    	<td class="mdl-data-table__cell--non-numeric">{{ $pro->tipo_producto}}</td>
-					    	<td class="mdl-data-table__cell--non-numeric">{{ $pro->descripcion_producto}}</td>	
+					    	<td class="mdl-data-table__cell--non-numeric"><p>{{ $pro->descripcion_producto}}</p></td>	
 					    	<td class="mdl-data-table__cell--non-numeric">{{$pro->proyeccion}}</td>
 					    	<td class="mdl-data-table__cell--non-numeric">{{$pro->unidad_producto}}</td>
 					    	<td class="mdl-data-table__cell--non-numeric">{{$pro->industria}}</td>							

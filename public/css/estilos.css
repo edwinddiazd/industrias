@@ -1,0 +1,25 @@
+
+/*Hoja de estilo creada para las tablas que deban mostrar
+la descripción de un producto o materia*/
+
+@charset "UTF-8";
+
+.class-tabla{
+	display: inline-table;
+	max-width: auto;
+	white-space: normal;
+}
+
+
+
+/*
+.class-tabla td{
+	width:450px;
+	width: 100px;
+
+}
+	text-align: justify-all;
+.class-tabla-tr{
+	max-height: 100px;
+}
+*/
