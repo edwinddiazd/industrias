@@ -22,19 +22,21 @@
   				</thead>
   				<tbody>
   				
-  				@foreach ($proy as $pro)
-					    
-						    <tr>
-					    	<td class="mdl-data-table__cell--non-numeric">{{ $pro->producto}}</td>
-					    	<td class="mdl-data-table__cell--non-numeric">{{ $pro->proyeccion}}</td>
-					    	<td class="mdl-data-table__cell--non-numeric">{{ $pro->capacidad}}</td>	
-					    	<td class="mdl-data-table__cell--non-numeric">{{$pro->produccion}}</td>
-					    	<td class="mdl-data-table__cell--non-numeric">{{$pro->unidad_producto}}</td>
-					    	<td class="mdl-data-table__cell--non-numeric">{{$pro->bolivares}}</td>
-					    	<td class="mdl-data-table__cell--non-numeric">{{$pro->dolares}}</td>
-					    	<td class="mdl-data-table__cell--non-numeric">{{$pro->industria}}</td>							
-				    		</tr>
-				    		
+  				@foreach ($proys as $proy)
+				@if ( $proy->tipo_producto === 'Sub-Producto' )
+			    
+			    <tr>
+		    	<td class="mdl-data-table__cell--non-numeric">{{$proy->producto}}</td>
+		    	<td class="mdl-data-table__cell--non-numeric">{{$proy->proyeccion}}</td>
+		    	<td class="mdl-data-table__cell--non-numeric">{{$proy->capacidad}}</td>	
+		    	<td class="mdl-data-table__cell--non-numeric">{{$proy->tipo_producto}}</td>
+		    	<td class="mdl-data-table__cell--non-numeric">{{$proy->unidad_producto}}</td>
+		    	<td class="mdl-data-table__cell--non-numeric">{{$proy->bolivares}}</td>
+		    	<td class="mdl-data-table__cell--non-numeric">{{$proy->dolares}}</td>
+		    	<td class="mdl-data-table__cell--non-numeric">{{$proy->industria}}</td>							
+	    		</tr>
+	    		@else
+				@endif		
 				@endforeach
 				    
   				</tbody>

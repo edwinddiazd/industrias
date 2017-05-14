@@ -111,7 +111,7 @@ Route::get('ProductoSemi_Consul','PageController@getConsultaProductoSemi_Consul'
 
 Route::get('ProductoTermi_Consul','PageController@getConsultaProductoTermi_Consul');
 
-Route::get('ProductoSub_Consul','PageController@getConsultaProductoSub_Consul');
+Route::get('Subproducto','PageController@getConsultaProductoSub_Consul');
 
 Route::auth(); 
 

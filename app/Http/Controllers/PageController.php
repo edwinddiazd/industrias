@@ -6,8 +6,6 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use DB;
-
 use App\Industrias;
 
 use App\Personal;
@@ -19,6 +17,8 @@ use App\Materias;
 use App\Proyeccion;
 
 use App\Produccion;
+
+use Illuminate\Support\Facades\DB;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -132,8 +132,9 @@ class PageController extends Controller
 
     public function getConsultaProductoSub_Consul ()
     {
-        $proys = DB::table('proyeccions')->join('industrias','industrias.id','=','proyeccions.industrias_id')->join('productos','productos.id','=','proyeccions.productos_id')->join('capacidads','capacidads.productos_id','=','proyeccions.productos_id')->join('produccions','produccions.productos_id','=','proyeccions.productos_id')->select('industrias.industria','proyeccions.proyeccion','productos.producto','produccions.produccion','produccions.bolivares','produccions.dolares','productos.unidad_producto','capacidads.capacidad_instalada','proyeccions.capacidad','productos.tipo_producto')->where('productos.tipo_producto','=','Sub Producto')->get();
-        return view ('Consultas.ProductoSub_Consul')->withProy($proys);
+        $proys = DB::table('productos')->join('proyeccions', 'proyeccions.productos_id','=', 'productos.id')->join('industrias','industrias.id','=','proyeccions.industrias_id')->join('capacidads', 'capacidads.productos_id', '=', 'productos.id')->join('produccions', 'produccions.productos_id' ,'=', 'productos.id')->select('industrias.industria','proyeccions.proyeccion','productos.producto','produccions.produccion','produccions.bolivares','produccions.dolares','productos.unidad_producto','capacidads.capacidad_instalada','proyeccions.capacidad','productos.tipo_producto')->get();
+        /*->join('industrias','industrias.id','=','proyeccions.industrias_id')->join('productos','productos.id','=','proyeccions.productos_id')->join('capacidads','capacidads.productos_id','=','proyeccions.productos_id')->join('produccions','produccions.productos_id','=','proyeccions.productos_id')->where('productos.tipo_producto','=','Sub-Producto')->select('industrias.industria','proyeccions.proyeccion','productos.producto','produccions.produccion','produccions.bolivares','produccions.dolares','productos.unidad_producto','capacidads.capacidad_instalada','proyeccions.capacidad','productos.tipo_producto')->get();*/
+        return view ('Consultas.Subproducto')->withProys($proys);
     }
 
     public function getAlianzas ()
