@@ -8,6 +8,7 @@ la descripción de un producto o materia*/
 	display: inline-table;
 	max-width: auto;
 	white-space: normal;
+	text-align: justify;
 }
 
 

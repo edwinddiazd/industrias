@@ -49,8 +49,6 @@ Route::get('Brokers', 'PageController@getBroker');
 
 Route::get('Proyeccion', 'PageController@getProyeccion');
 
-Route::get('Exportacion', 'PageController@getExportacion');
-
 Route::get('Alianzas', 'PageController@getAlianzas');
 
 Route::get('Capacidads', 'PageController@getCapacidads');
@@ -107,7 +105,13 @@ Route::get('Gestion_Humana','PageController@getConsultaGestionHumana');
 
 Route::get('Broker_Consul','PageController@getConsultaBroker_Consul');
 
-Route::get('Proyeccion_Consul','PageController@getConsultaProyeccion');
+Route::get('Producto_Consul','PageController@getConsultaProducto');
+
+Route::get('ProductoSemi_Consul','PageController@getConsultaProductoSemi_Consul');
+
+Route::get('ProductoTermi_Consul','PageController@getConsultaProductoTermi_Consul');
+
+Route::get('ProductoSub_Consul','PageController@getConsultaProductoSub_Consul');
 
 Route::auth(); 
 
