@@ -43,11 +43,13 @@ Route::get('Dashboard', ['middleware' => ['auth'], 'uses' => 'PageController@get
 
 Route::get('Producto', ['middleware' => ['auth'], 'uses' => 'PageController@getProducto']);
 
-Route::get('Aliados', 'PageController@getAliados');
+Route::get('Productos_consul', 'PageController@getConsultaProductos_consul');
 
 Route::get('Brokers', 'PageController@getBroker');
 
 Route::get('Proyeccion', 'PageController@getProyeccion');
+
+Route::get('Exportacion', 'PageController@getExportacion');
 
 Route::get('Alianzas', 'PageController@getAlianzas');
 
@@ -105,14 +107,8 @@ Route::get('Gestion_Humana','PageController@getConsultaGestionHumana');
 
 Route::get('Broker_Consul','PageController@getConsultaBroker_Consul');
 
-Route::get('Producto_Consul','PageController@getConsultaProducto');
+Route::get('Prueba','PageController@getConsultaPrueba');
 
-Route::get('ProductoSemi_Consul','PageController@getConsultaProductoSemi_Consul');
-
-Route::get('ProductoTermi_Consul','PageController@getConsultaProductoTermi_Consul');
-
-Route::get('Subproducto','PageController@getConsultaProductoSub_Consul');
-
-Route::auth(); 
+Route::auth();
 
 /*Route::get('/home', 'HomeController@index');*/

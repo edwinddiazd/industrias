@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use DB;
+
 use App\Industrias;
 
 use App\Personal;
@@ -17,8 +19,6 @@ use App\Materias;
 use App\Proyeccion;
 
 use App\Produccion;
-
-use Illuminate\Support\Facades\DB;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -93,9 +93,16 @@ class PageController extends Controller
         return view ('Consultas.Personal')->withIndustrias($industrias);
     }
 
-    public function getAliados ()
+    public function getConsultaProductos_consul ()
     {
-        return view ('Aliados');
+         /*Aqui estoy haciendo un query serio, dentro de este query lo q estoy haciendo es 
+        1- llamar a la tabla proyeccion para meter la informacion dentro de la variable $proys mediante el comabdo DB::table('nombre de la tabla')
+        2- unirle o pegarle (->join) la informacion de la tabla industrias con la condicion de q el id de la tabla industrias ('industrias.id' y recuerda q el punto indica pertenencia a la tabla, en este caso seria el id que pertenece a la tabla industrias, tambien recuerda que me refiero a id como columna de la tabla no como titulo del valor) coincida con el industrias_id de la tabla proyeccion
+        3- repito el procedimiendo para las tablas de productos, de capacidad y de produccion.
+        4- con ->select selecciono las columnas que necesito para mostrar la informacion de la consulta, en este caso necesito el nombre de la industria, el nombre del producto, la unidad del producto, la capacidad instalada, la capacidad operativa, la proyeccion, la produccion y los precios en bs y en $
+        5- toda esa informacion va a estar guardada en la variable $proys, y se la pasamos a la vista para q se construya la tabla a mostrar */
+        $nue = DB::table('proyeccions')->join('industrias','industrias.id','=','proyeccions.industrias_id')->join('productos','productos.id','=','proyeccions.productos_id')->join('produccions','produccions.productos_id','=','proyeccions.productos_id')->select('industrias.industria','proyeccions.proyeccion','productos.producto','productos.descripcion_producto','produccions.produccion','productos.unidad_producto','productos.tipo_producto')->get();
+        return view ('Consultas.Productos_consul')->withNuev($nue);
     }
 
     public function getBroker ()
@@ -105,36 +112,9 @@ class PageController extends Controller
         return view ('Broker')->withIndustrias($industrias);
     }
 
-    public function getConsultaProducto()
+    public function getExportacion ()
     {
-        /*Aqui estoy haciendo un query serio, dentro de este query lo q estoy haciendo es 
-        1- llamar a la tabla proyeccion para meter la informacion dentro de la variable $proys mediante el comabdo DB::table('nombre de la tabla')
-        2- unirle o pegarle (->join) la informacion de la tabla industrias con la condicion de q el id de la tabla industrias ('industrias.id' y recuerda q el punto indica pertenencia a la tabla, en este caso seria el id que pertenece a la tabla industrias, tambien recuerda que me refiero a id como columna de la tabla no como titulo del valor) coincida con el industrias_id de la tabla proyeccion
-        3- repito el procedimiendo para las tablas de productos, de capacidad y de produccion.
-        4- con ->select selecciono las columnas que necesito para mostrar la informacion de la consulta, en este caso necesito el nombre de la industria, el nombre del producto, la unidad del producto, la capacidad instalada, la capacidad operativa, la proyeccion, la produccion y los precios en bs y en $
-        5- toda esa informacion va a estar guardada en la variable $proys, y se la pasamos a la vista para q se construya la tabla a mostrar 
-        */
-        $proys = DB::table('proyeccions')->join('industrias','industrias.id','=','proyeccions.industrias_id')->join('productos','productos.id','=','proyeccions.productos_id')->join('capacidads','capacidads.productos_id','=','proyeccions.productos_id')->join('produccions','produccions.productos_id','=','proyeccions.productos_id')->select('industrias.industria','proyeccions.proyeccion','productos.producto','productos.descripcion_producto','productos.unidad_producto','productos.tipo_producto')->get();
-        return view ('Consultas.Producto_Consul')->withProy($proys);
-    }
-
-    public function getConsultaProductoSemi_Consul ()
-    {
-        $proys = DB::table('proyeccions')->join('industrias','industrias.id','=','proyeccions.industrias_id')->join('productos','productos.id','=','proyeccions.productos_id')->join('capacidads','capacidads.productos_id','=','proyeccions.productos_id')->join('produccions','produccions.productos_id','=','proyeccions.productos_id')->select('industrias.industria','proyeccions.proyeccion','productos.producto','produccions.produccion','produccions.bolivares','produccions.dolares','productos.unidad_producto','capacidads.capacidad_instalada','proyeccions.capacidad','productos.tipo_producto')->where('productos.tipo_producto','=','Semi-Terminado')->get();
-        return view ('Consultas.ProductoSemi_Consul')->withProy($proys);
-    }
-
-    public function getConsultaProductoTermi_Consul ()
-    {
-        $proys = DB::table('proyeccions')->join('industrias','industrias.id','=','proyeccions.industrias_id')->join('productos','productos.id','=','proyeccions.productos_id')->join('capacidads','capacidads.productos_id','=','proyeccions.productos_id')->join('produccions','produccions.productos_id','=','proyeccions.productos_id')->select('industrias.industria','proyeccions.proyeccion','productos.producto','produccions.produccion','produccions.bolivares','produccions.dolares','productos.unidad_producto','capacidads.capacidad_instalada','proyeccions.capacidad','productos.tipo_producto')->where('productos.tipo_producto','=','Terminado')->get();
-        return view ('Consultas.ProductoTermi_Consul')->withProy($proys);
-    }
-
-    public function getConsultaProductoSub_Consul ()
-    {
-        $proys = DB::table('productos')->join('proyeccions', 'proyeccions.productos_id','=', 'productos.id')->join('industrias','industrias.id','=','proyeccions.industrias_id')->join('capacidads', 'capacidads.productos_id', '=', 'productos.id')->join('produccions', 'produccions.productos_id' ,'=', 'productos.id')->select('industrias.industria','proyeccions.proyeccion','productos.producto','produccions.produccion','produccions.bolivares','produccions.dolares','productos.unidad_producto','capacidads.capacidad_instalada','proyeccions.capacidad','productos.tipo_producto')->get();
-        /*->join('industrias','industrias.id','=','proyeccions.industrias_id')->join('productos','productos.id','=','proyeccions.productos_id')->join('capacidads','capacidads.productos_id','=','proyeccions.productos_id')->join('produccions','produccions.productos_id','=','proyeccions.productos_id')->where('productos.tipo_producto','=','Sub-Producto')->select('industrias.industria','proyeccions.proyeccion','productos.producto','produccions.produccion','produccions.bolivares','produccions.dolares','productos.unidad_producto','capacidads.capacidad_instalada','proyeccions.capacidad','productos.tipo_producto')->get();*/
-        return view ('Consultas.Subproducto')->withProys($proys);
+        return view ('Exportacion');
     }
 
     public function getAlianzas ()

@@ -1,5 +1,6 @@
-@extends('main')
-@section('content')
+@extends ('main')
+@section ('content')
+
 <div class="mdl-grid">
 <div class="mdl-layout-spacer"></div>
 	<div class="mdl-cell mdl-cell--12-col mdl-shadow--3dp mdl-color--grey-100">
@@ -19,15 +20,15 @@
 				    </tr>
   				</thead>
   				<tbody>
-  				@foreach ($proy as $pro)
+  				@foreach ($nuev as $nueva)
 					    
 						    <tr>
-					    	<td class="mdl-data-table__cell--non-numeric ">{{ $pro->producto}}</td>
-					    	<td class="mdl-data-table__cell--non-numeric">{{ $pro->tipo_producto}}</td>
-					    	<td class="mdl-data-table__cell--non-numeric"><p>{{ $pro->descripcion_producto}}</p></td>	
-					    	<td class="mdl-data-table__cell--non-numeric">{{$pro->proyeccion}}</td>
-					    	<td class="mdl-data-table__cell--non-numeric">{{$pro->unidad_producto}}</td>
-					    	<td class="mdl-data-table__cell--non-numeric">{{$pro->industria}}</td>							
+					    	<td class="mdl-data-table__cell--non-numeric ">{{ $nueva->producto}}</td>
+					    	<td class="mdl-data-table__cell--non-numeric ">{{ $nueva->tipo_producto}}</td>
+					    	<td class="mdl-data-table__cell--non-numeric class-tabla">{{ $nueva->descripcion_producto}}</td>
+					    	<td class="mdl-data-table__cell--non-numeric ">{{ $nueva->proyeccion}}</td>	
+					    	<td class="mdl-data-table__cell--non-numeric">{{$nueva->unidad_producto}}</td>
+					    	<td class="mdl-data-table__cell--non-numeric">{{$nueva->industria}}</td>							
 				    		</tr>
 				    		
 				@endforeach
@@ -40,5 +41,4 @@
 	</div>
 	<div class="mdl-layout-spacer"></div>
 </div>
-
 @stop
