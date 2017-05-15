@@ -107,7 +107,13 @@ Route::get('Gestion_Humana','PageController@getConsultaGestionHumana');
 
 Route::get('Broker_Consul','PageController@getConsultaBroker_Consul');
 
-Route::get('Prueba','PageController@getConsultaPrueba');
+Route::get('Subproduc','PageController@getConsultaSubproduc');
+
+Route::get('Semiproduc','PageController@getConsultaSemiproduc');
+
+Route::get('Terminado','PageController@getConsultaTerminado');
+
+Route::get('MateriaP','PageController@getConsultaMateriP');
 
 Route::auth();
 

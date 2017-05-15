@@ -14,8 +14,10 @@
           <i class="material-icons">keyboard_arrow_down</i>
             </button>
             <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu2">
-              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Proyección</a></li>
-              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Exportacion</a></li>
+              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Productos_consul">Productos</a></li>
+              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Terminado">Terminados</a></li>
+              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Semiproduc"> Semi Terminados</a></li>
+              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Subproduc"> Sub Productos</a></li>
             </ul>
         
         <p class="mdl-navigation__link" style="cursor: default;">Industria</p>
@@ -23,10 +25,10 @@
           <i class="material-icons">keyboard_arrow_down</i>
             </button>
             <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu1">
-              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Aliados</a></li>
-              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Operacion Con Aliados</a></li>
+              <!--<li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Aliados</a></li>
+              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Operacion Con Aliados</a></li>-->
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Broker_Consul">Broker</a></li>
-              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Exportaciones</a></li>
+              <!--<li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="">Exportaciones</a></li>-->
             </ul>
 <!-- inicio del menu desplegable -->
         <p class="mdl-navigation__link" style="cursor: default;">Personal</p>

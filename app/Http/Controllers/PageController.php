@@ -105,6 +105,34 @@ class PageController extends Controller
         return view ('Consultas.Productos_consul')->withNuev($nue);
     }
 
+    public function getConsultaSubproduc ()
+    {
+        $subp=DB::table('produccions')->join('industrias','industrias.id','=','produccions.industrias_id')->join('productos','productos.id','=','produccions.productos_id')->join('proyeccions','proyeccions.productos_id','=','produccions.productos_id')->select('industrias.industria','productos.tipo_producto','productos.producto','produccions.produccion','produccions.bolivares','produccions.dolares','productos.unidad_producto','proyeccions.capacidad','proyeccions.proyeccion')->where('productos.tipo_producto','=','Sub Producto')->get();
+
+        return view ('Consultas.Subproduc')->withSub($subp);
+    }
+
+    public function getConsultaSemiproduc ()
+    {
+        $semi=DB::table('produccions')->join('industrias','industrias.id','=','produccions.industrias_id')->join('productos','productos.id','=','produccions.productos_id')->join('proyeccions','proyeccions.productos_id','=','produccions.productos_id')->select('industrias.industria','productos.tipo_producto','productos.producto','produccions.produccion','produccions.bolivares','produccions.dolares','productos.unidad_producto','proyeccions.capacidad','proyeccions.proyeccion')->where('productos.tipo_producto','=','Semi-Terminado')->get();
+
+        return view ('Consultas.Semiproduc')->withSemip($semi);
+    }
+
+    public function getConsultaTerminado ()
+    {
+        $termi=DB::table('produccions')->join('industrias','industrias.id','=','produccions.industrias_id')->join('productos','productos.id','=','produccions.productos_id')->join('proyeccions','proyeccions.productos_id','=','produccions.productos_id')->select('industrias.industria','productos.tipo_producto','productos.producto','produccions.produccion','produccions.bolivares','produccions.dolares','productos.unidad_producto','proyeccions.capacidad','proyeccions.proyeccion')->where('productos.tipo_producto','=','Terminado')->get();
+
+        return view ('Consultas.Terminado')->withTer($termi);
+    }
+
+    public function getConsultaMateriP()
+    {
+        $solmp=DB::table('solmat')->join('industrias','industrias.id','=','solmat.industrias_id')->join('materias','materias.id','=','solmat.materias_id')->select('industrias.industria','materias.nombre','materias.descripcion','materias.unidad')->get();
+
+        return view ('Consultas.MateriaP')->withSmp($solmp);  
+    }
+
     public function getBroker ()
     {
         $data = Auth::user()->industrias_id;
