@@ -5,7 +5,7 @@
 <!--dashboard de el usuario Dios
 =================================--> 
 @if(Entrust::hasRole('Dios'))
-<div class="mdl-grid">
+<div class="mdl-grid" style="margin-top: 30px;">
 	<div class="mdl-layout-spacer"></div>
 	<div class="mdl-cell mdl-cell--10-col mdl-shadow--3dp mdl-color--grey-100">
 	<h3 style="margin-left: 2%;">{{ $industrias->industria }}<br></h3>
@@ -20,7 +20,7 @@
 					<div>{{$industrias->tipo_industria}}</div>
 				</div>
 			</div>
-			<div class="mdl-grid">
+			<!--<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--3-col">
 					<input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" value="Industria">
 				</div>
@@ -33,7 +33,7 @@
 				<div class="mdl-cell mdl-cell--3-col">
 					<input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" value="Exportaci&oacute;n">
 				</div>
-			</div>
+			</div>-->
 	</div>
 	<div class="mdl-layout-spacer"></div>
 </div>
@@ -55,7 +55,7 @@
 					<div style="border: 2px solid #ccc">Tipo de Industria</div>
 				</div>
 			</div>
-			<div class="mdl-grid">
+			<!--<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--4-col">
 					<input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" value="Industria">
 				</div>
@@ -76,7 +76,7 @@
 				<div class="mdl-cell mdl-cell--4-col">
 					<input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" value="Operaci&oacute;n">
 				</div>
-			</div>
+			</div>-->
 	</div>
 	<div class="mdl-layout-spacer"></div>
 
@@ -101,7 +101,7 @@
 					<div style="border: 2px solid #ccc">Tipo de Industria</div>
 				</div>
 			</div>
-			<div class="mdl-grid">
+			<!--<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--3-col">
 					<input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" value="Producto">
 				</div>
@@ -114,7 +114,7 @@
 				<div class="mdl-cell mdl-cell--3-col">
 					<input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" value="Exportaci&oacute;n">
 				</div>
-			</div>
+			</div>-->
 	</div>
 	<div class="mdl-layout-spacer"></div>
 
