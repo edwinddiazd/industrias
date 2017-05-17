@@ -18,11 +18,11 @@ class CreateSolmatTable extends Migration
             $table->integer('materias_id')->unsigned();
             $table->integer('productos_id')->unsigned();
             $table->foreign('industrias_id')->references('id')->on('industrias')
-                ->onUpdate('cascade')->onDelete('cascade');
+                ->onDelete('cascade');
             $table->foreign('materias_id')->references('id')->on('materias')
-                ->onUpdate('cascade')->onDelete('cascade');
+                ->onDelete('cascade');
             $table->foreign('productos_id')->references('id')->on('productos')
-                ->onUpdate('cascade')->onDelete('cascade');
+                ->onDelete('cascade');
             $table->boolean('criticidad_producto')->default(false);
             $table->integer('capacidad');
             $table->integer('solicitud');

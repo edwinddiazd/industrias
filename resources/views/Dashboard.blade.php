@@ -86,27 +86,27 @@
 =======================================--> 
 
 @elseif (Entrust::hasRole('Mortal'))
-<div class="mdl-grid">
+<div class="mdl-grid" style="margin-top: 30px;">
 	<div class="mdl-layout-spacer"></div>
 	<div class="mdl-cell mdl-cell--10-col mdl-shadow--3dp mdl-color--grey-100">
-	<h5 style="margin-left: 2%;">Nombre de la Industria<br></h5>
+	<h3 style="margin-left: 2%;">{{ $industrias->industria }}<br></h3>
 			<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--4-col">
-					<div style="border: 2px solid #ccc">Direcci&oacute;n</div>
+					<div>{{$industrias->direccion_industria}}</div>
 				</div>
 				<div class="mdl-cell mdl-cell--4-col">
-					<div style="border: 2px solid #ccc">RIF</div>
+					<div>{{$industrias->rif_industria}}</div>
 				</div>
 				<div class="mdl-cell mdl-cell--4-col">
-					<div style="border: 2px solid #ccc">Tipo de Industria</div>
+					<div>{{$industrias->tipo_industria}}</div>
 				</div>
 			</div>
 			<!--<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--3-col">
-					<input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" value="Producto">
+					<input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" value="Industria">
 				</div>
 				<div class="mdl-cell mdl-cell--3-col">
-					<input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" value="Materia Prima">
+					<input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" value="Producto">
 				</div>
 				<div class="mdl-cell mdl-cell--3-col">
 					<input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" value="Proyecci&oacute;n">
@@ -117,7 +117,6 @@
 			</div>-->
 	</div>
 	<div class="mdl-layout-spacer"></div>
-
 </div>
 @endif
 @endsection

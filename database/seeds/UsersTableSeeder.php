@@ -35,6 +35,24 @@ class UsersTableSeeder extends Seeder
         'password' => bcrypt('qwerty'),
         'industrias_id'=>'3'        
             ]);
+  $pedro = User::create([
+        'name' => 'Pedro Perez',
+        'email' => 'pperez@gmail.com',
+        'password' => bcrypt('qwerty'),
+        'industrias_id'=>'5'        
+            ]);
+  $jose = User::create([
+        'name' => 'Jose Guillen',
+        'email' => 'jguillen@gmail.com',
+        'password' => bcrypt('qwerty'),
+        'industrias_id'=>'4'        
+            ]);
+  $anton = User::create([
+        'name' => 'Antonio Duarte',
+        'email' => 'aduarte@gmail.com',
+        'password' => bcrypt('qwerty'),
+        'industrias_id'=>'7'        
+            ]);
 //creamos el role de admin
    $dios = Role::create([
         'name' => 'Dios',
@@ -75,6 +93,9 @@ class UsersTableSeeder extends Seeder
 //Aqui se adhiere el role al user
     $made->attachRole($dios);
     $edwin->attachRole($mortal);
+    $pedro->attachRole($mortal);
+    $anton->attachRole($mortal);
+    $jose->attachRole($mortal);
 
     }
 }
