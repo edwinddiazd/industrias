@@ -17,7 +17,7 @@
 					    	<option >Seleccione Tipo de Producción</option>
 					    	<option value="Semi-Terminado">Semi - Terminado</option>
 					    	<option value="Terminado">Terminado</option>
-					    	<option value="Sub Producto">Sub Producto</option>
+					    	<option value="Sub-Producto">Sub Producto</option>
 			    		</select>
 					</div>
 				</div>

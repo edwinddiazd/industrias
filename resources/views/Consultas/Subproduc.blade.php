@@ -22,17 +22,17 @@
 				    </tr>
   				</thead>
   				<tbody>
-  				@foreach ($sub as $subp)
+  				@foreach ($sub as $subs)
 					    
 					<tr>
-					<td class="mdl-data-table__cell--non-numeric ">{{ $subp->producto}}</td>
-					<td class="mdl-data-table__cell--non-numeric">{{ $subp->proyeccion}}</td>
-					<td class="mdl-data-table__cell--non-numeric">{{ $subp->capacidad}}</td>
-					<td class="mdl-data-table__cell--non-numeric">{{ $subp->produccion}}</td>
-					<td class="mdl-data-table__cell--non-numeric">{{$subp->unidad_producto}}</td>
-					<td class="mdl-data-table__cell--non-numeric">{{ $subp->bolivares}}</td>
-					<td class="mdl-data-table__cell--non-numeric">{{ $subp->dolares}}</td>
-					<td class="mdl-data-table__cell--non-numeric">{{$subp->industria}}</td>							
+					<td class="mdl-data-table__cell--non-numeric ">{{ $subs->producto}}</td>
+					<td class="mdl-data-table__cell--non-numeric">{{ $subs->proyeccion}}</td>
+					<td class="mdl-data-table__cell--non-numeric">{{ $subs->capacidad}}</td>
+					<td class="mdl-data-table__cell--non-numeric">{{ $subs->produccion}}</td>
+					<td class="mdl-data-table__cell--non-numeric">{{$subs->unidad_producto}}</td>
+					<td class="mdl-data-table__cell--non-numeric">{{ $subs->bolivares}}</td>
+					<td class="mdl-data-table__cell--non-numeric">{{ $subs->dolares}}</td>
+					<td class="mdl-data-table__cell--non-numeric">{{$subs->industria}}</td>							
 				 </tr>
 				    		
 				@endforeach

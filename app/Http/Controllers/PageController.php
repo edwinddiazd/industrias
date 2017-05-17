@@ -107,7 +107,7 @@ class PageController extends Controller
 
     public function getConsultaSubproduc ()
     {
-        $subp=DB::table('produccions')->join('industrias','industrias.id','=','produccions.industrias_id')->join('productos','productos.id','=','produccions.productos_id')->join('proyeccions','proyeccions.productos_id','=','produccions.productos_id')->select('industrias.industria','productos.tipo_producto','productos.producto','produccions.produccion','produccions.bolivares','produccions.dolares','productos.unidad_producto','proyeccions.capacidad','proyeccions.proyeccion')->where('productos.tipo_producto','=','Sub Producto')->get();
+        $subp=DB::table('produccions')->join('industrias','industrias.id','=','produccions.industrias_id')->join('productos','productos.id','=','produccions.productos_id')->join('proyeccions','proyeccions.productos_id','=','produccions.productos_id')->select('industrias.industria','productos.tipo_producto','productos.producto','produccions.produccion','produccions.bolivares','produccions.dolares','productos.unidad_producto','proyeccions.capacidad','proyeccions.proyeccion')->where('productos.tipo_producto','=','Sub-Producto')->get();
 
         return view ('Consultas.Subproduc')->withSub($subp);
     }

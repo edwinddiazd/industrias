@@ -13,11 +13,17 @@
 				<div class="mdl-cell mdl-cell--4-col">
 					<div>{{$industrias->direccion_industria}}</div>
 				</div>
-				<div class="mdl-cell mdl-cell--4-col">
+				<div class="mdl-cell mdl-cell--2-col">
 					<div>{{$industrias->rif_industria}}</div>
 				</div>
-				<div class="mdl-cell mdl-cell--4-col">
+				<div class="mdl-cell mdl-cell--2-col">
 					<div>{{$industrias->tipo_industria}}</div>
+				</div>
+				<div class="mdl-cell mdl-cell--2-col">
+					<div>{{$industrias->telefono1_industria}}</div>
+				</div>
+				<div class="mdl-cell mdl-cell--2-col">
+					<div>{{$industrias->telefono2_industria}}</div>
 				</div>
 			</div>
 			<!--<div class="mdl-grid">
@@ -40,19 +46,25 @@
 <!--dashboard de el usuario Visor
 =====================================--> 
 @elseif (Entrust::hasRole('Consulta'))
-<div class="mdl-grid">
+<div class="mdl-grid" style="margin-top: 30px;">
 	<div class="mdl-layout-spacer"></div>
 	<div class="mdl-cell mdl-cell--10-col mdl-shadow--3dp mdl-color--grey-100">
 	<h5 style="margin-left: 2%;">Nombre de la Industria<br></h5>
 			<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--4-col">
-					<div style="border: 2px solid #ccc">Direcci&oacute;n</div>
+					<div>{{$industrias->direccion_industria}}</div>
 				</div>
-				<div class="mdl-cell mdl-cell--4-col">
-					<div style="border: 2px solid #ccc">RIF</div>
+				<div class="mdl-cell mdl-cell--2-col">
+					<div>{{$industrias->rif_industria}}</div>
 				</div>
-				<div class="mdl-cell mdl-cell--4-col">
-					<div style="border: 2px solid #ccc">Tipo de Industria</div>
+				<div class="mdl-cell mdl-cell--2-col">
+					<div>{{$industrias->tipo_industria}}</div>
+				</div>
+				<div class="mdl-cell mdl-cell--2-col">
+					<div>{{$industrias->telefono1_industria}}</div>
+				</div>
+				<div class="mdl-cell mdl-cell--2-col">
+					<div>{{$industrias->telefono2_industria}}</div>
 				</div>
 			</div>
 			<!--<div class="mdl-grid">
@@ -94,11 +106,17 @@
 				<div class="mdl-cell mdl-cell--4-col">
 					<div>{{$industrias->direccion_industria}}</div>
 				</div>
-				<div class="mdl-cell mdl-cell--4-col">
+				<div class="mdl-cell mdl-cell--2-col">
 					<div>{{$industrias->rif_industria}}</div>
 				</div>
-				<div class="mdl-cell mdl-cell--4-col">
+				<div class="mdl-cell mdl-cell--2-col">
 					<div>{{$industrias->tipo_industria}}</div>
+				</div>
+				<div class="mdl-cell mdl-cell--2-col">
+					<div>{{$industrias->telefono1_industria}}</div>
+				</div>
+				<div class="mdl-cell mdl-cell--2-col">
+					<div>{{$industrias->telefono2_industria}}</div>
 				</div>
 			</div>
 			<!--<div class="mdl-grid">
