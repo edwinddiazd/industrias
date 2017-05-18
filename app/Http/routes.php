@@ -15,6 +15,8 @@
 Route::get('/', 'PageController@getIndex');
 
 //autenticacion
+Route::auth();
+
 Route::group(['prefix' => 'dios'], function () {
         Route::controller('roles', 'RolesController');
         Route::controller('permissions', 'PermissionsController');
@@ -35,15 +37,9 @@ Route::post('auth/register','Auth\AuthController@postRegister');
 
 //vistas infinitas
 
-Route::get('Reg_Personal', 'PageController@getReg_Personal');
-
-Route::get('Reg_Materias', ['middleware' => ['auth'], 'uses' => 'PageController@getReg_Materias']);
-
 Route::get('Dashboard', ['middleware' => ['auth'], 'uses' => 'PageController@getDashboard']);
 
 Route::get('Producto', ['middleware' => ['auth'], 'uses' => 'PageController@getProducto']);
-
-Route::get('Productos_consul', 'PageController@getConsultaProductos_consul');
 
 Route::get('Brokers', 'PageController@getBroker');
 
@@ -53,13 +49,55 @@ Route::get('Exportacion', 'PageController@getExportacion');
 
 Route::get('Alianzas', 'PageController@getAlianzas');
 
-Route::get('Capacidads', 'PageController@getCapacidads');
+Route::get('Capacidads', 'RegisterController@getCapacidads');
 
-Route::get('Solmats', 'PageController@getSolmats');
+Route::get('Solmats', 'RegisterController@getSolmats');
 
-Route::get('Reg_Proyeccions','PageController@getReg_Proyeccion');
+Route::get('Reg_Personal', 'RegisterController@getReg_Personal');
 
-Route::get('Reg_Produccions','PageController@getReg_Produccion');
+Route::get('Reg_Materias', ['middleware' => ['auth'], 'uses' => 'RegisterController@getReg_Materias']);
+
+Route::get('Reg_Proyeccions','RegisterController@getReg_Proyeccion');
+
+Route::get('Reg_Produccions','RegisterController@getReg_Produccion');
+
+Route::get('Registro', 'PageController@getRegistro');
+
+Route::get('Personal', 'ConsultasController@getConsultaPersonal');
+
+Route::get('Presidente','ConsultasController@getConsultaPresidente');
+
+Route::get('Ventas','ConsultasController@getConsultaVentas');
+
+Route::get('Compras','ConsultasController@getConsultaCompras');
+
+Route::get('Juridico','ConsultasController@getConsultaJuridico');
+
+Route::get('Seguridad_Integral','ConsultasController@getConsultaSeguridadIntegral');
+
+Route::get('Seguridad_Industrial','ConsultasController@getConsultaSeguridadIndustrial');
+
+Route::get('Operaciones','ConsultasController@getConsultaOperaciones');
+
+Route::get('Bienes','ConsultasController@getConsultaBienes');
+
+Route::get('Comunicaciones','ConsultasController@getConsultaComunicaciones');
+
+Route::get('Tecnologia','ConsultasController@getConsultaTecnologia');
+
+Route::get('Gestion_Humana','ConsultasController@getConsultaGestionHumana');
+
+Route::get('Broker_Consul','ConsultasController@getConsultaBroker_Consul');
+
+Route::get('Productos_consul', 'ConsultasController@getConsultaProductos_consul');
+
+Route::get('Subproduc','ConsultasController@getConsultaSubproduc');
+
+Route::get('Semiproduc','ConsultasController@getConsultaSemiproduc');
+
+Route::get('Terminado','ConsultasController@getConsultaTerminado');
+
+Route::get('MateriaP','ConsultasController@getConsultaMateriP');
 
 Route::resource('Productos','ProductController');
 
@@ -79,42 +117,6 @@ Route::resource('Proyeccion','ProyeccionController');
 
 Route::resource('Produccion','ProduccionController');
 
-Route::get('Personal', 'PageController@getConsultaPersonal');
 
-Route::get('Registro', 'PageController@getRegistro');
-
-Route::get('Presidente','PageController@getConsultaPresidente');
-
-Route::get('Ventas','PageController@getConsultaVentas');
-
-Route::get('Compras','PageController@getConsultaCompras');
-
-Route::get('Juridico','PageController@getConsultaJuridico');
-
-Route::get('Seguridad_Integral','PageController@getConsultaSeguridadIntegral');
-
-Route::get('Seguridad_Industrial','PageController@getConsultaSeguridadIndustrial');
-
-Route::get('Operaciones','PageController@getConsultaOperaciones');
-
-Route::get('Bienes','PageController@getConsultaBienes');
-
-Route::get('Comunicaciones','PageController@getConsultaComunicaciones');
-
-Route::get('Tecnologia','PageController@getConsultaTecnologia');
-
-Route::get('Gestion_Humana','PageController@getConsultaGestionHumana');
-
-Route::get('Broker_Consul','PageController@getConsultaBroker_Consul');
-
-Route::get('Subproduc','PageController@getConsultaSubproduc');
-
-Route::get('Semiproduc','PageController@getConsultaSemiproduc');
-
-Route::get('Terminado','PageController@getConsultaTerminado');
-
-Route::get('MateriaP','PageController@getConsultaMateriP');
-
-Route::auth();
 
 /*Route::get('/home', 'HomeController@index');*/
