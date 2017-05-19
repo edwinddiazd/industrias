@@ -37,7 +37,7 @@
             </button>
         <!-- inicio del menu desplegable -->
             <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="menu">
-              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Personal">Personal</a></li>
+              <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Personals">Personal</a></li>
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Presidente">Presidente</a></li>
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Bienes">Bienes</a></li>
               <li class="mdl-menu__item"><a class="mdl-button--primary" style="text-decoration: none;" href="Compras">Compras</a></li>

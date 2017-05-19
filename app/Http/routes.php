@@ -63,7 +63,7 @@ Route::get('Reg_Produccions','RegisterController@getReg_Produccion');
 
 Route::get('Registro', 'PageController@getRegistro');
 
-Route::get('Personal', 'ConsultasController@getConsultaPersonal');
+Route::get('Personals', 'ConsultasController@getConsultaPersonal');
 
 Route::get('Presidente','ConsultasController@getConsultaPresidente');
 
