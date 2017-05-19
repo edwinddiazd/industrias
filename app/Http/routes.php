@@ -99,6 +99,8 @@ Route::get('Terminado','ConsultasController@getConsultaTerminado');
 
 Route::get('MateriaP','ConsultasController@getConsultaMateriP');
 
+//rutas resource
+
 Route::resource('Productos','ProductController');
 
 Route::resource('Industria','IndustriaController');

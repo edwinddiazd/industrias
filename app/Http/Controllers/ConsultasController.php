@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use Illuminate\Support\Facades\Auth;
+
+use Personal;
+
 use DB;
 
 
@@ -26,8 +30,10 @@ class ConsultasController extends Controller
         2- unirle o pegarle (->join) la informacion de la tabla industrias con la condicion de q el id de la tabla industrias ('industrias.id' y recuerda q el punto indica pertenencia a la tabla, en este caso seria el id que pertenece a la tabla industrias, tambien recuerda que me refiero a id como columna de la tabla no como titulo del valor) coincida con el industrias_id de la tabla proyeccion
         3- repito el procedimiendo para las tablas de productos, de capacidad y de produccion.
         4- con ->select selecciono las columnas que necesito para mostrar la informacion de la consulta, en este caso necesito el nombre de la industria, el nombre del producto, la unidad del producto, la capacidad instalada, la capacidad operativa, la proyeccion, la produccion y los precios en bs y en $
-        5- toda esa informacion va a estar guardada en la variable $proys, y se la pasamos a la vista para q se construya la tabla a mostrar */
+        5- toda esa informacion va a estar guardada en la variable $proys, y se la pasamos a la vista para q se construya la tabla a mostrar 
         $nue = DB::table('proyeccions')->join('industrias','industrias.id','=','proyeccions.industrias_id')->join('productos','productos.id','=','proyeccions.productos_id')->join('produccions','produccions.productos_id','=','proyeccions.productos_id')->select('industrias.industria','proyeccions.proyeccion','productos.producto','productos.descripcion_producto','produccions.produccion','productos.unidad_producto','productos.tipo_producto')->get();
+        return view ('Consultas.Productos_consul')->withNuev($nue);*/
+        $nue = DB::table('proyeccions')->join('industrias','proyeccions.industrias_id','=','industrias.id')->join('productos','proyeccions.productos_id','=','productos.id')->select('industrias.industria','proyeccions.proyeccion','productos.producto','productos.descripcion_producto','productos.unidad_producto','productos.tipo_producto')->get();
         return view ('Consultas.Productos_consul')->withNuev($nue);
     }
 
