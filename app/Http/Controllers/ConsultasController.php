@@ -33,13 +33,20 @@ class ConsultasController extends Controller
         5- toda esa informacion va a estar guardada en la variable $proys, y se la pasamos a la vista para q se construya la tabla a mostrar 
         $nue = DB::table('proyeccions')->join('industrias','industrias.id','=','proyeccions.industrias_id')->join('productos','productos.id','=','proyeccions.productos_id')->join('produccions','produccions.productos_id','=','proyeccions.productos_id')->select('industrias.industria','proyeccions.proyeccion','productos.producto','productos.descripcion_producto','produccions.produccion','productos.unidad_producto','productos.tipo_producto')->get();
         return view ('Consultas.Productos_consul')->withNuev($nue);*/
-        $nue = DB::table('proyeccions')->join('industrias','proyeccions.industrias_id','=','industrias.id')->join('productos','proyeccions.productos_id','=','productos.id')->select('industrias.industria','proyeccions.proyeccion','productos.producto','productos.descripcion_producto','productos.unidad_producto','productos.tipo_producto')->get();
+        $nue = DB::table('proyeccions')->join('industrias','proyeccions.industrias_id','=','industrias.id')->join('productos','proyeccions.productos_id','=','productos.id')->select('industrias.industria','proyeccions.proyeccion','productos.producto','productos.descripcion_producto','productos.unidad_producto','productos.tipo_producto','proyeccions.industrias_id')->get();
         return view ('Consultas.Productos_consul')->withNuev($nue);
     }
 
     public function getConsultaSubproduc ()
     {
-        $subp=DB::table('produccions')->join('industrias','industrias.id','=','produccions.industrias_id')->join('productos','productos.id','=','produccions.productos_id')->join('proyeccions','proyeccions.productos_id','=','produccions.productos_id')->select('industrias.industria','productos.tipo_producto','productos.producto','produccions.produccion','produccions.bolivares','produccions.dolares','productos.unidad_producto','proyeccions.capacidad','proyeccions.proyeccion')->where('productos.tipo_producto','=','Sub-Producto')->get();
+        /*$subp=DB::table('produccions')->join('industrias','industrias.id','=','produccions.industrias_id')->join('productos','productos.id','=','produccions.productos_id')->join('proyeccions','proyeccions.productos_id','=','produccions.productos_id')->select('industrias.industria','productos.tipo_producto','productos.producto','produccions.produccion','produccions.bolivares','produccions.dolares','productos.unidad_producto','proyeccions.capacidad','proyeccions.proyeccion')->where('productos.tipo_producto','=','Sub-Producto')->get();
+
+        return view ('Consultas.Subproduc')->withSub($subp);  
+        
+        $subp=DB::table('proyeccions')->join('industrias','proyeccions.industrias_id','=','industrias.id')->join('productos','proyeccions.productos_id','=','productos.id')->join('produccions','proyeccions.productos_id','=','produccions.productos_id')->select('industrias.industria','productos.tipo_producto','productos.producto','produccions.produccion','produccions.bolivares','produccions.dolares','productos.unidad_producto','proyeccions.capacidad','proyeccions.proyeccion')->where('productos.tipo_producto','=','Sub-Producto')->get();
+
+        return view ('Consultas.Subproduc')->withSub($subp);*/
+        $subp=DB::table('proyeccions')->where('productos.tipo_producto','=','Sub-Producto')->join('industrias','proyeccions.industrias_id','=','industrias.id')->join('productos','proyeccions.productos_id','=','productos.id')->join('produccions','proyeccions.productos_id','=','produccions.productos_id')->select('industrias.industria','productos.tipo_producto','productos.producto','produccions.produccion','produccions.bolivares','produccions.dolares','productos.unidad_producto','proyeccions.capacidad','proyeccions.proyeccion')->get();
 
         return view ('Consultas.Subproduc')->withSub($subp);
     }

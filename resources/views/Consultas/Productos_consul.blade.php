@@ -21,7 +21,7 @@
   				</thead>
   				<tbody>
   				@foreach ($nuev as $nueva)
-					    
+					@if($nueva->industrias_id > 3)   
 						    <tr>
 					    	
 					    	<td class="mdl-data-table__cell--non-numeric ">{{ $nueva->producto}}</td>
@@ -31,6 +31,7 @@
 					    	<td class="mdl-data-table__cell--non-numeric">{{$nueva->unidad_producto}}</td>
 					    	<td class="mdl-data-table__cell--non-numeric">{{$nueva->industria}}</td>					
 				    		</tr>
+				    @endif
 				    		
 				@endforeach
 				    
